@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The QuackZone</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!--ENCABEZADO-->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="RECURSOS/PATO-removebg-preview.png" alt = "logo">
+                <h1> The <span class = "spaw">QuackZone</span></h1>
+            </div>
+            <!--menu de navegacion-->
+            <nav>
+                <ul class="nav-list" id="nav-list">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#ps5">PlayStation 5</a></li>
+                    <li><a href="#ps4">PlayStation 4</a></li>
+                    <li><a href="#PC">PC</a></li>
+                    <li><a href="#xbox">Xbox</a></li>
+                </ul>
+            </nav>
+            <!--<div class="acciones">
+                <div class="compras">
+                    <button id = "Ccompra" onclick="ToggleEvent()"><i class="fa-solid fa-cart-shopping"></i> </button>
+                </div>
+                <div class = "login">
+                    <button id = "login-btn" onclick="toggleLoginForm()"><i class="fa-solid fa-user"></i></button>
+                    <div id="login-form" class="login-form">
+                        <input type="text" id="username" placeholder="Usuario" required>
+                        <input type="password" id="password" placeholder="Contraseña" required>
+                        <button onclick="login()">Ingresar</button>
+                        <p>¿Aún no tienes cuenta? Créala aquí.</p>
+                        <div class="register">
+                            <button id = "sign-btn" onclick="toggleRegisterForm()">Registro</button>
+                            
+                            <div id = "sign-form" class="sign-form">
+                                <input type="text" id="correo" placeholder="Direccion de Correo Electronico" required>
+                                <button onclick="register()">Registrarse</button>
+                            </div> 
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+    </header>
+    <!--<div id="menu" class="menu">
+        <ul>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Sign in</a></li>
+        </ul>
+    </div>-->
+
+    <!--CUERPO-->
+    <main>
+        <section id="home">
+            <h2>Juegos Populares</h2>
+            <div class="container-carrusel">
+                <div class="game">
+                    <img src="https://i.pinimg.com/736x/a5/c5/29/a5c529a21b85c978bd4e1874762d29d3.jpg" alt="Counter Strike 2">
+                </div>
+                <div class="game">
+                    <img src="https://i.pinimg.com/736x/b2/48/a4/b248a47671cc9b3d3f7c1fdd23a0a8a5.jpg" alt ="Call of Duty Modern Warfare III">
+                </div>
+                <div class="game">
+                    <img src="https://i.pinimg.com/736x/1c/02/29/1c02294c7c71202d72c1561b204ee235.jpg" alt = "The last of us">
+                </div>
+                <div class = "game">
+                    <img src="https://i.pinimg.com/736x/dc/ad/bf/dcadbf12865e4df00d89d2e84e3344dd.jpg" alt="God of war Ragnarök">
+                </div>
+                <div class="game">
+                    <img src="https://i.pinimg.com/736x/30/12/26/3012266ca4cba5ecde5c96ab86acb0bc.jpg" alt="Days Gone">
+                </div>
+                <div class="game">
+                    <img src="https://i.pinimg.com/736x/54/39/c8/5439c8c20368017e14aabb133d9abe2d.jpg" alt="Ghost Recon">
+                </div>
+            </div>
+        </section>
+
+        <!--SECCIÓN DE ACCIÓN-->
+        <section id="Accion">
+            <h3>Los mejores juegos de acción</h3>
+            <div class="juegosAccion">
+                <div class="juegoA">
+                    <div class="imagen-con-descripcion">
+                        <img src="https://i.pinimg.com/736x/08/35/85/083585979b0592236e2904b5a0e65c3e.jpg" alt="GTA 5">
+                        <span class="descripcion">GTA 5 es un juego de acción y aventura de mundo abierto que sigue las vidas de tres criminales mientras realizan robos y enfrentan el caos en Los Santos.</span>
+                    </div>
+                </div>
+                <div class="juegoA">
+                    <div class="imagen-con-descripcion">
+                        <img src="https://i.pinimg.com/736x/fd/80/f9/fd80f9b0bc7628319ac46c4eb0e420e4.jpg" alt="COD mw2">
+                        <span class="descripcion">Call of Duty: Modern Warfare 2 es un shooter en primera persona lleno de acción intensa y combates tácticos.</span>
+                    </div>
+                </div>
+                <div class="juegoA">
+                    <img src="https://i.pinimg.com/736x/7f/6d/48/7f6d48a99cc9352ec7f41f0a970777ee.jpg" alt="RDR2">
+                    <span class="descripcion">Red Dead Redemption 2 es una épica aventura del Viejo Oeste con una historia profunda y envolvente. Explora un mundo abierto vibrante y detallado, lleno de personajes memorables, cazarrecompensas y decisiones que marcan tu destino.</span>
+                </div>
+                <div class="juegoA">
+                    <img src="https://i.pinimg.com/736x/30/ac/48/30ac487bc98bb07fbb4abb4feca4a8d4.jpg" alt="Ghost Tsushima">
+                </div>
+            </div>
+
+            <!--SECCIÓN DE AVENTURA-->
+
+
+        </section>
+    </main>
+    <!--FOOTER-->
+    <footer>
+        <p>&copy; 2025 The QuackZone. Todos los derechos reservados.</p>
+        <nav>
+          <a href="#">Política de Privacidad</a> |
+          <a href="#">Términos y Condiciones</a>
+        </nav>
+        <div class="payment-logos">
+            <div class="payment-logos">
+                <ul>
+                    <li><img src="RECURSOS\image-removebg-preview.png" alt="Todos los logos"></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+      
+    <script src="script.js"></script>
+</body>
+
+</html>
