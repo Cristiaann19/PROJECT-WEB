@@ -40,14 +40,17 @@ function toggleLoginForm() {
   }  
  */
 
-/*FUNCIONES DE LA PAG. LOGIN */
-  const btn = document.getElementById("btn");
-  const container = document.querySelector(".container-login");
+//FUNCIONES DE LA PAG. LOGIN
+const container = document.querySelector(".container-login");
+const btnSignIn = document.getElementById("btn-sign-in")
+const btnSignUp = document.getElementById("btn-sign-up")
+
+btnSignIn.addEventListener("click",()=>{
+    container.classList.remove("toggle")
+});
+btnSignUp.addEventListener("click",()=>{
+    container.classList.add("toggle")
+});
 
 
-  btn.addEventListener("click",()=>{
-    container.classList.toggle("toggle")
-
-  });
-  
     
