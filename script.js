@@ -52,4 +52,3 @@ btnSignUp.addEventListener("click",()=>{
     container.classList.add("toggle")
 });
 
-
