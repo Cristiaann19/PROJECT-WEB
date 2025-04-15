@@ -233,10 +233,10 @@ h2{
 
 .juegoA img, .juegoAvtr img, .juegoD img, .juegoL img, .juegoS img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: opacity 0.3s ease;
     border-radius: 12px;
+    display: block;
 }
 
 .juegoA:hover, .juegoAvtr:hover, .juegoD:hover, .juegoL:hover, .juegoS:hover {
@@ -247,19 +247,33 @@ h2{
 .juegoA:hover img, .juegoAvtr:hover img, .juegoD:hover img, .juegoL:hover img, .juegoS:hover img {
     opacity: 0.8;
 }
-
-/* Estilos responsivos */
-@media (max-width: 768px) {
-    .juegosAccion, .juegosAventura, .juegosDeportes, .juegosLucha, .juegosSupervivencia {
-        grid-template-columns: 1fr;
-    }
+.descripcion{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro translúcido */
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease, opacity 0.3s ease;
+    height: auto;
+    border-radius: 0 0 12px 12px;
+    transform: translateY(100%);
+    max-height: 100%;
+    overflow-y: auto;
+}
+.juegoA:hover .descripcion,
+.juegoAvtr:hover .descripcion,
+.juegoD:hover .descripcion,
+.juegoL:hover .descripcion,
+.juegoS:hover .descripcion {
+    transform: translateY(0);
+    opacity: 1;
 }
 
-@media (max-width: 480px) {
-    #Accion h3, #Aventura h3, #Deportes h3, #Lucha h3, #Supervivencia h3 {
-        font-size: 1.5rem;
-    }
-}
+
 
 /*Estilo de los iconos*/
 .social-icons a {
@@ -335,6 +349,19 @@ h2{
     .login {
         order: 1;
     }
+
+    .juegoA, .juegoAvtr, .juegoD, .juegoL, .juegoS {
+        height: auto; /* Se ajusta automáticamente */
+    }
+
+    .juegosAccion, .juegosAventura, .juegosDeportes, .juegosLucha, .juegosSupervivencia {
+        grid-template-columns: 1fr;
+    }
+    .juegoA img, .juegoAvtr img, .juegoD img, .juegoL img, .juegoS img {
+        width: 100%;
+        height: auto;
+    }
+
 }
 
 @media screen and (max-width: 480px) {
@@ -348,5 +375,8 @@ h2{
 
     .logo h1 {
         font-size: 20px;
+    }
+    #Accion h3, #Aventura h3, #Deportes h3, #Lucha h3, #Supervivencia h3 {
+        font-size: 1.5rem;
     }
 }
