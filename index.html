@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+<body >
     <!--ENCABEZADO-->
     <header>
         <div class="container">
@@ -27,14 +27,14 @@
             </nav>
             <div class="acciones">
                 <div class="compras">
-                    <button id="Ccompra" onclick="ToggleEvent()">
+                    <a id="Ccompra" onclick="ToggleEvent()">
                         <i class="fa-solid fa-cart-shopping"></i>
-                    </button>
+                    </a>
                 </div>
                 <div class="login">
-                    <button id="login-btn" onclick="window.location.href='login.html'">
+                    <a href="login.html" id="user-btn">
                         <i class="fa-solid fa-user"></i>
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -124,40 +124,121 @@
             </div>
         </section>
         <!--SECCIÓN DE DEPORTES-->
-            <section id="Deportes">
-                <h3>Los mejores juegos de deportes</h3>
-                <div class="juegosDeportes">
-                    <div class="juegoD">
-                        <div class="imagen-con-descripcion">
-                            <img src="https://i.pinimg.com/736x/27/c7/14/27c71467a4e74dfa0a7ed0c482fe1d53.jpg" alt="FC25">
-                            <span class="descripcion">EA Sports FC 25 es la segunda entrega de la saga FC y se lanzó el 27 de septiembre de 2024 para consolas y PC. Incorpora mejoras en la jugabilidad como el sistema táctico FC IQ, nuevos roles de jugador, un modo Rush 5v5 y mejoras en los porteros, además de ampliar el contenido con más ligas femeninas y novedades en Ultimate Team.</span>
-                        </div>
-                    </div>
-                    <div class="juegoD">
-                        <div class="imagen-con-descripcion">
-                            <img src="https://i.pinimg.com/736x/01/9c/5b/019c5b73605c7e201611ecbacc6b66af.jpg" alt="efotball">
-                            <span class="descripcion">eFootball 2025 ofrece una experiencia de fútbol ultra realista con gráficos de última generación y jugabilidad fluida, permitiendo a los jugadores competir en tiempo real con equipos de todo el mundo. Con un enfoque en el juego en línea y actualizaciones periódicas, el título continúa evolucionando año tras año.</span>
-                        </div>
-                    </div>
-                    <div class="juegoD">
-                        <div class="imagen-con-descripcion">
-                            <img src="https://i.pinimg.com/736x/97/72/79/9772794ac68cee5914caed4680973f97.jpg" alt="Nba 2k25">
-                            <span class="descripcion">NBA 2K25 lleva la serie a un nuevo nivel con un realismo impresionante en sus gráficos y movimientos, ofreciendo una jugabilidad mejorada tanto en partidos individuales como en modos de carrera. Los jugadores pueden sumergirse en la cultura del baloncesto, con modos que incluyen la NBA, el WNBA y la creación de un jugador en modo MyCareer.</span>
-                        </div>
-                    </div>
-                    <div class="juegoD">
-                        <div class="imagen-con-descripcion">
-                            <img src="https://i.pinimg.com/736x/52/6d/9b/526d9ba56acec0bf68bc28a8c52eba66.jpg" alt="Gran Turismo 7">
-                            <span class="descripcion">Gran Turismo 7 ofrece una experiencia de simulación de conducción inigualable con más de 400 coches, circuitos icónicos y un sistema de física avanzado. Los jugadores pueden disfrutar de carreras tanto en modo campaña como en línea, con una personalización profunda para cada vehículo y un enfoque realista en cada aspecto del automovilismo.</span>
-                        </div>
+        <section id="Deportes">
+            <h3>Los mejores juegos de deportes</h3>
+            <div class="juegosDeportes">
+                <div class="juegoD">
+                    <div class="imagen-con-descripcion">
+                        <img src="https://i.pinimg.com/736x/27/c7/14/27c71467a4e74dfa0a7ed0c482fe1d53.jpg" alt="FC25">
+                        <span class="descripcion">EA Sports FC 25 es la segunda entrega de la saga FC y se lanzó el 27 de septiembre de 2024 para consolas y PC. Incorpora mejoras en la jugabilidad como el sistema táctico FC IQ, nuevos roles de jugador, un modo Rush 5v5 y mejoras en los porteros, además de ampliar el contenido con más ligas femeninas y novedades en Ultimate Team.</span>
                     </div>
                 </div>
-            </section>
+                <div class="juegoD">
+                    <div class="imagen-con-descripcion">
+                        <img src="https://i.pinimg.com/736x/01/9c/5b/019c5b73605c7e201611ecbacc6b66af.jpg" alt="efotball">
+                        <span class="descripcion">eFootball 2025 ofrece una experiencia de fútbol ultra realista con gráficos de última generación y jugabilidad fluida, permitiendo a los jugadores competir en tiempo real con equipos de todo el mundo. Con un enfoque en el juego en línea y actualizaciones periódicas, el título continúa evolucionando año tras año.</span>
+                    </div>
+                </div>
+                <div class="juegoD">
+                    <div class="imagen-con-descripcion">
+                        <img src="https://i.pinimg.com/736x/97/72/79/9772794ac68cee5914caed4680973f97.jpg" alt="Nba 2k25">
+                        <span class="descripcion">NBA 2K25 lleva la serie a un nuevo nivel con un realismo impresionante en sus gráficos y movimientos, ofreciendo una jugabilidad mejorada tanto en partidos individuales como en modos de carrera. Los jugadores pueden sumergirse en la cultura del baloncesto, con modos que incluyen la NBA, el WNBA y la creación de un jugador en modo MyCareer.</span>
+                    </div>
+                </div>
+                <div class="juegoD">
+                    <div class="imagen-con-descripcion">
+                        <img src="https://i.pinimg.com/736x/52/6d/9b/526d9ba56acec0bf68bc28a8c52eba66.jpg" alt="Gran Turismo 7">
+                        <span class="descripcion">Gran Turismo 7 ofrece una experiencia de simulación de conducción inigualable con más de 400 coches, circuitos icónicos y un sistema de física avanzado. Los jugadores pueden disfrutar de carreras tanto en modo campaña como en línea, con una personalización profunda para cada vehículo y un enfoque realista en cada aspecto del automovilismo.</span>
+                    </div>
+                </div>
+            </div>
         </section>
-    </main>
+        <!--SECCIÓN DE LUCHA-->
+        <section id="Lucha">
+            <h3>Los mejores juegos de lucha</h3>
+            <div class="juegosLucha">
+                <div class="juegoL">
+                    <div class="imagen-con-descripcion">
+                        <img src="https://i.pinimg.com/736x/2d/06/d6/2d06d6c290878f7e4dbcfc671f25baf0.jpg" alt="MK1">
+                        <span class="descripcion">Mortal Kombat 1 es un juego de lucha icónico que presenta combates intensos y sangrientos entre personajes únicos con habilidades especiales. Los jugadores deben dominar movimientos especiales, combos y los famosos fatalities para derrotar a sus oponentes y obtener la victoria.</span>
+                    </div>
+                </div>
+                <div class="juegoL">
+                    <div class="imagen-con-descripcion">
+                        <img src="https://i.pinimg.com/736x/1c/d4/fd/1cd4fdde3039555d52ab49e646eaad76.jpg" alt="Tekken7">
+                        <span class="descripcion">Tekken 7 es un juego de lucha de la famosa franquicia Tekken, donde los jugadores eligen entre una amplia variedad de personajes para enfrentarse en combates espectaculares. Con mecánicas de lucha profundas, combos devastadores y un modo historia que explora los conflictos familiares, Tekken 7 ofrece una experiencia de lucha emocionante y estratégica.</span>
+                    </div>
+                </div>
+                <div class="juegoL">
+                    <div class="imagen-con-descripcion">
+                        <img src="https://i.pinimg.com/736x/65/cd/51/65cd51dfa47ef1a9ac2ef9fa54f3aaca.jpg" alt="Street Figther">
+                        <span class="descripcion">Street Fighter es una serie de videojuegos de lucha clásica que se centra en combates entre diversos luchadores con habilidades únicas y movimientos especiales. Con su icónica mecánica de "hadouken" y otros ataques emblemáticos, Street Fighter ha sido fundamental en la evolución de los juegos de lucha, ofreciendo batallas emocionantes y competitivas.</span>
+                    </div>
+                </div>
+                <div class="juegoL">
+                    <div class="imagen-con-descripcion">
+                        <img src="https://i.pinimg.com/736x/b7/b4/cf/b7b4cf8c56224c828b12d7e8ff7594f7.jpg" alt="MK11">
+                        <span class="descripcion">Mortal Kombat 11 es la última entrega de la icónica saga de juegos de lucha, conocida por sus combates sangrientos y sus personajes únicos. El juego ofrece una jugabilidad mejorada, nuevos fatalities, y una historia que continúa explorando el conflicto entre los campeones de la Tierra y los villanos interdimensionales, con un enfoque en la personalización de los luchadores y el modo multijugador.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--SECCIÓN DE SUPERVIVENCIA-->
+        <section id="Supervivencia">
+            <h3>Los mejores juegos de supervivencia</h3>
+            <div class="juegosSupervivencia">
+                <div class="juegoS">
+                    <div class="imagen-con-descripcion">
+                        <img src="https://wallpapers.com/images/featured/fondos-de-minecraft-cfljc4haleghnajo.jpg" alt="Minecraft">
+                        <span class="descripcion">Minecraft es un videojuego de construcción y aventura en un mundo abierto, donde los jugadores pueden explorar, recolectar recursos, construir estructuras y sobrevivir en un entorno generado aleatoriamente. Con su estilo visual de bloques y su enfoque en la creatividad, Minecraft permite a los jugadores crear casi cualquier cosa que imaginen, desde simples casas hasta complejos sistemas mecánicos, mientras enfrentan desafíos como criaturas hostiles y cambios en el entorno.</span>
+                    </div>
+                </div>
+                <div class="juegoS">
+                    <div class="imagen-con-descripcion">
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/108600/capsule_616x353.jpg?t=1739309087" alt="Project Zomboid">
+                        <span class="descripcion">Project Zomboid es un juego de supervivencia en mundo abierto ambientado en un apocalipsis zombi, donde el objetivo principal es resistir el mayor tiempo posible antes de morir. Los jugadores deben gestionar recursos, construir refugios, combatir zombis y cuidar su salud física y mental en un entorno hostil y realista, donde cada decisión puede marcar la diferencia entre la vida y la muerte.</span>
+                    </div>
+                </div>
+                <div class="juegoS">
+                    <div class="imagen-con-descripcion">
+                        <img src="https://i.pinimg.com/736x/74/ca/89/74ca89a99eadcaee94014c566fa0beac.jpg" alt="Stardew Valley">
+                        <span class="descripcion">Stardew Valley es un juego de simulación de vida en el que los jugadores heredan una granja y deben cultivarla, criar animales, pescar, minar y construir relaciones con los habitantes del pueblo cercano. Con un enfoque relajante y de exploración, el juego permite a los jugadores personalizar su granja, participar en festivales, y descubrir secretos mientras mejoran sus habilidades y enfrentan desafíos a lo largo de las estaciones del año.</span>
+                    </div>
+                </div>
+                <div class="juegoS">
+                    <div class="imagen-con-descripcion">
+                        <img src="https://i.pinimg.com/736x/29/89/cc/2989cc7944c3825f03c51a7a8eab262a.jpg" alt="World war Z">
+                        <span class="descripcion">World War Z es un juego de disparos en tercera persona cooperativo, ambientado en un mundo invadido por hordas masivas de zombis rápidos y agresivos. Los jugadores forman equipos para completar misiones en distintas partes del mundo, utilizando armas, trampas y trabajo en equipo para sobrevivir a oleadas implacables de enemigos.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</main>
     <!--FOOTER-->
     <footer>
+        <p>The QuackZone – Donde el cuac se convierte en GG. 🦆</p>
         <p>&copy; 2025 The QuackZone. Todos los derechos reservados.</p>
+        <div class="social-icons" >
+            <a href="https://www.facebook.com" target="_blank" title="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.whatsapp.com" target="_blank" title="WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" title="Twitter">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" title="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com" target="_blank" title="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://www.tiktok.com" target="_blank" title="TikTok">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+        </div>
         <nav>
           <a href="#">Política de Privacidad</a> |
           <a href="#">Términos y Condiciones</a>
@@ -165,13 +246,11 @@
         <div class="payment-logos">
             <div class="payment-logos">
                 <ul>
-                    <li><img src="RECURSOS\image-removebg-preview.png" alt="Todos los logos"></li>
+                    <li><img src="RECURSOS/image-removebg-preview.png" alt="Todos los logos"></li>
                 </ul>
             </div>
         </div>
     </footer>
-      
     <script src="script.js"></script>
 </body>
-
 </html>
