@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 /* RESET Y FUENTES */
 * {
     margin: 0;
@@ -46,12 +47,13 @@ header {
 
 .logo h1 {
     font-size: 24px;
+    font-family: 'Press Start 2P', system-ui;
 }
 
 .spaw {
-    color: #fe8330;
+    color: orangered;
+    font-family: 'Press Start 2P', system-ui ;
 }
-
 /* NAVEGACIÓN */
 nav ul {
     list-style: none;

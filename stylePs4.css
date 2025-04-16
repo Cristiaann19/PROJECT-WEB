@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
 /* RESET Y FUENTES */
 * {
     margin: 0;
@@ -305,7 +304,6 @@ label #btn, label #cancel{
     object-fit: cover;
     border-radius: 12px;
     margin-left: 50px;
-    margin-top: 40px;
 }
 
 .titulo h3{
@@ -329,21 +327,8 @@ label #btn, label #cancel{
     font-family: 'Orbitron', sans-serif;
     padding: 10px;
     text-align: center;
-    margin-left: 120px;
+    margin-left: 50px;
 }
-
-.titulo h6{
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-    display: flex;
-    align-items: center;
-    font-size: 1.8em;
-    font-family: 'Orbitron', sans-serif;
-    padding: 10px;
-    text-align: center;
-    margin-left: 270px;
-}
-
 .description {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
@@ -355,57 +340,37 @@ label #btn, label #cancel{
     text-align: justify;
 }
 
-.requisitos {
-    margin-top: 5px;
-    font-family: Arial, sans-serif;
+.titulo h6 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+    font-size: 1.8em;
+    font-family: 'Orbitron', sans-serif;
+    padding: 10px;
+    text-align: center;
+    margin-left: 100px;
 }
 
-.requisitos h4 {
-    margin-bottom: 20px;
-    color: #6ab02d;
-    font-size: 18px;
-    border-bottom: 2px solid #6ab02d;
-    display: inline-block;
-    padding-bottom: 4px;
-}
-
-.requisitos table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #1e1e1e;
-    color: #ffffff;
-    border-radius: 8px;
+.trailer {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    padding: 10px;
+    height: 280px;
+    margin-right: 20px;
+    margin-left: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-radius: 5px;
     overflow: hidden;
 }
 
-.requisitos td {
-    padding: 12px 14px;
-    text-align: justify;
-    font-size: 11px;
-}
-
-.requisitos th {
-    padding: 12px 14px;
-    text-align: center;
-    font-size: 13px;
-}
-
-.requisitos thead {
-    background-color: #333333;
-}
-
-.requisitos th {
-    color: #e0e0e0;
-    font-weight: bold;
-}
-
-.requisitos tbody tr:nth-child(even) {
-    background-color: #2c2c2c;
-}
-
-.requisitos tbody tr:hover {
-    background-color: #444444;
-    transition: background-color 0.2s ease-in-out;
+.trailer iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 20px; /* Bordes curvos */
+    display: block;
 }
 
 .game-actions {
