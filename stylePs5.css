@@ -214,6 +214,15 @@ label #btn, label #cancel{
     cursor: pointer;
     display: none;
 }
+/* ========================== */
+/*      SOCIAL ICONS         */
+/* ========================== */
+.social-icons a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+}
 
 /* Estilos responsivos */
 @media screen and (max-width: 768px) {

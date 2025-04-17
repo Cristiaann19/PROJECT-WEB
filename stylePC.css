@@ -109,6 +109,17 @@ section#home {
     display: block;
 }
 
+/* ========================== */
+/*      SOCIAL ICONS         */
+/* ========================== */
+.social-icons a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+}
+
+
 /* RESPONSIVE NAV Y GRID */
 @media (max-width: 768px) {
     .container {

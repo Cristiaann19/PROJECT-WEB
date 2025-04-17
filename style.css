@@ -48,13 +48,12 @@ header {
 }
 
 .logo {
-    background-color: #3c3c3c;
+    background-color: transparent;
     color: white;
     padding: 0;
     display: flex;
     justify-content: left;
     align-items: center;
-
 }
 
 .logo img {
@@ -142,6 +141,19 @@ nav{
     color: white;
     transition: all 1.5s ease;
 }
+.dark header {
+    background-color: #1a1a1a;
+}
+
+
+.dark h2, .dark h3, .dark .descripcion {
+    color: #ffffff;
+}
+
+.dark .descripcion {
+    background: rgba(255, 255, 255, 0.1);
+}
+
 /* ========================== */
 /*           MAIN            */
 /* ========================== */
