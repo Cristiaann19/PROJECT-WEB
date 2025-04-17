@@ -374,6 +374,18 @@ label #btn, label #cancel{
     display: block;
 }
 
+video {
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+video:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    filter: brightness(1.1);
+}
+
+
 .game-actions {
     grid-column: 2 / 3;
     grid-row: 4 / 5;
