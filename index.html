@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The QuackZone</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body >
-<audio id="musica" ></audio>
     <!--ENCABEZADO-->
     <header>
         <div class="container">
@@ -16,15 +16,16 @@
                 <img src="RECURSOS/PATO-removebg-preview.png" alt = "logo">
                 <h1> The <span class = "spaw">QuackZone</span></h1>
             </div>
-            <!--menu de navegacion-->
-            <nav>
-                <ul class="nav-list" id="nav-list">
-                    <li><a href="JuegosPs5.html">PlayStation 5</a></li>
-                    <li><a href="JuegosPs4.html">PlayStation 4</a></li>
-                    <li><a href="JuegosPC.html">PC</a></li>
-                    <li><a href="JuegosXbox.html">Xbox</a></li>
-                </ul>
-            </nav>
+            <div>
+                <nav>
+                    <ul class="nav-list" id="nav-list">
+                        <li><a href="JuegosPs5.html">PlayStation 5</a></li>
+                        <li><a href="JuegosPs4.html">PlayStation 4</a></li>
+                        <li><a href="JuegosPC.html">PC</a></li>
+                        <li><a href="JuegosXbox.html">Xbox</a></li>
+                    </ul>
+                </nav>
+            </div>
             <div class="acciones">
                 <div class="compras">
                     <a id="Ccompra" onclick="ToggleEvent()">
@@ -37,9 +38,10 @@
                     </a>
                 </div>
                 <div class="music">
-                    <a href="login.html" id="music-btn">
+                    <a href="#" id="music-btn" onclick="reproducirMusica()">
                         <i class="fa-solid fa-music"></i>
                     </a>
+                    <audio id="musica" src="RECURSOS/Mora - Ansiedades (Instrumental).mp3"></audio>
                 </div>
                 <div class="dark-mode">
                     <button class="theme-toggle" id=" themeToggle">
