@@ -46,6 +46,7 @@ header {
     color: white;
     padding: 1rem;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -73,14 +74,14 @@ header .logo h1 .spaw {
     color: orangered;
 }
 
-header nav .nav-list li a img {
-    width: 30px;
-    margin: 0px 30px;
-}
-
 /* ====================================
    NAVEGACIÓN
 ==================================== */
+
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+}
 .nav-list {
     list-style-type: none;
     display: flex;
@@ -101,10 +102,6 @@ header nav .nav-list li a img {
     border-radius: 5px;
 }
 
-.abrir-menu,
-.cerrar-menu {
-    display: none;
-}
 
 /* ====================================
    CUERPO – SECCIÓN CARRUSEL / JUEGOS
@@ -432,7 +429,7 @@ footer nav a:hover {
     }
 
     .nav-list li a {
-        color: #ececec;
+        color: #ecececec;
     }
 }
 
