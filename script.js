@@ -25,7 +25,4 @@ function reproducirMusica() {
         musicIcon.classList.add("fa-music");
     }
 }
-//MODO OSCURO
-function ModeDark(){
 
-}

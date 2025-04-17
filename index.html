@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body >
+<body>
     <!--ENCABEZADO-->
     <header>
         <div class="logo">
@@ -40,14 +40,8 @@
                 </a>
                 <audio id="musica" src="RECURSOS/Mora - Ansiedades (Instrumental).mp3"></audio>
             </div>
-            <label for="toggle" id="label_top"><i class="fa-solid fa-moon"></i></label>
-            <input type="checkbox" id = "toggle">
-            <!--
-            <div class="dark-mode">
-                <a  href="#" id="themeToggle" onclick="ModeDark()">
-                    <i class="fa-solid fa-moon"></i>
-                </a>
-            </div>-->
+            <label for="toggle" id="label_toggle"><i class="fa-solid fa-moon"></i></label>
+            <input type="checkbox" id ="toggle">
         </div>
     </header>
 
@@ -261,6 +255,17 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const toggleSwitch = document.getElementById('toggle');
+        const body = document.body;
+
+        toggleSwitch.addEventListener('change', () => {
+            body.classList.toggle('dark');
+        });
+    </script>
+
+
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="script.js"></script>

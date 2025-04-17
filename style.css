@@ -77,7 +77,6 @@ header nav .nav-list li a img {
     margin: 0px 30px;
 }
 
-
 /* ========================== */
 /*     NAVEGACIÓN (MENÚ)     */
 /* ========================== */
@@ -133,12 +132,16 @@ nav{
 #toggle{
     display: none;
 }
-#label_top{
+#label_toggle{
     position: relative;
     color: #ffffff;
     cursor: pointer;
 }
-
+.dark{
+    background-color: black;
+    color: white;
+    transition: all 1.5s ease;
+}
 /* ========================== */
 /*           MAIN            */
 /* ========================== */
