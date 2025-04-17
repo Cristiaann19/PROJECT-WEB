@@ -8,6 +8,20 @@ btnSignIn.addEventListener("click",()=>{
 });
 btnSignUp.addEventListener("click",()=>{
     container.classList.add("toggle")
+
+    const form = document.getElementById("registration-form");
+    const password = document.getElementById("password");
+    const confirmPassword = document.getElementById("confirm-password");
+    const passwordError = document.getElementById("password-error");
+
+    form.addEventListener("submit", function(event) {
+        if (password.value !== confirmPassword.value) {
+            passwordError.style.display = "block";
+            event.preventDefault();
+        } else {
+            passwordError.style.display = "none";
+        }
+    });
 });
 
 //Boton de reproducir musica
@@ -26,3 +40,5 @@ function reproducirMusica() {
     }
 }
 
+
+//

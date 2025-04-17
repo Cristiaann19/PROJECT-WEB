@@ -117,7 +117,7 @@
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
-    background-color: #cc5200; /* Naranja-rojo */
+    background-color: orangered; /* Naranja-rojo */
     color: white; /* Blanco */
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
@@ -147,7 +147,7 @@
     position: absolute;
     width: 50%;
     height: 100%;
-    background-color: #cc5200; /* Naranja-rojo */
+    background-color: orangered;
     display: flex;
     align-items: center;
     transform: translateX(100%);
@@ -159,7 +159,7 @@
 .container-login.toggle .container-welcome {
     transform: translateX(0);
     border-radius: 0 50% 50% 0;
-    background-color: #ff6600; /* Naranja brillante */
+    background-color: orangered;
 }
 
 .container-welcome .welcome {
@@ -200,3 +200,128 @@
     transform: translateX(-100%);
 }
 /* Fin del código CSS de la página Login */
+
+
+/*=================================
+    MEDIA QUERY
+==================================
+*/
+/* Estilos Responsive */
+@media (max-width: 768px) {
+    .container-login {
+        flex-direction: column;
+        width: 95%;
+        height: auto;
+        transition: 0.5s ease-in-out;
+    }
+
+    .container-form {
+        width: 100%;
+        height: auto;
+        padding: 20px 0;
+        z-index: 2;
+    }
+
+    .container-welcome {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(0);
+        padding: 30px 10px;
+    }
+
+    .welcome {
+        position: relative;
+        transform: translateX(0) !important;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .container-login.toggle .sign-in {
+        display: none;
+    }
+
+    .container-login.toggle .sign-up {
+        display: flex;
+    }
+
+    .container-login:not(.toggle) .sign-up {
+        display: none;
+    }
+
+    .container-login:not(.toggle) .sign-in {
+        display: flex;
+    }
+
+    .container-welcome h3 {
+        font-size: 28px;
+    }
+
+    .container-welcome p {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .button {
+        width: 160px;
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .container-login {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    .container-form {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .container-welcome {
+        display: none;
+    }
+
+    .container-input {
+        width: 100%;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .container-form h2 {
+        font-size: 24px;
+    }
+}
+
+/*
+@media (max-width: 480px) {
+    .container-form h2 {
+        font-size: 20px;
+    }
+
+    .container-form span,
+    .container-form a {
+        font-size: 12px;
+    }
+
+    .container-input {
+        width: 95%;
+        height: 40px;
+        padding: 0 10px;
+    }
+
+    .button {
+        width: 140px;
+        font-size: 13px;
+    }
+}*/
