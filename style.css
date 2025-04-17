@@ -122,29 +122,22 @@ nav{
 #user-btn:active,
 #music-btn:visited,
 #music-btn:focus,
-#music-btn:active,
-#themeToggle:visited,
-#themeToggle:focus,
-#themeToggle:active{
+#music-btn:active{
     color: inherit;
     outline: none;
     text-decoration: none;
 }
-.theme-toggle{
-    background: none;
-    border: 2px solid transparent;
-    color:white;
-    padding: 0;
-    font-size: 16px;
+/* ========================== */
+/*        MODO OSCURO         */
+/* ========================== */
+#toggle{
+    display: none;
+}
+#label_top{
+    position: relative;
+    color: #ffffff;
     cursor: pointer;
-    display: flex;
-    gap: 10px;
-    transition: all .3s;
 }
-.theme-toggle:hover{
-    opacity: 0.8;
-}
-
 
 /* ========================== */
 /*           MAIN            */
