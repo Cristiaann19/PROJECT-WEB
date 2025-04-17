@@ -1,28 +1,25 @@
-/* ====================================
-   IMPORTACIÓN DE FUENTES
-==================================== */
+/* ========================== */
+/*          IMPORTS          */
+/* ========================== */
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Oswald:wght@200..700&display=swap');
 @import url('https://fonts.cdnfonts.com/css/segoe-ui-4');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-/* ====================================
-   RESET
-==================================== */
+/* ========================== */
+/*       ESTILOS GENERALES    */
+/* ========================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ====================================
-   ESTILOS GENERALES
-==================================== */
 body {
     font-family: Arial, sans-serif;
+    background-color: #787878;
     margin: 0;
     padding: 0;
-    background-color: #787878;
 }
 
 .container {
@@ -34,19 +31,19 @@ body {
     width: 100%;
 }
 
-main {
-    padding: 5px;
+h2 {
+    margin-right: 10px;
+    text-align: center;
 }
 
-/* ====================================
-   CABECERA
-==================================== */
+/* ========================== */
+/*          HEADER            */
+/* ========================== */
 header {
     background-color: #3c3c3c;
     color: white;
     padding: 1rem;
     display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 
@@ -57,33 +54,42 @@ header {
     display: flex;
     justify-content: left;
     align-items: center;
+
 }
 
 .logo img {
     width: 50px;
     margin: 0px 30px;
+
 }
 
 header .logo h1 {
     font-family: 'Press Start 2P', system-ui;
-    font-size: 20px;
-    margin-left: 8px;
+    font-size: 21px;
 }
 
 header .logo h1 .spaw {
     color: orangered;
 }
 
-/* ====================================
-   NAVEGACIÓN
-==================================== */
-
-.abrir-menu,
-.cerrar-menu {
-    display: none;
+header nav .nav-list li a img {
+    width: 30px;
+    margin: 0px 30px;
 }
+
+
+/* ========================== */
+/*     NAVEGACIÓN (MENÚ)     */
+/* ========================== */
+nav{
+    display: flex;
+    align-items: center;
+}
+
 .nav-list {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     gap: 1rem;
 }
@@ -102,10 +108,54 @@ header .logo h1 .spaw {
     border-radius: 5px;
 }
 
+/* ========================== */
+/*        DIV ACCIONES        */
+/* ========================== */
+.acciones {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
-/* ====================================
-   CUERPO – SECCIÓN CARRUSEL / JUEGOS
-==================================== */
+#user-btn:visited,
+#user-btn:focus,
+#user-btn:active,
+#music-btn:visited,
+#music-btn:focus,
+#music-btn:active,
+#themeToggle:visited,
+#themeToggle:focus,
+#themeToggle:active{
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+}
+.theme-toggle{
+    background: none;
+    border: 2px solid transparent;
+    color:white;
+    padding: 0;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    transition: all .3s;
+}
+.theme-toggle:hover{
+    opacity: 0.8;
+}
+
+
+/* ========================== */
+/*           MAIN            */
+/* ========================== */
+main {
+    padding: 5px;
+}
+
+/* ========================== */
+/*   SECCIÓN DE CARRUSEL     */
+/* ========================== */
 .container-carrusel {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -127,12 +177,9 @@ header .logo h1 .spaw {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-h2 {
-    margin-right: 10px;
-    text-align: center;
-}
-
-/* Secciones de juegos */
+/* ========================== */
+/*     SECCIONES DE JUEGOS   */
+/* ========================== */
 #Accion, #Aventura, #Deportes, #Lucha, #Supervivencia {
     text-align: center;
     margin: 20px;
@@ -194,7 +241,7 @@ h2 {
     padding: 10px;
     font-size: 14px;
     opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.3s ease;
     height: auto;
     border-radius: 0 0 12px 12px;
     transform: translateY(100%);
@@ -211,26 +258,9 @@ h2 {
     opacity: 1;
 }
 
-/* ====================================
-   ÍCONOS REDES SOCIALES
-==================================== */
-.social-icons a {
-    margin: 0 10px;
-    font-size: 24px;
-    color: #333;
-    text-decoration: none;
-}
-
-.social-icon.facebook { color: #1877f2; }
-.social-icon.twitter  { color: #1da1f2; }
-.social-icon.instagram{ color: #e4405f; }
-.social-icon.youtube  { color: #ff0000; }
-.social-icon.whatsapp { color: #25d366; }
-.social-icon.tiktok   { color: white; }
-
-/* ====================================
-   FOOTER
-==================================== */
+/* ========================== */
+/*           FOOTER          */
+/* ========================== */
 footer {
     background-color: #000000;
     color: white;
@@ -270,29 +300,34 @@ footer nav a:hover {
     height: auto;
 }
 
-/* ====================================
-   MEDIA QUERIES
-==================================== */
+/* ========================== */
+/*      SOCIAL ICONS         */
+/* ========================== */
+.social-icons a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+}
+
+.social-icon.facebook { color: #1877f2; }
+.social-icon.twitter { color: #1da1f2; }
+.social-icon.instagram { color: #e4405f; }
+.social-icon.youtube { color: #ff0000; }
+.social-icon.whatsapp { color: #25d366; }
+.social-icon.tiktok { color: white; }
+
+/* ========================== */
+/*         RESPONSIVE         */
+/* ========================== */
 @media screen and (max-width: 768px) {
-    .container {
+    .container, nav ul, .acciones {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .login-form {
-        width: 90%;
-        position: fixed;
-        left: 5%;
-        top: 80px;
-    }
-
-    .menu {
+    .login-form, .menu {
         width: 90%;
         position: fixed;
         left: 5%;
@@ -304,24 +339,23 @@ footer nav a:hover {
     }
 
     .acciones {
-        flex-direction: column;
         align-items: flex-end;
     }
 
     .compras { order: 2; }
-    .login   { order: 1; }
-    .music   { order: 3; }
+    .login { order: 1; }
+    .music { order: 3; }
 
     #music-btn {
         font-size: 24px;
         color: white;
         padding: 10px 15px;
         border-radius: 5px;
+        transition: background-color 0.3s ease;
         text-decoration: none;
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: background-color 0.3s ease;
     }
 
     #music-btn:hover {
@@ -380,13 +414,17 @@ footer nav a:hover {
     }
 
     .nav-list li a {
+        color: white;
         font-size: 1.2rem;
+    }
+
+    .acciones {
+        gap: 1rem;
     }
 }
 
 @media screen and (max-width: 550px) {
-    .abrir-menu,
-    .cerrar-menu {
+    .abrir-menu, .cerrar-menu {
         display: block;
         border: 0;
         font-size: 1.25rem;
@@ -394,13 +432,8 @@ footer nav a:hover {
         cursor: pointer;
     }
 
-    .abrir-menu {
-        color: #1c1c1c;
-    }
-
-    .cerrar-menu {
-        color: #ececec;
-    }
+    .abrir-menu { color: #1c1c1c; }
+    .cerrar-menu { color: #ececec; }
 
     .nav {
         opacity: 0;

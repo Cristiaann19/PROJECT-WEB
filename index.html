@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,26 +11,45 @@
 <body >
     <!--ENCABEZADO-->
     <header>
-        <div class="container">
-            <div class="logo">
-                <img src="RECURSOS/PATO-removebg-preview.png" alt = "logo">
-                <h1> The <span class = "spaw">QuackZone</span></h1>
-            </div>
-            <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
-            <nav class="nav" id="nav">
-                <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
-                <ul class="nav-list">
-                    <li><a href="JuegosPs5.html">PlayStation 5</a></li>
-                    <li><a href="JuegosPs4.html">PlayStation 4</a></li>
-                    <li><a href="JuegosPC.html">PC</a></li>
-                    <li><a href="JuegosXbox.html">Xbox</a></li>
-                    <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                    <li><a href="login.html"><i class="fa-solid fa-user"></i></a></li>
-                    <li><a href="#"><i class="fa-solid fa-music"></i></a></li>
-                    <li><a href="#"><ion-icon name="moon-outline"></ion-icon></a></li>
-                </ul>
-            </nav>
+        <div class="logo">
+            <img src="RECURSOS/PATO-removebg-preview.png" alt = "logo">
+            <h1> The <span class = "spaw">QuackZone</span></h1>
         </div>
+        <nav>
+            <ul class="nav-list" id="nav-list">
+                <li><a href="JuegosPs5.html">PlayStation 5</a></li>
+                <li><a href="JuegosPs4.html">PlayStation 4</a></li>
+                <li><a href="JuegosPC.html">PC</a></li>
+                <li><a href="JuegosXbox.html">Xbox</a></li>
+            </ul>
+        </nav>
+        <div class="acciones">
+            <div class="compras">
+                <a id="Ccompra" onclick="ToggleEvent()">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+            </div>
+            <div class="login">
+                <a href="login.html" id="user-btn">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+            </div>
+            <div class="music">
+                <a href="#" id="music-btn" onclick="reproducirMusica()">
+                    <i class="fa-solid fa-music"></i>
+                </a>
+                <audio id="musica" src="RECURSOS/Mora - Ansiedades (Instrumental).mp3"></audio>
+            </div>
+
+            <!--
+            <div class="dark-mode">
+                <a  href="#" id="themeToggle" onclick="ModeDark()">
+                    <i class="fa-solid fa-moon"></i>
+                </a>
+            </div>-->
+        </div>
+        <label for="toggle">modo oscuro</label>
+
     </header>
     <!--CUERPO-->
     <main>
