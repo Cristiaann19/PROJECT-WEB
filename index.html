@@ -262,26 +262,37 @@
         const icon = document.getElementById('icon');
         const body = document.body;
         const h3Elements = document.querySelectorAll('h3');
-        if (localStorage.getItem('darkMode') === 'enabled') {
-            toggle.checked = true;
+
+        // Función para activar modo oscuro
+        function enableDarkMode() {
             body.classList.add('dark-mode');
             icon.classList.remove('fa-moon');
             icon.classList.add('fa-sun');
+            localStorage.setItem('darkMode', 'enabled');
             h3Elements.forEach(h3 => h3.classList.add('dark-mode'));
         }
-        toggle.addEventListener('change', function() {
+
+        // Función para desactivar modo oscuro
+        function disableDarkMode() {
+            body.classList.remove('dark-mode');
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+            localStorage.setItem('darkMode', 'disabled');
+            h3Elements.forEach(h3 => h3.classList.remove('dark-mode'));
+        }
+
+        // Al cargar la página, comprobar el modo guardado
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            toggle.checked = true;
+            enableDarkMode();
+        }
+
+        // Evento al cambiar el checkbox
+        toggle.addEventListener('change', function () {
             if (this.checked) {
-                body.classList.add('dark-mode');
-                icon.classList.remove('fa-moon');
-                icon.classList.add('fa-sun');
-                localStorage.setItem('darkMode', 'enabled');
-                h3Elements.forEach(h3 => h3.classList.add('dark-mode'));
+                enableDarkMode();
             } else {
-                body.classList.remove('dark-mode');
-                icon.classList.remove('fa-sun');
-                icon.classList.add('fa-moon');
-                localStorage.setItem('darkMode', 'disabled');
-                h3Elements.forEach(h3 => h3.classList.remove('dark-mode'));
+                disableDarkMode();
             }
         });
     </script>
