@@ -1,209 +1,132 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-/* Código CSS de la página Login */
-.login_body {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #555555; /* Gris oscuro */
-    font-family: "Montserrat", sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --accent-color: orangered;
+    --base-color:white;
+    --text-color:#2E2B41;
+    --input-color:#F3F0FF;
 }
-
-.container-login {
-    width: 85%; /* 800px */
-    height: 100%;
-    display: flex;
-    position: relative;
-    background-color: #555555; /* Gris oscuro - Igual al fondo de la página */
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgb(0, 0, 0);
+*{
+    margin: 0;
+    padding: 0;
 }
-
-.container-form {
-    width: 100%;
-    overflow: hidden;
-}
-
-.container-form form {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.5s ease-in;
-}
-
-.container-form h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
-    color: white; /* Blanco */
-}
-
-.social-network {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 25px;
-}
-
-.social-network ion-icon {
-    border-radius: 6px;
-    padding: 8px;
-    cursor: pointer;
-    background-color: #555555; /* Gris oscuro */
-    color: white;
-    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.social-network ion-icon:hover {
-    color: #ff6600; /* Cambiar color de los íconos a naranja brillante */
-    transform: scale(1.1); /* Agrandar ligeramente el icono */
-}
-
-.container-form span {
-    font-size: 15px;
-    margin-bottom: 15px;
-    color: white; /* Blanco */
-}
-
-.container-input {
-    width: 300px;
-    height: 40px;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    padding: 0 15px;
-    background-color: #ffffff; /* Gris medio */
-}
-
-.container-input input {
-    border: none;
-    outline: none;
-    width: 100%;
-    height: 85%;
-    background-color: inherit;
-    color: #050000;
-    font-size: 13px;
-    transition: background-color 0.3s, border 0.3s;
-}
-
-.container-input input:hover {
-    border: 1px solid #ff6600; /* Borde naranja */
-    background-color: #f4f4f4; /* Fondo más claro */
-}
-
-.container-form a {
-    color: white; /* Blanco */
-    font-size: 14px;
-    margin-bottom: 20px;
-    margin-top: 5px;
-    transition: color 0.3s ease-in-out, text-decoration 0.3s;
-}
-
-.container-form a:hover {
-    color: #ff6600; /* Cambiar el color del texto a naranja brillante */
-    text-decoration: underline; /* Subrayar el texto */
-}
-
-.button {
-    width: 170px;
-    height: 45px;
-    font-size: 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-    background-color: orangered; /* Naranja-rojo */
-    color: white; /* Blanco */
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.button:hover {
-    background-color: #ff6600; /* Naranja brillante */
-    border-radius: 5px;
-    transition: 200ms ease-in-out;
-    transform: scale(1.05); /* Aumentar ligeramente el tamaño */
-}
-
-/* Animación form */
-.sign-up {
-    transform: translateX(-100%);
-}
-
-.container-login.toggle .sign-in {
-    transform: translateX(100%);
-}
-
-.container-login.toggle .sign-up {
-    transform: translateX(0);
-}
-
-/* Welcome */
-.container-welcome {
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    background-color: orangered;
-    display: flex;
-    align-items: center;
-    transform: translateX(100%);
-    overflow: hidden;
-    transition: 0.5s ease-in-out, border-radius 0.5s ease-in-out;
-    border-radius: 50% 0 0 50%;
-}
-
-.container-login.toggle .container-welcome {
-    transform: translateX(0);
-    border-radius: 0 50% 50% 0;
-    background-color: orangered;
-}
-
-.container-welcome .welcome {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 0 50px;
-    color: white; /* Blanco */
-    transition: transform 0.5s ease-in-out;
-}
-
-.welcome-sign-in {
-    transform: translateX(100%);
-}
-
-.container-welcome h3 {
-    font-size: 40px;
-    color: white;
-}
-
-.container-welcome p {
-    font-size: 14px;
+html{
+    font-size: 12pt;
+    font-family: "Poppins","Segoe UI",sans-serif;
+    color: black;
     text-align: center;
 }
-
-.container-welcome .button {
-    border: 2px solid white;
-    background-color: transparent;
+body{
+    min-height: 100vh;
+    background-color: #3c3c3c;
+    background-size:cover ;
+    background-position: right;
+    overflow: hidden;
 }
-
-.container-login.toggle .welcome-sign-in {
-    transform: translateX(0);
-}
-
-.container-login.toggle .welcome-sign-up {
-    transform: translateX(-100%);
-}
-.mobile-toggle-buttons {
-    display: none;
-    flex-direction: row;
-    gap: 10px;
-    margin-top: 15px;
+.wrapper{
+    box-sizing: border-box;
+    background: white;
+    height: 100vh;
+    width: max(40%,600px);
+    padding: 10px;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
-/* Fin del código CSS de la página Login */
+h1{
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+form{
+    width:min(400px,100%) ;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+form > div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+form label{
+    flex-shrink:0;
+    height: 50px;
+    width: 50px;
+    background-color: orangered;
+    color: white;
+    border-radius:10px 0 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+form input{
+    box-sizing: border-box;
+    flex-grow: 1;
+    min-width: 0;
+    height: 50px;
+    padding: 1em;
+    font: inherit;
+    border-radius: 0 10px 10px 0;
+    border-left: none;
+    background-color: darkgray;
+    transition: 150ms ease;
+}
+form input:focus{
+    outline: none;
+    border-color: black;
+}
+div:has(input:focus)>label{
+    background-color: black;
+}
+form input::placeholder{
+    color: black;
+}
+form button{
+    margin-top: 10px;
+    border: none;
+    border-radius: 1000px;
+    padding: .85em 4em;
+    background-color: orangered;
+    color: white;
+    font: inherit;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 150ms ease;
+}
+form button:hover{
+    background-color: darkorange;
+}
+form button:focus{
+    outline: none;
+    background-color: black;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    text-decoration: underline;
+}
+@media(max-width:1100px ) {
+    .wrapper{
+        width: min(600px,100%);
+        border-radius: 0;
+    }
+}
+form div.incorrect label{
+    background-color: #f06272;
+}
+form div.incorrect input{
+    background-color: #f06272;
+}
+#error-message{
+    color: #f06272;
+}
