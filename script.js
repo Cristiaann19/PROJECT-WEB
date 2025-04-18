@@ -9,6 +9,7 @@ btnSignIn.addEventListener("click",()=>{
 btnSignUp.addEventListener("click",()=>{
     container.classList.add("toggle")
 });
+//VERIFIACADOR DE CONTRASEÑAS
 const form = document.getElementById("registration-form");
 const password = document.getElementById("password");
 const confirmPassword = document.getElementById("confirm-password");

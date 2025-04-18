@@ -113,6 +113,7 @@ nav{
     display: flex;
     align-items: center;
     gap: 10px;
+    font-size: 14px;
 }
 
 #user-btn:visited,
@@ -319,11 +320,11 @@ footer nav a:hover {
 }
 
 .social-icon.facebook { color: #1877f2; }
-.social-icon.twitter { color: #1da1f2; }
+.social-icon.twitter { color: #1c1c1c; }
 .social-icon.instagram { color: #e4405f; }
-.social-icon.youtube { color: #ff0000; }
+.social-icon.fa-discord { color: #5865F2; }
 .social-icon.whatsapp { color: #25d366; }
-.social-icon.tiktok { color: white; }
+.social-icon.fa-telegram { color: #0088CC; }
 
 /* ========================== */
 /*         RESPONSIVE         */
@@ -355,7 +356,7 @@ footer nav a:hover {
     .music { order: 3; }
 
     #music-btn {
-        font-size: 24px;
+        font-size: 10px;
         color: white;
         padding: 10px 15px;
         border-radius: 5px;

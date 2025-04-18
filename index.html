@@ -30,7 +30,7 @@
                 </a>
             </div>
             <div class="login">
-                <a href="login.html" id="user-btn">
+                <a href="#" id="user-btn">
                     <i class="fa-solid fa-user"></i>
                 </a>
             </div>
@@ -236,11 +236,11 @@
             <a href="https://www.instagram.com" target="_blank" title="Instagram">
                 <i class="fa-brands fa-instagram"></i>
             </a>
-            <a href="https://www.youtube.com" target="_blank" title="YouTube">
-                <i class="fa-brands fa-youtube"></i>
+            <a href="https://www.telgram.com" target="_blank" title="Telegram">
+                <i class="fa-brands fa-telegram"></i>
             </a>
-            <a href="https://www.tiktok.com" target="_blank" title="TikTok">
-                <i class="fa-brands fa-tiktok"></i>
+            <a href="http://www.discord.com" target="_blank" title="Discord">
+                <i class="fa-brands fa-discord"></i>
             </a>
         </div>
         <nav>
@@ -255,12 +255,20 @@
             </div>
         </div>
     </footer>
-
     <script>
         const toggleSwitch = document.getElementById('toggle');
         const body = document.body;
+        const icon = document.getElementById('icon');
+
         toggleSwitch.addEventListener('change', () => {
             body.classList.toggle('dark');
+            if (toggleSwitch.checked) {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon')
+            } else {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
         });
     </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

@@ -213,6 +213,7 @@ label #btn, label #cancel{
     cursor: pointer;
     display: none;
 }
+
 /* ========================== */
 /*      SOCIAL ICONS         */
 /* ========================== */
@@ -222,6 +223,13 @@ label #btn, label #cancel{
     color: #333;
     text-decoration: none;
 }
+
+.social-icon.facebook { color: #1877f2; }
+.social-icon.twitter { color: #1c1c1c; }
+.social-icon.instagram { color: #e4405f; }
+.social-icon.fa-discord { color: #5865F2; }
+.social-icon.whatsapp { color: #25d366; }
+.social-icon.fa-telegram { color: #0088CC; }
 
 /* Estilos responsivos */
 @media screen and (max-width: 768px) {
