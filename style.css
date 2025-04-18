@@ -33,6 +33,8 @@ body {
 
 h2 {
     margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 15px;
     text-align: center;
 }
 
@@ -489,4 +491,53 @@ footer nav a:hover {
     #Accion h3, #Aventura h3, #Deportes h3, #Lucha h3, #Supervivencia h3 {
         font-size: 1.5rem;
     }
+}
+
+/* Estilos generales */
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+h3.dark-mode {
+    color: #ffffff;
+}
+
+/* Estilo para el ícono */
+#label_toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+/* Estilo visual cuando está marcado */
+#toggle:checked + #label_toggle #icon {
+    content: "\f185";
+    transform: rotate(360deg);
+}
+
+/* Estilos adicionales para el checkbox invisible */
+#toggle {
+    display: none;
+}
+
+.dark {
+    background-color: black;
+    color: #ffffff;
+    transition: all 1.5s ease;
+}
+.dark header {
+    background-color: #1a1a1a;
+}
+
+.dark h2, .dark h3, .dark .descripcion {
+    color: #ffffff;
 }

@@ -40,8 +40,10 @@
                 </a>
                 <audio id="musica" src="RECURSOS/Mora - Ansiedades (Instrumental).mp3"></audio>
             </div>
-            <label for="toggle" id="label_toggle"><i class="fa-solid fa-moon"></i></label>
-            <input type="checkbox" id ="toggle">
+            <label for="toggle" id="label_toggle">
+                <span id="icon" class="fa-solid fa-moon"></span>
+            </label>
+            <input type="checkbox" id="toggle" style="display: none;">
         </div>
     </header>
 
@@ -80,19 +82,19 @@
                 <div class="juegoA">
                     <div class="imagen-con-descripcion">
                         <img src="https://i.pinimg.com/736x/fd/80/f9/fd80f9b0bc7628319ac46c4eb0e420e4.jpg" alt="COD mw2">
-                        <span class="descripcion">Call of Duty: Modern Warfare 2 es un shooter en primera persona lleno de acción intensa y combates tácticos.</span>
+                        <span class="descripcion">Call of Duty: Modern Warfare 2 es un videojuego de disparos en primera persona que sigue las intensas misiones de un grupo de élite militar mientras luchan contra una amenaza global. Con una campaña llena de acción y un modo multijugador adictivo, ofrece una experiencia de guerra moderna con gráficos realistas y mecánicas de juego mejoradas.</span>
                     </div>
                 </div>
                 <div class="juegoA">
                     <div class="imagen-con-descripcion">
-                        <img src="https://i.pinimg.com/736x/67/51/8d/67518d669d51b80ce51a3e0854108253.jpg" alt="Resident Evil 2">
-                        <span class="descripcion">Resident Evil 2 es un survival horror donde los protagonistas, Leon y Claire, deben escapar de una ciudad infestada de zombis tras un brote viral.</span>
+                        <img src="https://i.pinimg.com/736x/67/51/8d/67518d669d51b80ce51a3e0854108253.jpg" alt="Resident Evil 4">
+                        <span class="descripcion">*Resident Evil 4* es un juego de terror y acción que sigue a Leon S. Kennedy, un agente del gobierno, mientras intenta rescatar a la hija del presidente de los EE. UU. en un remoto pueblo europeo infestado por criaturas mutadas. Con una jugabilidad dinámica, combates estratégicos y una atmósfera tensa, el juego es reconocido por revitalizar la serie con su innovador enfoque en la perspectiva en tercera persona y la acción intensa.</span>
                     </div>
                 </div>
                 <div class="juegoA">
                     <div class="imagen-con-descripcion">
                         <img src="https://i.pinimg.com/736x/ce/8b/83/ce8b8349a2b94a043c2e3e2a1f2e32e4.jpg" alt="Good of War Ragnarok">
-                        <span class="descripcion">God of War: Ragnarok sigue la épica travesía de Kratos y su hijo Atreus en un mundo mitológico, enfrentándose a los dioses nórdicos mientras buscan detener el fin del mundo.</span>
+                        <span class="descripcion">God of War Ragnarök es un juego de acción y aventura que sigue a Kratos y su hijo Atreus mientras enfrentan los eventos del Ragnarök, la catástrofe del fin del mundo en la mitología nórdica. Con una narrativa épica, combate brutal y hermosos paisajes, el juego profundiza en la relación padre-hijo mientras exploran los reinos y luchan contra dioses y criaturas mitológicas.</span>
                     </div>
                 </div>
             </div>
@@ -104,7 +106,7 @@
                 <div class="juegoAvtr">
                     <div class="imagen-con-descripcion">
                         <img src="https://i.pinimg.com/736x/08/35/85/083585979b0592236e2904b5a0e65c3e.jpg" alt="GTA 5">
-                        <span class="descripcion">GTA 5 es un juego de acción y aventura de mundo abierto que sigue las vidas de tres criminales mientras realizan robos y enfrentan el caos en Los Santos.</span>
+                        <span class="descripcion">Grand Theft Auto V es un videojuego de acción y aventura en mundo abierto que sigue las historias entrelazadas de tres criminales mientras realizan robos y enfrentan a la ley en la ciudad ficticia de Los Santos. Con un vasto mundo para explorar, una trama envolvente y un modo multijugador en línea, ofrece una experiencia de libertad total y acción sin fin.</span>
                     </div>
                 </div>
                 <div class="juegoAvtr">
@@ -122,7 +124,7 @@
                 <div class="juegoAvtr">
                     <div class="imagen-con-descripcion">
                         <img src="https://i.pinimg.com/736x/4b/ee/1e/4bee1e0fc85df97c041d29060ffbc977.jpg" alt="Uncharted 4">
-                        <span class="descripcion">Uncharted 4: A Thief’s End sigue las aventuras de Nathan Drake, quien se ve obligado a regresar al mundo del saqueo y el peligro cuando su hermano perdido aparece.</span>
+                        <span class="descripcion">Uncharted 4: A Thief's End es un juego de acción y aventura en tercera persona que sigue a Nathan Drake, un cazador de tesoros retirado, mientras se ve arrastrado a una última aventura para encontrar un antiguo tesoro. Con impresionantes gráficos, una narrativa épica y mecánicas de juego fluidas, el título combina exploración, resolución de acertijos y combates intensos en una experiencia cinematográfica.</span>
                     </div>
                 </div>
             </div>
@@ -236,7 +238,7 @@
             <a href="https://www.instagram.com" target="_blank" title="Instagram">
                 <i class="fa-brands fa-instagram"></i>
             </a>
-            <a href="https://www.telgram.com" target="_blank" title="Telegram">
+            <a href="https://web.telegram.org/k/" target="_blank" title="Telegram">
                 <i class="fa-brands fa-telegram"></i>
             </a>
             <a href="http://www.discord.com" target="_blank" title="Discord">
@@ -256,18 +258,30 @@
         </div>
     </footer>
     <script>
-        const toggleSwitch = document.getElementById('toggle');
-        const body = document.body;
+        const toggle = document.getElementById('toggle');
         const icon = document.getElementById('icon');
-
-        toggleSwitch.addEventListener('change', () => {
-            body.classList.toggle('dark');
-            if (toggleSwitch.checked) {
-                icon.classList.remove('fa-sun');
-                icon.classList.add('fa-moon')
-            } else {
+        const body = document.body;
+        const h3Elements = document.querySelectorAll('h3');
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            toggle.checked = true;
+            body.classList.add('dark-mode');
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+            h3Elements.forEach(h3 => h3.classList.add('dark-mode'));
+        }
+        toggle.addEventListener('change', function() {
+            if (this.checked) {
+                body.classList.add('dark-mode');
                 icon.classList.remove('fa-moon');
                 icon.classList.add('fa-sun');
+                localStorage.setItem('darkMode', 'enabled');
+                h3Elements.forEach(h3 => h3.classList.add('dark-mode'));
+            } else {
+                body.classList.remove('dark-mode');
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+                localStorage.setItem('darkMode', 'disabled');
+                h3Elements.forEach(h3 => h3.classList.remove('dark-mode'));
             }
         });
     </script>
