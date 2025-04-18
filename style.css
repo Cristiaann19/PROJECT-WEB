@@ -541,3 +541,11 @@ h3.dark-mode {
 .dark h2, .dark h3, .dark .descripcion {
     color: #ffffff;
 }
+
+.dark-mode header {
+    background-color: #204d21;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}

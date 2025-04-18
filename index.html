@@ -262,32 +262,27 @@
         const icon = document.getElementById('icon');
         const body = document.body;
         const h3Elements = document.querySelectorAll('h3');
-
-        // Función para activar modo oscuro
+        const header = document.querySelector('header');
         function enableDarkMode() {
             body.classList.add('dark-mode');
             icon.classList.remove('fa-moon');
             icon.classList.add('fa-sun');
             localStorage.setItem('darkMode', 'enabled');
             h3Elements.forEach(h3 => h3.classList.add('dark-mode'));
+            header.classList.add('dark-mode'); // ✅ Aplica a header
         }
-
-        // Función para desactivar modo oscuro
         function disableDarkMode() {
             body.classList.remove('dark-mode');
             icon.classList.remove('fa-sun');
             icon.classList.add('fa-moon');
             localStorage.setItem('darkMode', 'disabled');
             h3Elements.forEach(h3 => h3.classList.remove('dark-mode'));
+            header.classList.remove('dark-mode'); // ✅ Se quitaba aquí también
         }
-
-        // Al cargar la página, comprobar el modo guardado
         if (localStorage.getItem('darkMode') === 'enabled') {
             toggle.checked = true;
             enableDarkMode();
         }
-
-        // Evento al cambiar el checkbox
         toggle.addEventListener('change', function () {
             if (this.checked) {
                 enableDarkMode();
@@ -296,6 +291,7 @@
             }
         });
     </script>
+
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="script.js"></script>
