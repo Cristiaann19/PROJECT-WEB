@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>The QuackZone - PC</title>
+    <link rel="stylesheet" href="styleNintendo.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<!--ENCABEZADO-->
+<header>
+    <div class="container">
+        <div class="logo">
+            <img src="RECURSOS/PATO-removebg-preview.png" alt="logo">
+            <h1> The <span class="spaw">QuackZone</span></h1>
+        </div>
+        <!--menu de navegacion-->
+        <nav>
+            <ul class="nav-list" id="nav-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#ps5">¡Grandes éxitos de Nintendo!</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!--CUERPO-->
+<section id="home">
+    <h2>¡Los más vendidos!</h2>
+    <div class="parent">
+        <div><img src="https://i.pinimg.com/736x/5f/fc/5d/5ffc5d5bf74d612ae33355a00f4de920.jpg" alt="Super Mario Galaxy"></div>
+        <div><img src="https://i.pinimg.com/736x/f8/cc/e8/f8cce8f5a3bdbdd7cec2c6dc701ae23a.jpg" alt="Zelda breath world"></div>
+        <div><img src="https://i.pinimg.com/736x/ec/44/da/ec44da375728e3da0f0f5d26b8ca6e68.jpg" alt="Pokemos arceus"></div>
+        <div><img src="https://i.pinimg.com/736x/a1/f3/1b/a1f31bb3dd05e190a9bf026725303fe9.jpg" alt="Super Smash"></div>
+        <div><img src="https://i.pinimg.com/736x/55/7c/a9/557ca96d01c7c13194476995d948f1d4.jpg" alt="Donkey Kong"></div>
+    </div>
+</section>
+<section>
+    <div class="juego">
+        <div class="juego-info">
+            <img src="https://i.pinimg.com/736x/a6/3c/6f/a63c6f2fcf2e3fe4a07353e9ee60068e.jpg" alt="Super Mario Odyssey" class="juego-img" />
+            <div class="titulo">
+                <h3>Super Mario Odyssey</h3>
+            </div>
+            <div class="description">
+                <p>Super Mario Odyssey es un colorido videojuego de plataformas en el que Mario viaja por distintos reinos junto a su nuevo aliado Cappy para rescatar a la Princesa Peach y detener los planes de Bowser. Con un diseño de niveles abierto, mecánicas innovadoras y un espíritu aventurero, el juego celebra la creatividad y la exploración en cada rincón.</p>
+            </div>
+            <div class="trailer">
+                <video width="100%" height="100%" controls>
+                    <source src="videos/videos nintendo/Super Mario Odyssey - Nintendo Switch Presentation 2017 Trailer.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="game-actions">
+                <button class="buy-btn" onclick="addToCart()">
+                    <i class="fas fa-shopping-cart"></i> Comprar
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="juego">
+        <div class="juego-info">
+            <img src="https://i.pinimg.com/736x/29/80/1c/29801c6c753b0101d9d79e05269d9b93.jpg" alt="Mario Kart Deluxe" class="juego-img" />
+            <div class="titulo">
+                <h3>Mario Kart 8 Deluxe</h3>
+            </div>
+            <div class="description">
+                <p>Mario Kart 8 Deluxe es un divertido y frenético juego de carreras en el que los personajes del universo de Mario compiten en circuitos llenos de obstáculos, objetos y atajos. Con gráficos vibrantes, modos multijugador locales y en línea, y una amplia variedad de personajes y vehículos, es la versión más completa de la saga hasta la fecha.</p>
+            </div>
+            <div class="trailer">
+                <video width="100%" height="100%" controls>
+                    <source src="videos/videos nintendo/Mario Kart 8 Deluxe - Nintendo Switch Presentation 2017 Trailer.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="game-actions">
+                <button class="buy-btn" onclick="addToCart()">
+                    <i class="fas fa-shopping-cart"></i> Comprar
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="juego">
+        <div class="juego-info">
+            <img src="RECURSOS/8639803.png" alt="Luigs Mansion 3" class="juego-img" />
+            <div class="titulo">
+                <h3>Luigi's Mansion 3</h3>
+            </div>
+            <div class="description">
+                <p>Luigi’s Mansion 3 es un juego de aventuras y exploración donde Luigi debe rescatar a sus amigos atrapados en un hotel encantado, usando su aspiradora Poltergust para cazar fantasmas y resolver acertijos. Con un ambiente misterioso pero lleno de humor, ofrece niveles creativos, jefes únicos y un encantador estilo visual.</p>
+            </div>
+            <div class="trailer">
+                <video width="100%" height="100%" controls>
+                    <source src="videos/videos nintendo/Luigi’s Mansion 3 - Nintendo Switch Trailer - Nintendo E3 2019.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="game-actions">
+                <button class="buy-btn" onclick="addToCart()">
+                    <i class="fas fa-shopping-cart"></i> Comprar
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="juego">
+        <div class="juego-info">
+            <img src="https://i.pinimg.com/736x/71/dd/43/71dd43db25e712cd779c802f8a4fb707.jpg" alt="CTR nitro fueld" class="juego-img" />
+            <div class="titulo">
+                <h2>Crash Team Racing: Nitro-Fueled</h2>
+            </div>
+            <div class="description">
+                <p>Crash Team Racing Nitro-Fueled es un remake del clásico juego de carreras de Crash Bandicoot, con gráficos renovados y contenido adicional, incluyendo personajes, pistas y modos de juego. Mantiene la esencia del original, combinando velocidad, diversión y desafíos, mientras introduce nuevas características como el modo multijugador en línea y la personalización de vehículos.</p>
+            </div>
+            <div class="trailer">
+                <video width="100%" height="100%" controls>
+                    <source src="videos/videos nintendo/Crash Team Racing Nitro-Fueled - Gameplay Trailer - Nintendo Switch.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="game-actions">
+                <button class="buy-btn" onclick="addToCart()">
+                    <i class="fas fa-shopping-cart"></i> Comprar
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+<!--FOOTER-->
+<footer>
+    <p>The QuackZone – Donde el cuac se convierte en GG. 🦆</p>
+    <p>&copy; 2025 The QuackZone. Todos los derechos reservados.</p>
+    <div class="social-icons" >
+        <a href="https://www.facebook.com" target="_blank" title="Facebook">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.whatsapp.com" target="_blank" title="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="https://www.twitter.com" target="_blank" title="Twitter">
+            <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.telgram.com" target="_blank" title="Telegram">
+            <i class="fa-brands fa-telegram"></i>
+        </a>
+        <a href="http://www.discord.com" target="_blank" title="Discord">
+            <i class="fa-brands fa-discord"></i>
+        </a>
+    </div>
+    <nav>
+        <a href="#">Política de Privacidad</a> |
+        <a href="#">Términos y Condiciones</a>
+    </nav>
+    <div class="payment-logos">
+        <div class="payment-logos">
+            <ul>
+                <li><img src="RECURSOS/image-removebg-preview.png" alt="Todos los logos"></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

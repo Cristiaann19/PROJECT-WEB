@@ -69,6 +69,14 @@ header .logo h1 {
     font-size: 21px;
 }
 
+#user-btn {
+    color: white;
+}
+
+#music-btn {
+    color: white;
+}
+
 header .logo h1 .spaw {
     color: orangered;
 }
