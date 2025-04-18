@@ -12,7 +12,7 @@
 html{
     font-size: 12pt;
     font-family: "Poppins","Segoe UI",sans-serif;
-    color: black;
+    color: var(--text-color);
     text-align: center;
 }
 body{
@@ -23,8 +23,8 @@ body{
     overflow: hidden;
 }
 .wrapper{
+    background-color: var(--base-color);
     box-sizing: border-box;
-    background: white;
     height: 100vh;
     width: max(40%,600px);
     padding: 10px;
@@ -57,8 +57,8 @@ form label{
     flex-shrink:0;
     height: 50px;
     width: 50px;
-    background-color: orangered;
-    color: white;
+    background-color: var(--accent-color);
+    color: var(--base-color);
     border-radius:10px 0 0 10px;
     display: flex;
     justify-content: center;
@@ -74,27 +74,31 @@ form input{
     padding: 1em;
     font: inherit;
     border-radius: 0 10px 10px 0;
-    border-left: none;
-    background-color: darkgray;
+    border: 2px solid var(--input-color);
+    border-left:none ;
+    background-color: var(--input-color);
     transition: 150ms ease;
+}
+form input:hover{
+    border-color:var(--accent-color) ;
 }
 form input:focus{
     outline: none;
-    border-color: black;
+    border-color: var(--text-color);
 }
 div:has(input:focus)>label{
-    background-color: black;
+    background-color: var(--text-color);
 }
 form input::placeholder{
-    color: black;
+    color: var(--text-color);
 }
 form button{
     margin-top: 10px;
     border: none;
     border-radius: 1000px;
     padding: .85em 4em;
-    background-color: orangered;
-    color: white;
+    background-color: var(--accent-color);
+    color: var(--base-color);
     font: inherit;
     font-weight: 600;
     text-transform: uppercase;
@@ -102,15 +106,15 @@ form button{
     transition: 150ms ease;
 }
 form button:hover{
-    background-color: darkorange;
+    background-color: var(--text-color);
 }
 form button:focus{
     outline: none;
-    background-color: black;
+    background-color: var(--text-color);
 }
 a{
     text-decoration: none;
-    color: black;
+    color: var(--accent-color);
 }
 a:hover{
     text-decoration: underline;
