@@ -581,3 +581,8 @@ h3.dark-mode {
 #icon.fa-moon {
     color: white;
 }
+
+.dark-mode .nav-list li a:hover {
+    background-color: #050000;
+    border-radius: 5px;
+}
