@@ -265,6 +265,7 @@
         const body = document.body;
         const h3Elements = document.querySelectorAll('h3');
         const header = document.querySelector('header');
+        const nav = document.querySelector('li a');
 
         function enableDarkMode() {
             body.classList.add('dark-mode');
@@ -273,6 +274,7 @@
             localStorage.setItem('darkMode', 'enabled');
             h3Elements.forEach(h3 => h3.classList.add('dark-mode'));
             header.classList.add('dark-mode');
+            nav.classList.add('dark-mode');
         }
         function disableDarkMode() {
             body.classList.remove('dark-mode');
@@ -281,6 +283,7 @@
             localStorage.setItem('darkMode', 'disabled');
             h3Elements.forEach(h3 => h3.classList.remove('dark-mode'));
             header.classList.remove('dark-mode');
+            nav.classList.remove('dark-mode');
         }
         if (localStorage.getItem('darkMode') === 'enabled') {
             toggle.checked = true;
