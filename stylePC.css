@@ -26,6 +26,16 @@ header {
     z-index: 1000;
 }
 
+.header {
+    background-color: #3c3c3c;
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -82,7 +92,7 @@ section#home {
 
 .parent {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Más anchas */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
     gap: 20px;
     max-width: 1200px;
     margin: auto;
@@ -585,36 +595,6 @@ h3.dark-mode {
 
 #icon.fa-moon {
     color: white;
-}
-
-.dark-mode .nav-list li a:hover {
-    background-color: #050000;
-    border-radius: 5px;
-}
-
-.dark-mode acciones {
-    position: absolute;
-    top: 50%;
-    right: 0px;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: flex-end;
-    gap: 0.4rem;
-    z-index: 2;
-}
-
-.dark-mode footer nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-.dark-mode #user-btn {
-    color: black;
-}
-
-.dark-mode #music-btn {
-    color: black;
 }
 
 #icon.fa-moon {
