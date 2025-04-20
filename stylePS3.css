@@ -40,18 +40,9 @@ header {
 }
 
 .logo img {
-    width: 50px;
+    width: 22rem;
     margin: 0px 30px;
-}
 
-header .logo h1 {
-    font-family: 'Press Start 2P', system-ui;
-    font-size: 21px;
-}
-
-.spaw {
-    color: orangered;
-    font-family: 'Press Start 2P', system-ui ;
 }
 /* NAVEGACIÓN */
 nav ul {
