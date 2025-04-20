@@ -335,7 +335,11 @@ footer nav a:hover {
 
 }
 @media screen and (max-width: 550px) {
+    .logo img {
+        width: 15rem;
+        margin: 0px 30px;
 
+    }
     .nav {
         opacity: 0;
         visibility: hidden;

@@ -112,6 +112,7 @@ section#home {
 }
 
 @media (max-width: 500px) {
+
     .parent {
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* Más ancho en móviles también */
     }
@@ -256,6 +257,11 @@ label #btn, label #cancel{
 }
 
 @media screen and (max-width: 480px) {
+    .logo img {
+        width: 15rem;
+        margin: 0px 30px;
+
+    }
     nav ul li a {
         font-size: 14px;
     }

@@ -113,6 +113,11 @@ section#home {
 }
 
 @media (max-width: 500px) {
+    .logo img {
+        width: 15rem;
+        margin: 0px 30px;
+
+    }
     .parent {
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* Más ancho en móviles también */
     }
