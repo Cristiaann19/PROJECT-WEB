@@ -64,21 +64,3 @@ function getLoginFormsErrors(email,password){
 
     return errors;
 }
-
-//Boton de reproducir musica
-function reproducirMusica() {
-    const music = document.getElementById("musica");
-    const musicIcon = document.querySelector("#music-btn i");
-
-    if (music.paused) {
-        music.play();
-        musicIcon.classList.remove("fa-music");
-        musicIcon.classList.add("fa-pause");
-    } else {
-        music.pause();
-        musicIcon.classList.remove("fa-pause");
-        musicIcon.classList.add("fa-music");
-    }
-}
-
-

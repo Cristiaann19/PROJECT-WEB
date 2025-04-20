@@ -10,7 +10,7 @@
     <header>
         <div class="navbar">
             <div class="logo">
-                <a href="index.html"><img src="RECURSOS/LOGO.jpg"></a>
+                <a href="index.html"><img src="RECURSOS/image-removebg-preview (2).png"></a>
             </div>
             <ul class="links">
                 <li><a href="JuegosPs5.html">PlayStation 5</a></li>
@@ -22,8 +22,16 @@
             <div>
                 <a href="Loginv1.html" class="action_btn"><i class="fa-solid fa-user"></i></a>
                 <a href="#" class="action_btn"><i class="fa-solid fa-cart-shopping"></i></a>
-                <a href="#" class="action_btn"><i class="fa-solid fa-music"></i></a>
-                <a href="#" class="action_btn"><i class="fa-solid fa-moon"></i></a>
+                <a href="#" onclick="ReproMusica()" id="BotonMusica" class="action_btn">
+                    <i class="fa-solid fa-music"></i>
+                    <audio id="Mmusica" src="RECURSOS/Mora - Ansiedades (Instrumental).mp3" preload="auto"></audio>
+                </a>
+                <a href="#" class="action_btn" id="toggle-btn">
+                    <label for="toggle" id="label_toggle">
+                        <span id="icon" class="fa-solid fa-sun"></span>
+                    </label>
+                </a>
+                <input type="checkbox" id="toggle" hidden>
             </div>
             <div class="toggle_btn">
                 <i class="fa-solid fa-bars"></i>
@@ -38,7 +46,12 @@
                 <li><a href="JuegosNintendo.html">Nintendo</a></li>
                 <li><a href="Loginv1.html" class="action_btn"><i class="fa-solid fa-user"></i></a></li>
                 <li><a href="#" class="action_btn"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                <li><a href="#" class="action_btn"><i class="fa-solid fa-music"></i></a></li>
+                <li>
+                    <a href="#" id="music-btn" onclick="reproducirMusica()">
+                        <i class="fa-solid fa-music"></i>
+                    </a>
+                    <audio id="musica" src="RECURSOS/Mora - Ansiedades (Instrumental).mp3"></audio>
+                </li>
                 <li><a href="#" class="action_btn"><i class="fa-solid fa-moon"></i></a></li>
             </ul>
         </div>
@@ -263,7 +276,91 @@
             ? 'fa-solid fa-xmark'
             : 'fa-solid fa-bars'
         }
+    </script>
+    <script>
+        function reproducirMusica() {
+            const music = document.getElementById("musica");
+            const musicIcon = document.querySelector("#music-btn i");
+            if (music.paused) {
+                music.play();
+                musicIcon.classList.remove("fa-music");
+                musicIcon.classList.add("fa-pause");
+            } else {
+                music.pause();
+                musicIcon.classList.remove("fa-pause");
+                musicIcon.classList.add("fa-music");
+            }
+        }
+    </script>
+    <script>
+        function ReproMusica() {
+            const music = document.getElementById("Mmusica");
+            const musicIcon = document.querySelector("#BotonMusica i");
 
+            if (music.paused) {
+                music.play();
+                musicIcon.classList.remove("fa-music");
+                musicIcon.classList.add("fa-pause");
+            } else {
+                music.pause();
+                musicIcon.classList.remove("fa-pause");
+                musicIcon.classList.add("fa-music");
+            }
+        }
+    </script>
+    <script>
+        const toggle = document.getElementById('toggle');
+        const icon = document.getElementById('icon');
+        const body = document.body;
+        const h3Elements = document.querySelectorAll('h3');
+        const header = document.querySelector('header');
+        const navLinks = document.querySelectorAll('.links li a');
+
+        function enableDarkMode() {
+            body.classList.add('dark-mode');
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+            localStorage.setItem('darkMode', 'enabled');
+            h3Elements.forEach(h3 => h3.classList.add('dark-mode'));
+            header.classList.add('dark-mode');
+            navLinks.forEach(a => a.classList.add('dark-mode'));
+        }
+
+        function disableDarkMode() {
+            body.classList.remove('dark-mode');
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+            localStorage.setItem('darkMode', 'disabled');
+            h3Elements.forEach(h3 => h3.classList.remove('dark-mode'));
+            header.classList.remove('dark-mode');
+            navLinks.forEach(a => a.classList.remove('dark-mode'));
+        }
+
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            toggle.checked = true;
+            enableDarkMode();
+        }
+
+        toggle.addEventListener('change', function () {
+            if (this.checked) {
+                enableDarkMode();
+            } else {
+                disableDarkMode();
+            }
+        });
+    </script>
+    <script>
+        const toggleCheckbox = document.getElementById('toggle');
+        const icon = document.getElementById('icon');
+        toggleCheckbox.addEventListener('change', function() {
+            if (this.checked) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        });
     </script>
 </body>
 </html>
