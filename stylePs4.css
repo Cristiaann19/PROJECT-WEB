@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: #625e5e;
+    background-color: #ffffff;
     color: #ffffff;
     text-align: center;
     margin-top: auto;
@@ -16,7 +16,7 @@ body {
 
 /* ENCABEZADO */
 header {
-    background-color: #3c3c3c;
+    background-color: #6d7e6f;
     color: white;
     padding: 15px 0;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
@@ -66,7 +66,7 @@ nav ul li a:hover {
 /* SECCIÓN DE JUEGOS */
 section#home {
     padding: 40px 20px;
-    background-color: #625e5e;
+    background-color: #ffffff;
 }
 
 .parent {
@@ -128,7 +128,7 @@ section#home {
 }
 
 footer {
-    background-color: #000000;
+    background-color: #6d7e6f;
     color: white;
     text-align: center;
     padding: 20px;

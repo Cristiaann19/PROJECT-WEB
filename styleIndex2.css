@@ -33,7 +33,7 @@
 
 body{
     min-height: 100vh;
-    background-color: var(--base-color);
+    background-color: #ffffff;
 }
 
 li{
@@ -57,7 +57,7 @@ h2 {
 
 /*HEADER*/
 header {
-    background-color: #3c3c3c;
+    background-color: #6d7e6f;
     color: white;
     padding: 1rem;
     display: flex;
@@ -264,10 +264,14 @@ main {
 
 /*FOOTER*/
 footer {
-    background-color: #000000;
+    background-color: #6d7e6f;
     color: white;
     text-align: center;
     padding: 20px;
+}
+
+footer p, a {
+    font-size: 16px;
 }
 
 footer nav {
@@ -301,6 +305,7 @@ footer nav a:hover {
     width: 200px;
     height: auto;
 }
+
 .social-icons a {
     margin: 0 10px;
     font-size: 24px;
@@ -417,7 +422,7 @@ body.dark-mode {
 }
 
 .dark-mode header {
-    background-color: #1a1a1a;
+    background-color: #444141;
 }
 
 .dark-mode .links li a {
@@ -443,6 +448,13 @@ body.dark-mode {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.dark-mode footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 
 /* ========================== */
