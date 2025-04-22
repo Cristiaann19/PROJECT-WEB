@@ -11,17 +11,57 @@
 <body>
 <!--ENCABEZADO-->
 <header>
-    <div class="container">
+    <div class="navbar">
         <div class="logo">
             <a href="index.html"><img src="RECURSOS/image-removebg-preview (2).png"></a>
         </div>
-        <!--menu de navegacion-->
-        <nav>
-            <ul class="nav-list" id="nav-list">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="#ps5">¡Los mejores juegos para PC!</a></li>
-            </ul>
-        </nav>
+        <ul class="links">
+            <li><a href="JuegosPs5.html">PlayStation 5</a></li>
+            <li><a href="JuegosPs4.html">PlayStation 4</a></li>
+            <li><a href="JuegosPs3.html">PlayStation 3</a></li>
+            <li><a href="JuegosPC.html">PC</a></li>
+            <li><a href="JuegosNintendo.html">Nintendo</a></li>
+        </ul>
+        <div>
+            <a href="Loginv1.html" class="action_btn"><i class="fa-solid fa-user"></i></a>
+            <a href="#" class="action_btn"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#" onclick="ReproMusica()" id="BotonMusica" class="action_btn">
+                <i class="fa-solid fa-music"></i>
+                <audio id="Mmusica" src="RECURSOS/Mora - Ansiedades (Instrumental).mp3" preload="auto"></audio>
+            </a>
+            <a href="#" class="action_btn" id="toggle-btn">
+                <label for="toggle" id="label_toggle">
+                    <span id="icon" class="fa-solid fa-moon"></span>
+                </label>
+            </a>
+            <input type="checkbox" id="toggle" hidden>
+        </div>
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+    <div class="dropdown_menu">
+        <ul class="links">
+            <li><a href="JuegosPs5.html">PlayStation 5</a></li>
+            <li><a href="JuegosPs4.html">PlayStation 4</a></li>
+            <li><a href="JuegosPs3.html">PlayStation 3</a></li>
+            <li><a href="JuegosPC.html">PC</a></li>
+            <li><a href="JuegosNintendo.html">Nintendo</a></li>
+            <li><a href="Loginv1.html" class="action_btn"><i class="fa-solid fa-user"></i></a></li>
+            <li><a href="#" class="action_btn"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li>
+                <a href="#" class="action_btn" id="music-btn" onclick="reproducirMusica()">
+                    <i class="fa-solid fa-music"></i>
+                </a>
+                <audio id="musica" src="RECURSOS/Mora - Ansiedades (Instrumental).mp3"></audio>
+            </li>
+            <li>
+                <input type="checkbox" id="togle" hidden>
+                <label for="togle">
+                    <span id="icono" class="fa-solid fa-moon"></span>
+                </label>
+            </li>
+        </ul>
     </div>
 </header>
 <!--CUERPO-->
@@ -505,6 +545,20 @@
         </div>
     </div>
 </footer>
+<script>
+    const toggleBtn=document.querySelector('.toggle_btn')
+    const toggleBtnIcon=document.querySelector('.toggle_btn i')
+    const dropDownMenu=document.querySelector('.dropdown_menu')
+
+    toggleBtn.onclick= function (){
+        dropDownMenu.classList.toggle('open')
+        const isOpen = dropDownMenu.classList.contains('open')
+
+        toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+    }
+</script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script src="script.js"></script>

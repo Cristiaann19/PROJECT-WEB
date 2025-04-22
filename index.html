@@ -52,7 +52,12 @@
                     </a>
                     <audio id="musica" src="RECURSOS/Mora - Ansiedades (Instrumental).mp3"></audio>
                 </li>
-                <li><a href="#" class="action_btn"><i class="fa-solid fa-moon"></i></a></li>
+                <li>
+                    <input type="checkbox" id="togle" hidden>
+                    <label for="togle">
+                        <span id="icono" class="fa-solid fa-moon"></span>
+                    </label>
+                </li>
             </ul>
         </div>
     </header>
@@ -325,6 +330,49 @@
             header.classList.add('dark-mode');
             navLinks.forEach(a => a.classList.add('dark-mode'));
         }
+
+        function disableDarkMode() {
+            body.classList.remove('dark-mode');
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+            localStorage.setItem('darkMode', 'disabled');
+            h3Elements.forEach(h3 => h3.classList.remove('dark-mode'));
+            header.classList.remove('dark-mode');
+            navLinks.forEach(a => a.classList.remove('dark-mode'));
+        }
+
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            toggle.checked = true;
+            enableDarkMode();
+        }
+
+        toggle.addEventListener('change', function () {
+            if (this.checked) {
+                enableDarkMode();
+            } else {
+                disableDarkMode();
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggle = document.getElementById('togle');
+            const icon = document.getElementById('icono');
+            const body = document.body;
+            const h3Elements = document.querySelectorAll('h3');
+            const header = document.querySelector('header');
+            const navLinks = document.querySelectorAll('.links li a');
+
+            function enableDarkMode() {
+                body.classList.add('dark-mode');
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+                localStorage.setItem('darkMode', 'enabled');
+                h3Elements.forEach(h3 => h3.classList.add('dark-mode'));
+                header.classList.add('dark-mode');
+                navLinks.forEach(a => a.classList.add('dark-mode'));
+            }
+        });
 
         function disableDarkMode() {
             body.classList.remove('dark-mode');
