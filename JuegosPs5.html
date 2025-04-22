@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>The QuackZone - PS5</title>
-    <link rel="stylesheet" href="stylePs5.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleGen.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -11,180 +12,224 @@
 <body>
 <!--ENCABEZADO-->
 <header>
-    <div class="container">
+    <div class="navbar">
         <div class="logo">
             <a href="index.html"><img src="RECURSOS/image-removebg-preview (2).png"></a>
         </div>
-        <!--menu de navegacion-->
-        <nav>
-            <ul class="nav-list" id="nav-list">
-                <li><a href="#ps5">¡Los juegos más destacados para PS5!</a></li>
-            </ul>
-        </nav>
+        <ul class="links">
+            <li><a href="JuegosPs5.html">PlayStation 5</a></li>
+            <li><a href="JuegosPs4.html">PlayStation 4</a></li>
+            <li><a href="JuegosPs3.html">PlayStation 3</a></li>
+            <li><a href="JuegosPC.html">PC</a></li>
+            <li><a href="JuegosNintendo.html">Nintendo</a></li>
+        </ul>
+        <div>
+            <a href="Loginv1.html" class="action_btn"><i class="fa-solid fa-user"></i></a>
+            <a href="#" class="action_btn"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#" onclick="ReproMusica()" id="BotonMusica" class="action_btn">
+                <i class="fa-solid fa-music"></i>
+                <audio id="Mmusica" src="RECURSOS/Mora - Ansiedades (Instrumental).mp3" preload="auto"></audio>
+            </a>
+            <a href="#" class="action_btn" id="toggle-btn">
+                <label for="toggle" id="label_toggle">
+                    <span id="icon" class="fa-solid fa-moon"></span>
+                </label>
+            </a>
+            <input type="checkbox" id="toggle" hidden>
+        </div>
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+    <div class="dropdown_menu">
+        <ul class="links">
+            <li><a href="JuegosPs5.html">PlayStation 5</a></li>
+            <li><a href="JuegosPs4.html">PlayStation 4</a></li>
+            <li><a href="JuegosPs3.html">PlayStation 3</a></li>
+            <li><a href="JuegosPC.html">PC</a></li>
+            <li><a href="JuegosNintendo.html">Nintendo</a></li>
+            <li><a href="Loginv1.html" class="action_btn"><i class="fa-solid fa-user"></i></a></li>
+            <li><a href="#" class="action_btn"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li>
+                <a href="#" class="action_btn" id="music-btn" onclick="reproducirMusica()">
+                    <i class="fa-solid fa-music"></i>
+                </a>
+                <audio id="musica" src="RECURSOS/Mora - Ansiedades (Instrumental).mp3"></audio>
+            </li>
+            <li>
+                <input type="checkbox" id="togle" hidden>
+                <label for="togle">
+                    <span id="icono" class="fa-solid fa-moon"></span>
+                </label>
+            </li>
+        </ul>
     </div>
 </header>
+<main>
+    <section id="home">
+        <h2>¡Los juegos mas destacados para PS5!</h2>
+        <div class="container-carrusel">
+            <div class="game"><img src="https://i.pinimg.com/736x/43/e1/96/43e196e0bbd74c024da5ace500f46133.jpg" alt="COD MW2"></div>
+            <div class="game"><img src="https://i.pinimg.com/736x/09/73/6e/09736eed93c1357f6d1c5bd0576c4e5b.jpg" alt="God of War Ragnarok"></div>
+            <div class="game"><img src="https://i.pinimg.com/736x/e8/5e/40/e85e4038c36960d170eea1f9ca5823a2.jpg" alt="The last of us"></div>
+            <div class="game"><img src="https://i.pinimg.com/736x/2c/5a/b1/2c5ab109e0e9886e8cdd571a2c126da9.jpg" alt="Resident Evil 2"></div>
+            <div class="game"><img src="https://i.pinimg.com/736x/7a/46/7b/7a467bb48d0ee345a1b253981a414223.jpg" alt="GTA 5"></div>
+        </div>
+    </section>
 
+    <section>
+        <div class="juego">
+            <div class="juego-info">
+                <img src="https://i.pinimg.com/736x/a0/7e/eb/a07eeb846f05daa0554bdfd609f3fcb7.jpg" alt="Spiderman 2" class="juego-img" />
+                <div class="titulo">
+                    <h3>Spider-Man 2</h3>
+                </div>
+                <div class="description">
+                    <p>En Spider-Man 2, Miles Morales lucha junto a Peter Parker para proteger Nueva York de amenazas como Venom y Kraven el Cazador. A medida que enfrenta nuevos desafíos, Miles madura como héroe y fortalece sus poderes únicos.</p>
+                </div>
+                <div class="trailer">
+                    <video width="100%" height="100%" controls>
+                        <source src="videos/videos ps5/Marvel’s Spider-Man 2  Tráiler de la historia  PS5.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="game-actions">
+                    <button class="buy-btn" onclick="addToCart()">
+                        <i class="fas fa-shopping-cart"></i> Comprar
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="juego">
+            <div class="juego-info">
+                <img src="RECURSOS/The_Texas_Chain_Saw_Massacre_(2023)_cover.jpg" alt="Spiderman 2" class="juego-img" />
+                <div class="titulo">
+                    <h4>The Texas Chain Saw Massacre</h4>
+                </div>
+                <div class="description">
+                    <p>The Texas Chain Saw Massacre es un juego de terror multijugador asimétrico donde un grupo de víctimas intenta escapar de la familia Slaughter, incluyendo al icónico Leatherface. Los jugadores deben usar el sigilo, la estrategia y el trabajo en equipo para sobrevivir o, si juegan como la familia, para atrapar y eliminar a las víctimas antes de que escapen.</p>
+                </div>
+                <div class="trailer">
+                    <video width="100%" height="100%" controls>
+                        <source src="videos/videos ps5/The Texas Chain Saw Massacre - Launch Trailer ｜ PS5 & PS4 Games.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="game-actions">
+                    <button class="buy-btn" onclick="addToCart()">
+                        <i class="fas fa-shopping-cart"></i> Comprar
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="juego">
+            <div class="juego-info">
+                <img src="https://i.pinimg.com/736x/31/1f/48/311f486a1d0d77951ab5a61cffa25749.jpg" alt="Uncharted" class="juego-img" />
+                <div class="titulo">
+                    <h4>Uncharted Legacy of Thieves</h4>
+                </div>
+                <div class="description">
+                    <p>Uncharted: Legacy of Thieves Collection es una remasterización para PC y PS5 que incluye Uncharted 4: A Thief’s End y Uncharted: The Lost Legacy. Ofrece acción cinematográfica, exploración exótica y combates intensos con gráficos mejorados y tiempos de carga reducidos.</p>
+                </div>
+                <div class="trailer">
+                    <video width="100%" height="100%" controls>
+                        <source src="videos/videos ps5/UNCHARTED Legacy of thieves collection - Gameplay Trailer.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="game-actions">
+                    <button class="buy-btn" onclick="addToCart()">
+                        <i class="fas fa-shopping-cart"></i> Comprar
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="juego">
+            <div class="juego-info">
+                <img src="https://i.pinimg.com/736x/e1/2c/fb/e12cfb8537f167dd559f272dd76dca69.jpg" alt="cold at war" class="juego-img" />
+                <div class="titulo">
+                    <h4>Call Of Duty: Cold at War</h4>
+                </div>
+                <div class="description">
+                    <p>Call of Duty: Black Ops Cold War es un shooter en primera persona ambientado en los años 80, donde los jugadores asumen el rol de un agente encubierto en una misión para detener a un espía soviético conocido como Perseus. La campaña ofrece decisiones que afectan el desenlace, mientras que los modos multijugador y Zombies brindan acción intensa con nuevas mecánicas y mapas. </p>
+                </div>
+                <div class="trailer">
+                    <video width="100%" height="100%" controls>
+                        <source src="videos/videos ps5/𝙲𝚊𝚕𝚕 𝚘𝚏 𝙳𝚞𝚝𝚢® 𝙱𝚕𝚊𝚌𝚔 𝙾𝚙𝚜 𝙲𝚘𝚕𝚍 𝚆𝚊𝚛 - 𝚃𝚛𝚊𝚒𝚕𝚎𝚛  Español Latino.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="game-actions">
+                    <button class="buy-btn" onclick="addToCart()">
+                        <i class="fas fa-shopping-cart"></i> Comprar
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="juego">
+            <div class="juego-info">
+                <img src="https://i.pinimg.com/736x/02/58/e7/0258e72b1eb0c41033ec469481b49912.jpg" alt="The Witcher III" class="juego-img" />
+                <div class="titulo">
+                    <h4>World War Z: Aftermath</h4>
+                </div>
+                <div class="description">
+                    <p>World War Z es un juego cooperativo de disparos en tercera persona donde los jugadores enfrentan hordas masivas de zombis en distintas partes del mundo. Inspirado en la película del mismo nombre, ofrece misiones intensas, clases personalizables y un enfoque en el trabajo en equipo para sobrevivir.</p>
+                </div>
+                <div class="trailer">
+                    <video width="100%" height="100%" controls>
+                        <source src="videos/videos ps5/World War Z Aftermath - Official Trailer  Summer of Gaming 2021.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="game-actions">
+                    <button class="buy-btn" onclick="addToCart()">
+                        <i class="fas fa-shopping-cart"></i> Comprar
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="juego">
+            <div class="juego-info">
+                <img src="RECURSOS/EpY7cORUUAEZHjO.jpg" alt="Black 4 Blod" class="juego-img" />
+                <div class="titulo">
+                    <h3>Black 4 Blood</h3>
+                </div>
+                <div class="description">
+                    <p>Back 4 Blood es un juego cooperativo de disparos en primera persona donde los jugadores luchan contra hordas de zombis mutantes conocidos como "los infectados". Desarrollado por los creadores de *Left 4 Dead*, el juego combina acción intensa, trabajo en equipo y un sistema de cartas que modifica habilidades y desafíos en cada partida.</p>
+                </div>
+                <div class="trailer">
+                    <video width="100%" height="100%" controls>
+                        <source src="videos/videos ps5/Trailer Revelación Back 4 Blood - Español Latino (Estreno Game Awards).mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="game-actions">
+                    <button class="buy-btn" onclick="addToCart()">
+                        <i class="fas fa-shopping-cart"></i> Comprar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 <!--CUERPO-->
-<section id="home">
-    <h2>¡Los más vendidos!</h2>
-    <div class="parent">
-        <div><img src="https://i.pinimg.com/736x/43/e1/96/43e196e0bbd74c024da5ace500f46133.jpg" alt="COD MW2"></div>
-        <div><img src="https://i.pinimg.com/736x/09/73/6e/09736eed93c1357f6d1c5bd0576c4e5b.jpg" alt="God of War Ragnarok"></div>
-        <div><img src="https://i.pinimg.com/736x/e8/5e/40/e85e4038c36960d170eea1f9ca5823a2.jpg" alt="The last of us"></div>
-        <div><img src="https://i.pinimg.com/736x/2c/5a/b1/2c5ab109e0e9886e8cdd571a2c126da9.jpg" alt="Resident Evil 2"></div>
-        <div><img src="https://i.pinimg.com/736x/7a/46/7b/7a467bb48d0ee345a1b253981a414223.jpg" alt="GTA 5"></div>
-    </div>
-</section>
-<section>
-    <div class="juego">
-        <div class="juego-info">
-            <img src="https://i.pinimg.com/736x/a0/7e/eb/a07eeb846f05daa0554bdfd609f3fcb7.jpg" alt="Spiderman 2" class="juego-img" />
-            <div class="titulo">
-                <h3>Spider-Man 2</h3>
-            </div>
-            <div class="description">
-                <p>En Spider-Man 2, Miles Morales lucha junto a Peter Parker para proteger Nueva York de amenazas como Venom y Kraven el Cazador. A medida que enfrenta nuevos desafíos, Miles madura como héroe y fortalece sus poderes únicos.</p>
-            </div>
-            <div class="trailer">
-                <video width="100%" height="100%" controls>
-                    <source src="videos/videos ps5/Marvel’s Spider-Man 2  Tráiler de la historia  PS5.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="game-actions">
-                <button class="buy-btn" onclick="addToCart()">
-                    <i class="fas fa-shopping-cart"></i> Comprar
-                </button>
-            </div>
-        </div>
-    </div>
-    <div class="juego">
-        <div class="juego-info">
-            <img src="RECURSOS/The_Texas_Chain_Saw_Massacre_(2023)_cover.jpg" alt="Spiderman 2" class="juego-img" />
-            <div class="titulo">
-                <h4>The Texas Chain Saw Massacre</h4>
-            </div>
-            <div class="description">
-                <p>The Texas Chain Saw Massacre es un juego de terror multijugador asimétrico donde un grupo de víctimas intenta escapar de la familia Slaughter, incluyendo al icónico Leatherface. Los jugadores deben usar el sigilo, la estrategia y el trabajo en equipo para sobrevivir o, si juegan como la familia, para atrapar y eliminar a las víctimas antes de que escapen.</p>
-            </div>
-            <div class="trailer">
-                <video width="100%" height="100%" controls>
-                    <source src="videos/videos ps5/The Texas Chain Saw Massacre - Launch Trailer ｜ PS5 & PS4 Games.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="game-actions">
-                <button class="buy-btn" onclick="addToCart()">
-                    <i class="fas fa-shopping-cart"></i> Comprar
-                </button>
-            </div>
-        </div>
-    </div>
-    <div class="juego">
-        <div class="juego-info">
-            <img src="https://i.pinimg.com/736x/31/1f/48/311f486a1d0d77951ab5a61cffa25749.jpg" alt="Uncharted" class="juego-img" />
-            <div class="titulo">
-                <h4>Uncharted Legacy of Thieves</h4>
-            </div>
-            <div class="description">
-                <p>Uncharted: Legacy of Thieves Collection es una remasterización para PC y PS5 que incluye Uncharted 4: A Thief’s End y Uncharted: The Lost Legacy. Ofrece acción cinematográfica, exploración exótica y combates intensos con gráficos mejorados y tiempos de carga reducidos.</p>
-            </div>
-            <div class="trailer">
-                <video width="100%" height="100%" controls>
-                    <source src="videos/videos ps5/UNCHARTED Legacy of thieves collection - Gameplay Trailer.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="game-actions">
-                <button class="buy-btn" onclick="addToCart()">
-                    <i class="fas fa-shopping-cart"></i> Comprar
-                </button>
-            </div>
-        </div>
-    </div>
-    <div class="juego">
-        <div class="juego-info">
-            <img src="https://i.pinimg.com/736x/e1/2c/fb/e12cfb8537f167dd559f272dd76dca69.jpg" alt="cold at war" class="juego-img" />
-            <div class="titulo">
-                <h4>Call Of Duty: Cold at War</h4>
-            </div>
-            <div class="description">
-                <p>Call of Duty: Black Ops Cold War es un shooter en primera persona ambientado en los años 80, donde los jugadores asumen el rol de un agente encubierto en una misión para detener a un espía soviético conocido como Perseus. La campaña ofrece decisiones que afectan el desenlace, mientras que los modos multijugador y Zombies brindan acción intensa con nuevas mecánicas y mapas. </p>
-            </div>
-            <div class="trailer">
-                <video width="100%" height="100%" controls>
-                    <source src="videos/videos ps5/𝙲𝚊𝚕𝚕 𝚘𝚏 𝙳𝚞𝚝𝚢® 𝙱𝚕𝚊𝚌𝚔 𝙾𝚙𝚜 𝙲𝚘𝚕𝚍 𝚆𝚊𝚛 - 𝚃𝚛𝚊𝚒𝚕𝚎𝚛  Español Latino.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="game-actions">
-                <button class="buy-btn" onclick="addToCart()">
-                    <i class="fas fa-shopping-cart"></i> Comprar
-                </button>
-            </div>
-        </div>
-    </div>
-    <div class="juego">
-        <div class="juego-info">
-            <img src="https://i.pinimg.com/736x/02/58/e7/0258e72b1eb0c41033ec469481b49912.jpg" alt="The Witcher III" class="juego-img" />
-            <div class="titulo">
-                <h4>World War Z: Aftermath</h4>
-            </div>
-            <div class="description">
-                <p>World War Z es un juego cooperativo de disparos en tercera persona donde los jugadores enfrentan hordas masivas de zombis en distintas partes del mundo. Inspirado en la película del mismo nombre, ofrece misiones intensas, clases personalizables y un enfoque en el trabajo en equipo para sobrevivir.</p>
-            </div>
-            <div class="trailer">
-                <video width="100%" height="100%" controls>
-                    <source src="videos/videos ps5/World War Z Aftermath - Official Trailer  Summer of Gaming 2021.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="game-actions">
-                <button class="buy-btn" onclick="addToCart()">
-                    <i class="fas fa-shopping-cart"></i> Comprar
-                </button>
-            </div>
-        </div>
-    </div>
-    <div class="juego">
-        <div class="juego-info">
-            <img src="RECURSOS/EpY7cORUUAEZHjO.jpg" alt="Black 4 Blod" class="juego-img" />
-            <div class="titulo">
-                <h3>Black 4 Blood</h3>
-            </div>
-            <div class="description">
-                <p>Back 4 Blood es un juego cooperativo de disparos en primera persona donde los jugadores luchan contra hordas de zombis mutantes conocidos como "los infectados". Desarrollado por los creadores de *Left 4 Dead*, el juego combina acción intensa, trabajo en equipo y un sistema de cartas que modifica habilidades y desafíos en cada partida.</p>
-            </div>
-            <div class="trailer">
-                <video width="100%" height="100%" controls>
-                    <source src="videos/videos ps5/Trailer Revelación Back 4 Blood - Español Latino (Estreno Game Awards).mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="game-actions">
-                <button class="buy-btn" onclick="addToCart()">
-                    <i class="fas fa-shopping-cart"></i> Comprar
-                </button>
-            </div>
-        </div>
-    </div>
-</section>
+
 <!--FOOTER-->
 <footer>
     <p>The QuackZone – Donde el cuac se convierte en GG. 🦆</p>
     <p>&copy; 2025 The QuackZone. Todos los derechos reservados.</p>
     <div class="social-icons" >
         <a href="https://www.facebook.com" target="_blank" title="Facebook">
-            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-facebook fa-sm"></i>
         </a>
         <a href="https://www.whatsapp.com" target="_blank" title="WhatsApp">
-            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa- fa-smwhatsapp"></i>
         </a>
         <a href="https://www.twitter.com" target="_blank" title="Twitter">
-            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa- fa-smtwitter"></i>
         </a>
         <a href="https://www.instagram.com" target="_blank" title="Instagram">
-            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-instagram fa-sm"></i>
         </a>
         <a href="https://www.telgram.com" target="_blank" title="Telegram">
-            <i class="fa-brands fa-telegram"></i>
+            <i class="fa-brands fa-telegram fa-sm"></i>
         </a>
         <a href="http://www.discord.com" target="_blank" title="Discord">
-            <i class="fa-brands fa-discord"></i>
+            <i class="fa-brands fa-discord fa-sm"></i>
         </a>
     </div>
     <nav>
@@ -199,6 +244,20 @@
         </div>
     </div>
 </footer>
+<script>
+    const toggleBtn=document.querySelector('.toggle_btn')
+    const toggleBtnIcon=document.querySelector('.toggle_btn i')
+    const dropDownMenu=document.querySelector('.dropdown_menu')
+
+    toggleBtn.onclick= function (){
+        dropDownMenu.classList.toggle('open')
+        const isOpen = dropDownMenu.classList.contains('open')
+
+        toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+    }
+</script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script src="script.js"></script>

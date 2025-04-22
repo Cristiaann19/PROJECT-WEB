@@ -2,8 +2,9 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The QuackZone - Nintendo</title>
-    <link rel="stylesheet" href="styleNintendo.css">
+    <link rel="stylesheet" href="styleGen.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -11,16 +12,57 @@
 <body>
 <!--ENCABEZADO-->
 <header>
-    <div class="container">
+    <div class="navbar">
         <div class="logo">
             <a href="index.html"><img src="RECURSOS/image-removebg-preview (2).png"></a>
         </div>
-        <!--menu de navegacion-->
-        <nav>
-            <ul class="nav-list" id="nav-list">
-                <li><a href="#ps5">¡Grandes éxitos de Nintendo!</a></li>
-            </ul>
-        </nav>
+        <ul class="links">
+            <li><a href="JuegosPs5.html">PlayStation 5</a></li>
+            <li><a href="JuegosPs4.html">PlayStation 4</a></li>
+            <li><a href="JuegosPs3.html">PlayStation 3</a></li>
+            <li><a href="JuegosPC.html">PC</a></li>
+            <li><a href="JuegosNintendo.html">Nintendo</a></li>
+        </ul>
+        <div>
+            <a href="Loginv1.html" class="action_btn"><i class="fa-solid fa-user"></i></a>
+            <a href="#" class="action_btn"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#" onclick="ReproMusica()" id="BotonMusica" class="action_btn">
+                <i class="fa-solid fa-music"></i>
+                <audio id="Mmusica" src="RECURSOS/Mora - Ansiedades (Instrumental).mp3" preload="auto"></audio>
+            </a>
+            <a href="#" class="action_btn" id="toggle-btn">
+                <label for="toggle" id="label_toggle">
+                    <span id="icon" class="fa-solid fa-moon"></span>
+                </label>
+            </a>
+            <input type="checkbox" id="toggle" hidden>
+        </div>
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+    <div class="dropdown_menu">
+        <ul class="links">
+            <li><a href="JuegosPs5.html">PlayStation 5</a></li>
+            <li><a href="JuegosPs4.html">PlayStation 4</a></li>
+            <li><a href="JuegosPs3.html">PlayStation 3</a></li>
+            <li><a href="JuegosPC.html">PC</a></li>
+            <li><a href="JuegosNintendo.html">Nintendo</a></li>
+            <li><a href="Loginv1.html" class="action_btn"><i class="fa-solid fa-user"></i></a></li>
+            <li><a href="#" class="action_btn"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li>
+                <a href="#" class="action_btn" id="music-btn" onclick="reproducirMusica()">
+                    <i class="fa-solid fa-music"></i>
+                </a>
+                <audio id="musica" src="RECURSOS/Mora - Ansiedades (Instrumental).mp3"></audio>
+            </li>
+            <li>
+                <input type="checkbox" id="togle" hidden>
+                <label for="togle">
+                    <span id="icono" class="fa-solid fa-moon"></span>
+                </label>
+            </li>
+        </ul>
     </div>
 </header>
 
@@ -28,11 +70,11 @@
 <section id="home">
     <h2>¡Los más vendidos!</h2>
     <div class="parent">
-        <div><img src="https://i.pinimg.com/736x/5f/fc/5d/5ffc5d5bf74d612ae33355a00f4de920.jpg" alt="Super Mario Galaxy"></div>
-        <div><img src="https://i.pinimg.com/736x/f8/cc/e8/f8cce8f5a3bdbdd7cec2c6dc701ae23a.jpg" alt="Zelda breath world"></div>
-        <div><img src="https://i.pinimg.com/736x/ec/44/da/ec44da375728e3da0f0f5d26b8ca6e68.jpg" alt="Pokemos arceus"></div>
-        <div><img src="https://i.pinimg.com/736x/a1/f3/1b/a1f31bb3dd05e190a9bf026725303fe9.jpg" alt="Super Smash"></div>
-        <div><img src="https://i.pinimg.com/736x/55/7c/a9/557ca96d01c7c13194476995d948f1d4.jpg" alt="Donkey Kong"></div>
+        <div class="game"><img src="https://i.pinimg.com/736x/5f/fc/5d/5ffc5d5bf74d612ae33355a00f4de920.jpg" alt="Super Mario Galaxy"></div>
+        <div class="game"><img src="https://i.pinimg.com/736x/f8/cc/e8/f8cce8f5a3bdbdd7cec2c6dc701ae23a.jpg" alt="Zelda breath world"></div>
+        <div class="game"><img src="https://i.pinimg.com/736x/ec/44/da/ec44da375728e3da0f0f5d26b8ca6e68.jpg" alt="Pokemos arceus"></div>
+        <div class="game"><img src="https://i.pinimg.com/736x/a1/f3/1b/a1f31bb3dd05e190a9bf026725303fe9.jpg" alt="Super Smash"></div>
+        <div class="game"><img src="https://i.pinimg.com/736x/55/7c/a9/557ca96d01c7c13194476995d948f1d4.jpg" alt="Donkey Kong"></div>
     </div>
 </section>
 <section>
@@ -157,6 +199,20 @@
         </div>
     </div>
 </footer>
+<script>
+    const toggleBtn=document.querySelector('.toggle_btn')
+    const toggleBtnIcon=document.querySelector('.toggle_btn i')
+    const dropDownMenu=document.querySelector('.dropdown_menu')
+
+    toggleBtn.onclick= function (){
+        dropDownMenu.classList.toggle('open')
+        const isOpen = dropDownMenu.classList.contains('open')
+
+        toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+    }
+</script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script src="script.js"></script>

@@ -6,7 +6,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
-    font-size: 13px;
 }
 
 :root{
@@ -160,7 +159,7 @@ section#home {
 
 .parent {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
     max-width: 1200px;
     margin: auto;
@@ -168,7 +167,7 @@ section#home {
 
 .parent div {
     background-color: #625e5e;
-    border: none; /* Borde eliminado */
+    border: none;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -177,7 +176,7 @@ section#home {
 
 .parent div:hover {
     transform: scale(1.05) rotateZ(-1deg);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Nueva animación */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .parent img {
@@ -214,12 +213,6 @@ section#home {
     nav ul {
         flex-direction: column;
         margin-top: 10px;
-    }
-
-    .juego-img {
-        width: 100%;
-        max-width: 400px;
-        height: auto;
     }
 
     .h2 {
@@ -430,7 +423,7 @@ label #btn, label #cancel{
     object-fit: cover;
     border-radius: 12px;
     margin-left: 50px;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .titulo h3{
@@ -443,6 +436,7 @@ label #btn, label #cancel{
     padding: 10px;
     text-align: center;
     margin-left: 190px;
+    color: white;
 }
 
 .titulo h4 {
@@ -455,6 +449,7 @@ label #btn, label #cancel{
     padding: 10px;
     text-align: center;
     margin-left: 120px;
+    color: white;
 }
 
 .titulo h6{
@@ -467,6 +462,7 @@ label #btn, label #cancel{
     padding: 10px;
     text-align: center;
     margin-left: 270px;
+    color: white;
 }
 
 .description {
@@ -474,10 +470,11 @@ label #btn, label #cancel{
     grid-row: 2 / 3;
     padding: 15px;
     margin-right: 12px;
-    margin-left: 45px;
-    font-size: 14px;
+    margin-left: 25px;
+    font-size: 16px;
     line-height: 1.5;
     text-align: justify;
+    color: white;
     font-family: 'Comic Sans MS', sans-serif;
 }
 
@@ -494,6 +491,7 @@ label #btn, label #cancel{
     border-bottom: 2px solid #6ab02d;
     display: inline-block;
     padding-bottom: 4px;
+    margin-left: 60px;
 }
 
 .requisitos table {
@@ -542,6 +540,117 @@ label #btn, label #cancel{
     justify-content: flex-end;
     padding-top: 10px;
 }
+
+@media (max-width: 1000px) {
+    .juego-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    /* Orden del título */
+    .titulo {
+        order: 1;
+        font-size: 16px;
+        color: white;
+        margin-right: 220px;
+    }
+
+    /* Orden de la descripción */
+    .description {
+        order: 2;
+        font-size: 12px;
+        text-align: justify;
+        font-family: 'Comic Sans MS', sans-serif;
+        color: white;
+        margin-bottom: 15px;
+    }
+
+    /* Orden de la imagen */
+    .juego-img {
+        order: 3;
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+        border-radius: 50%;
+        display: block;
+        margin: 10px auto;
+    }
+
+    .requisitos h4 {
+        margin-bottom: 20px;
+        color: #6ab02d;
+        font-size: 15px;
+        border-bottom: 2px solid #6ab02d;
+        padding-bottom: 4px;
+    }
+
+
+    /* Orden de la tabla */
+    .requisitos {
+        order: 4;
+    }
+
+    table.scroll {
+        width: 90%;
+        border-spacing: 0;
+        margin: 0 auto;
+    }
+
+    table.scroll tbody,
+    table.scroll thead tr {
+        display: block;
+    }
+
+    table.scroll tbody {
+        height: 100px;
+        overflow-y: auto;
+        overflow-x: scroll;
+    }
+
+    table.scroll tbody td,
+    table.scroll thead th {
+        width: 140px;
+        padding: 8px;
+    }
+
+    table.scroll thead th:last-child {
+        width: 156px;
+    }
+
+    thead tr th {
+        height: 30px;
+        line-height: 30px;
+    }
+
+    tbody td:last-child, thead th:last-child {
+        border-right: none !important;
+    }
+
+    /* Orden del botón de compra */
+    .game-actions {
+        order: 5;
+    }
+
+    .buy-btn {
+        background: linear-gradient(to right, #ff7e5f, #cb7b3a);
+        color: #000000;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin: 10px auto;
+        padding: 15px 25px;
+        margin-left: 400px;
+    }
+}
+
 
 .buy-btn {
     background: linear-gradient(to right, #ff7e5f, #cb7b3a);

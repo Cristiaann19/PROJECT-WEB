@@ -6,7 +6,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
-    font-size: 13px;
 }
 
 :root{
@@ -33,7 +32,7 @@
 
 body{
     min-height: 100vh;
-    background-color: #ffffff;
+    background-color: var(--base-color);
 }
 
 li{
@@ -151,6 +150,8 @@ header {
 .dropdown_menu.open{
     height:500px ;
 }
+
+
 /*MAIN*/
 main {
     padding: 5px;
