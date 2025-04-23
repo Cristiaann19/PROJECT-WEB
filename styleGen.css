@@ -159,68 +159,10 @@ header {
 .dropdown_menu.open{
     height:500px ;
 }
+
+
+
 /* SECCIÓN DE JUEGOS */
-section#home {
-    padding: 40px 20px;
-    background-color: #ffffff;
-}
-
-.parent {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Más anchas */
-    gap: 20px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.parent div {
-    background-color: #625e5e;
-    border: none; /* Borde eliminado */
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.parent div:hover {
-    transform: scale(1.05) rotateZ(-1deg);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Nueva animación */
-}
-
-.parent img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* RESPONSIVE NAV Y GRID */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul {
-        flex-direction: column;
-        margin-top: 10px;
-    }
-}
-
-@media (max-width: 500px) {
-    .parent {
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* Más ancho en móviles también */
-    }
-
-    .logo img {
-        width: 50px;
-        height: 50px;
-    }
-
-    .logo h1 {
-        font-size: 20px;
-    }
-}
 
 footer {
     background-color: #6d7e6f;
@@ -316,19 +258,15 @@ label #btn, label #cancel{
     color: #333;
     text-decoration: none;
 }
-
-.social-icon.facebook { color: #1877f2; }
-.social-icon.twitter { color: #1c1c1c; }
-.social-icon.instagram { color: #e4405f; }
-.social-icon.fa-discord { color: #5865F2; }
-.social-icon.whatsapp { color: #25d366; }
-.social-icon.fa-telegram { color: #0088CC; }
-
-
 #home h2{
     margin-bottom: 30px;
 }
 
+
+
+/*============================*/
+/*============================*/
+/*============================*/
 /*SECCION DE COMPRA DE JUGOS*/
 .juego {
     background-color: #2e2e2e;
@@ -466,6 +404,11 @@ video:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 20px rgba(255, 126, 95, 0.5);
 }
+/*============================*/
+/*============================*/
+/*============================*/
+/*SECCION DE COMPRA DE JUGOS*/
+
 
 .juego-img {
     transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -476,8 +419,9 @@ video:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
-/*RESPONSIVE NAVBAR*/
-/*RESPONSIVE FIJO*/
+/*============================*/
+/*    NO TOQUES ESTO JUFER    */
+/*============================*/
 @media (max-width:992px ) {
     .navbar .links, .navbar .action_btn{
         display: none;
