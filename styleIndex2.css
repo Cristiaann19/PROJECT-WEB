@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Condensed+One&display=swap');
-
+/* RESET Y FUENTES */
 *{
     margin: 0;
     padding: 0;
@@ -22,6 +22,7 @@
     transition: background-color 0.3s ease, color 0.3s ease;
     color: white;
     font-family: "Special Gothic Condensed One", sans-serif;
+    font-size: 18px;
 }
 
 .links li a:hover {
@@ -130,13 +131,21 @@ header {
     top: 60px;
     width: 300px;
     height: 0;
-    background: transparent;
+    background: #4d5b50;
     backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
     transition: height 0.2s cubic-bezier(0.175,0.885,0.32,1.275);
 }
-.dropdown_menu .links li{
+
+.dropdown_menu .links .fa-solid{
+    font-size: 1rem;
+}
+
+.dropdown_menu .links li a {
+    font-size: 1rem  ;
+}
+.dropdown_menu .links li {
     padding: 0.7rem;
     display: flex;
     align-items: center;
@@ -150,7 +159,6 @@ header {
 .dropdown_menu.open{
     height:500px ;
 }
-
 
 /*MAIN*/
 main {
