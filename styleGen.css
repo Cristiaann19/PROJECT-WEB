@@ -34,6 +34,7 @@
 body{
     min-height: 100vh;
     background-color: var(--base-color);
+    overflow-x: hidden;
 }
 
 li{
@@ -213,26 +214,40 @@ main{
 }
 
 /*Seccion Imagenes*/
-.container-carrusel {
+section#home {
+    padding: 40px 20px;
+    background-color: var(--base-color);
+}
+
+.parent {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
-    margin: 20px;
-    padding: 0 20px;
+    max-width: 1200px;
+    margin: auto;
 }
 
-.game img {
+.parent div {
+    background-color: #625e5e;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.parent div:hover {
+    transform: scale(1.05) rotateZ(-1deg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.parent img {
     width: 100%;
-    height: 360px;
+    height: 100%;
     object-fit: cover;
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
 }
 
-.game img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
 
 /*h2*/
 h2{
@@ -374,14 +389,31 @@ video {
     transition: all 0.3s ease;
     border-radius: 10px;
 }
-
 video:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     filter: brightness(1.1);
 }
 
-
+.trailer iframe.video-juego {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 20px;
+    object-fit: cover;
+}
+h6{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+    font-size: 1.8em;
+    font-family: 'Orbitron', sans-serif;
+    padding: 10px;
+    text-align: center;
+    margin-left: 120px;
+    color: white;
+}
 .game-actions {
     grid-column: 2 / 3;
     grid-row: 4 / 5;
@@ -398,6 +430,12 @@ video:hover {
         justify-content: flex-start;
         width: 100%;
         text-align: center;
+        padding: 0;
+    }
+    .game-actions {
+        order: 5;
+        margin-top: 20px;
+        padding: 0; /* Asegúrate de que no haya relleno extra */
     }
 
     .titulo {
@@ -447,6 +485,7 @@ video:hover {
         border-radius: 10px;
         display: block;
         margin: 10px auto;
+        transition: none;
     }
 
     .trailer {
@@ -465,32 +504,27 @@ video:hover {
     }
 
     .buy-btn {
-        background: linear-gradient(to right, #ff7e5f, #cb7b3a);
-        color: #000000;
-        font-size: 11px;
-        font-weight: bold;
-        border: none;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        padding: 15px 25px;
-        margin: 0 auto;
+        padding: 12px 20px;
+        font-size: 14px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
         display: block;
-        margin-left: 400px;
+        margin-top: 10px;
     }
 
     .juego {
         background-color: #2e2e2e;
         border-radius: 20px;
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-        padding: 30px;
+        padding: 15px;
         margin: 40px auto;
-        max-width: 90%;
+        max-width: 100%;
     }
 }
 
 .buy-btn {
-    background: linear-gradient(to right, #ff7e5f, #cb7b3a);
+    background: var(--accent-color);
     color: #000000;
     padding: 12px 30px;
     font-size: 16px;
@@ -498,8 +532,11 @@ video:hover {
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    margin-right: 400px;
+    margin-left: auto;
+    margin-right: auto;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+
 }
 
 .buy-btn:hover {
