@@ -260,8 +260,12 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
-
 }
+
+footer p, a {
+    font-size: 16px;
+}
+
 footer nav {
     display: flex;
     justify-content: center;
@@ -549,91 +553,104 @@ label #btn, label #cancel{
         justify-content: flex-start;
         width: 100%;
         text-align: center;
-        padding: 20px 0;
     }
 
-    /* Orden del título */
-    .titulo {
+    .titulo h3 {
         order: 1;
-        font-size: 16px;
+        font-size: 18px;
         color: white;
-        margin-right: 220px;
+        margin: 5px 20px;
+        width: 100%;
+        text-align: center;
     }
 
-    /* Orden de la descripción */
+    .titulo h4 {
+        order: 1;
+        font-size: 18px;
+        color: white;
+        margin: 5px 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .titulo h6 {
+        order: 1;
+        font-size: 18px;
+        color: white;
+        margin: 5px 20px;
+        width: 100%;
+        text-align: center;
+    }
+
     .description {
         order: 2;
-        font-size: 12px;
+        font-size: 13px;
         text-align: justify;
         font-family: 'Comic Sans MS', sans-serif;
         color: white;
-        margin-bottom: 15px;
+        margin-top: 5px;
+        margin-left: 5px;
     }
 
-    /* Orden de la imagen */
     .juego-img {
         order: 3;
-        width: 100%;
+        width: 90%;
         height: auto;
-        max-width: 400px;
-        border-radius: 50%;
+        max-width: 300px;
+        border-radius: 10px;
         display: block;
         margin: 10px auto;
     }
 
+    .requisitos {
+        order: 4;
+        width: 100%;
+        overflow-x: auto;
+    }
+
     .requisitos h4 {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
+        margin-right: 55px;
         color: #6ab02d;
-        font-size: 15px;
+        font-size: 12px;
         border-bottom: 2px solid #6ab02d;
         padding-bottom: 4px;
     }
-    
 
-    /* Orden de la tabla */
-    .requisitos {
-        order: 4;
-    }
-
-    table.scroll {
-        width: 90%;
-        border-spacing: 0;
+    table {
+        width: 80%;
+        max-width: 350px;
+        font-size: 8px;
+        border-collapse: collapse;
+        background-color: #1a1a1a;
+        color: white;
         margin: 0 auto;
     }
 
-    table.scroll tbody,
-    table.scroll thead tr {
-        display: block;
+    thead {
+        background-color: #333;
     }
 
-    table.scroll tbody {
-        height: 100px;
-        overflow-y: auto;
-        overflow-x: scroll;
+    th, td {
+        padding: 6px;
+        text-align: left;
+        border: 1px solid #444;
+        word-break: break-word;
+        white-space: normal;
     }
 
-    table.scroll tbody td,
-    table.scroll thead th {
-        width: 140px;
-        padding: 8px;
+    tbody {
+        display: table-row-group;
+        overflow-x: auto;
     }
 
-    table.scroll thead th:last-child {
-        width: 156px;
+    tr {
+        table-layout: auto;
     }
 
-    thead tr th {
-        height: 30px;
-        line-height: 30px;
-    }
-
-    tbody td:last-child, thead th:last-child {
-        border-right: none !important;
-    }
-
-    /* Orden del botón de compra */
     .game-actions {
         order: 5;
+        margin-top: 20px;
     }
 
     .buy-btn {
@@ -645,12 +662,21 @@ label #btn, label #cancel{
         border-radius: 50%;
         cursor: pointer;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        margin: 10px auto;
         padding: 15px 25px;
+        margin: 0 auto;
+        display: block;
         margin-left: 400px;
     }
-}
 
+    .juego {
+        background-color: #2e2e2e;
+        border-radius: 20px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        padding: 30px;
+        margin: 40px auto;
+        max-width: 90%;
+    }
+}
 
 .buy-btn {
     background: linear-gradient(to right, #ff7e5f, #cb7b3a);

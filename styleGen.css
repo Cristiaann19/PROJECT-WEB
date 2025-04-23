@@ -169,8 +169,12 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
-
 }
+
+footer p, a {
+    font-size: 16px;
+}
+
 footer nav {
     display: flex;
     justify-content: center;
@@ -262,8 +266,6 @@ label #btn, label #cancel{
     margin-bottom: 30px;
 }
 
-
-
 /*============================*/
 /*============================*/
 /*============================*/
@@ -317,6 +319,7 @@ label #btn, label #cancel{
     padding: 10px;
     text-align: center;
     margin-left: 190px;
+    color: white;
 }
 
 .titulo h4 {
@@ -329,6 +332,7 @@ label #btn, label #cancel{
     padding: 10px;
     text-align: center;
     margin-left: 120px;
+    color: white;
 }
 
 .description {
@@ -341,6 +345,7 @@ label #btn, label #cancel{
     line-height: 1.5;
     text-align: justify;
     font-family: 'Comic Sans MS', sans-serif;
+    color: white;
 }
 
 .trailer {
@@ -385,6 +390,105 @@ video:hover {
     display: flex;
     justify-content: flex-end;
     padding-top: 10px;
+}
+
+@media (max-width: 1000px) {
+    .juego-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        text-align: center;
+    }
+
+    .titulo {
+        order: 1;
+        width: 100%;
+    }
+
+    .titulo h3 {
+        font-size: 18px;
+        color: white;
+        margin: 5px 20px;
+        text-align: center;
+        margin-left: 67px;
+    }
+
+    .titulo h4 {
+        font-size: 18px;
+        color: white;
+        margin: 5px 20px;
+        text-align: center;
+        margin-left: 35px;
+    }
+
+    .titulo h6 {
+        font-size: 18px;
+        color: white;
+        margin: 5px 20px;
+        text-align: center;
+        margin-left: 48px;
+    }
+
+    .description {
+        order: 2;
+        font-size: 13px;
+        text-align: justify;
+        font-family: 'Comic Sans MS', sans-serif;
+        color: white;
+        margin-top: 1px;
+        margin-left: 20px;
+    }
+
+    .juego-img {
+        order: 3;
+        width: 80%;
+        height: auto;
+        max-width: 300px;
+        border-radius: 10px;
+        display: block;
+        margin: 10px auto;
+    }
+
+    .trailer {
+        order: 4;
+        width: 90%;
+        height: auto;
+        max-width: 300px;
+        border-radius: 10px;
+        display: block;
+        margin: 10px auto;
+    }
+
+    .game-actions {
+        order: 5;
+        margin-top: 20px;
+    }
+
+    .buy-btn {
+        background: linear-gradient(to right, #ff7e5f, #cb7b3a);
+        color: #000000;
+        font-size: 11px;
+        font-weight: bold;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding: 15px 25px;
+        margin: 0 auto;
+        display: block;
+        margin-left: 400px;
+    }
+
+    .juego {
+        background-color: #2e2e2e;
+        border-radius: 20px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        padding: 30px;
+        margin: 40px auto;
+        max-width: 90%;
+    }
 }
 
 .buy-btn {
