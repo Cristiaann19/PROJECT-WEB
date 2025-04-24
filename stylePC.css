@@ -654,18 +654,13 @@ label #btn, label #cancel{
     }
 
     .buy-btn {
-        background: linear-gradient(to right, #ff7e5f, #cb7b3a);
-        color: #000000;
-        font-size: 16px;
-        font-weight: bold;
-        border: none;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        padding: 15px 25px;
-        margin: 0 auto;
+        padding: 12px 20px;
+        font-size: 14px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
         display: block;
-        margin-left: 400px;
+        margin-top: 10px;
     }
 
     .juego {
@@ -679,7 +674,7 @@ label #btn, label #cancel{
 }
 
 .buy-btn {
-    background: linear-gradient(to right, #ff7e5f, #cb7b3a);
+    background: var(--accent-color);
     color: #000000;
     padding: 12px 30px;
     font-size: 16px;
@@ -687,8 +682,10 @@ label #btn, label #cancel{
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    margin-right: 400px;
+    margin-left: auto;
+    margin-right: auto;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
 }
 
 .buy-btn:hover {
