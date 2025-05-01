@@ -130,7 +130,7 @@ header {
     top: 60px;
     width: 300px;
     height: 0;
-    background: transparent;
+    background: #4d5b50;
     backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
@@ -146,9 +146,10 @@ header {
     width: 100%;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 .dropdown_menu.open{
-    height:500px ;
+    height:510px ;
 }
 
 /* SECCIÓN DE JUEGOS */
@@ -235,25 +236,7 @@ section#home {
 
 }
 
-@media (max-width: 500px) {
-    .logo img {
-        width: 15rem;
-        margin: 0px 30px;
 
-    }
-    .parent {
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* Más ancho en móviles también */
-    }
-
-    .logo img {
-        width: 50px;
-        height: 50px;
-    }
-
-    .logo h1 {
-        font-size: 20px;
-    }
-}
 
 footer {
     background-color: #6d7e6f;
@@ -747,24 +730,6 @@ footer nav a {
     cursor: pointer;
 }
 
-.dark {
-    background-color: black;
-    color: white;
-    transition: all 1.5s ease;
-}
-
-.dark header {
-    background-color: #1a1a1a;
-}
-
-.dark h2, .dark h3, .dark .descripcion {
-    color: #ffffff;
-}
-
-.dark .descripcion {
-    background: rgba(255, 255, 255, 0.1);
-}
-
 body.dark-mode {
     background-color: #121212;
     color: #fff;
@@ -794,16 +759,8 @@ h3.dark-mode {
     display: none;
 }
 
-.dark header {
-    background-color: #1a1a1a;
-}
-
-.dark h2, .dark h3, .dark .descripcion {
-    color: #ffffff;
-}
-
 .dark-mode header {
-    background-color: #204d21;
+    background-color: #444141;
     color: white;
     padding: 1rem;
     display: flex;
@@ -833,7 +790,7 @@ h3.dark-mode {
 }
 
 .dark-mode #icon.fa-sun {
-    color: black;
+    color: white;
 }
 
 .logo h1 {
@@ -935,3 +892,4 @@ h3.dark-mode {
 #togle {
     display: none;
 }
+

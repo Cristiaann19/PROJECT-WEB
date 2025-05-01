@@ -57,16 +57,18 @@
                 <audio id="musica" src="RECURSOS/Mora - Ansiedades (Instrumental).mp3"></audio>
             </li>
             <li>
-                <input type="checkbox" id="togle" hidden>
-                <label for="togle">
-                    <span id="icono" class="fa-solid fa-moon"></span>
-                </label>
+                <a href="#" class="action_btn" id="toggle-btn2">
+                    <label for="toggle" id="label_toggle2">
+                        <span id="icon2" class="fa-solid fa-moon"></span>
+                    </label>
+                </a>
+                <input type="checkbox" id="togle2" hidden>
             </li>
         </ul>
     </div>
 </header>
 <!--CUERPO-->
-<section id="home">
+<section>
     <h2>¡Los más vendidos!</h2>
     <div class="parent">
         <div><img src="https://i.pinimg.com/736x/0c/0d/fb/0c0dfb2c74fcb81ec51b3f487bd415c7.jpg" alt="RRD2"></div>
@@ -87,7 +89,8 @@
             <div class="description">
                 <p>The Witcher 3: Wild Hunt, es un RPG de mundo abierto que sigue la historia de Geralt de Rivia, un cazador de monstruos en busca de su hija adoptiva en un mundo vasto y lleno de criaturas míticas. El juego destaca por su narrativa profunda, decisiones morales complejas y un sistema de combate dinámico.</p>
             </div>
-            <!--TABLAS VERIFICAR MARGIN -->
+            <!--TABLAS VERIFICAR MARGIN-->
+
             <div class="requisitos">
                 <h4>Requisitos del Sistema – The Witcher 3: Wild Hunt (PC)</h4>
                 <table class="scroll" border="1" cellpadding="8" cellspacing="0">
@@ -125,7 +128,7 @@
                     </tr>
                     </tbody>
                 </table>
-            </div>-->
+            </div>
             <div class="game-actions">
                 <button class="buy-btn" onclick="addToCart()">
                     <i class="fas fa-shopping-cart"></i> Comprar
@@ -549,20 +552,7 @@
         </div>
     </div>
 </footer>
-<script>
-    const toggleBtn=document.querySelector('.toggle_btn')
-    const toggleBtnIcon=document.querySelector('.toggle_btn i')
-    const dropDownMenu=document.querySelector('.dropdown_menu')
 
-    toggleBtn.onclick= function (){
-        dropDownMenu.classList.toggle('open')
-        const isOpen = dropDownMenu.classList.contains('open')
-
-        toggleBtnIcon.classList = isOpen
-            ? 'fa-solid fa-xmark'
-            : 'fa-solid fa-bars'
-    }
-</script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script src="script.js"></script>

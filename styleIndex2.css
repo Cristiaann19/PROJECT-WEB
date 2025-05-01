@@ -150,14 +150,16 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 .dropdown_menu .action_btn{
     width: 100%;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 .dropdown_menu.open{
-    height:500px ;
+    height:510px ;
 }
 
 /*MAIN*/
@@ -355,7 +357,7 @@ footer nav a:hover {
 .navbar .links a {
     text-decoration: none;
     color: var(--base-color);
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 /* Body */
@@ -382,7 +384,9 @@ body.dark-mode {
 .dark-mode .descripcion {
     background: rgb(98, 94, 94);
 }
+.dark-mode #home{
 
+}
 
 /* Estilo del icono del toggle (de la luna al sol) */
 #icon.fa-sun {

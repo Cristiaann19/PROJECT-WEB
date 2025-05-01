@@ -1,3 +1,150 @@
+//FUNCION DEL NAVBAR- MENU_HANBURGERSA//
+const toggleBtn = document.querySelector('.toggle_btn')
+const toggleBtnIcon = document.querySelector('.toggle_btn i')
+const dropDownMenu = document.querySelector('.dropdown_menu')
+
+toggleBtn.onclick = function () {
+    dropDownMenu.classList.toggle('open')
+    const isOpen = dropDownMenu.classList.contains('open')
+
+    toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+}
+//2 FUNCIONES PARA REPRODUCIR MODO OSCURO
+function reproducirMusica() {
+    const music = document.getElementById("musica");
+    const musicIcon = document.querySelector("#music-btn i");
+    if (music.paused) {
+        music.play();
+        musicIcon.classList.remove("fa-music");
+        musicIcon.classList.add("fa-pause");
+    } else {
+        music.pause();
+        musicIcon.classList.remove("fa-pause");
+        musicIcon.classList.add("fa-music");
+    }
+}
+
+function ReproMusica() {
+    const music = document.getElementById("Mmusica");
+    const musicIcon = document.querySelector("#BotonMusica i");
+
+    if (music.paused) {
+        music.play();
+        musicIcon.classList.remove("fa-music");
+        musicIcon.classList.add("fa-pause");
+    } else {
+        music.pause();
+        musicIcon.classList.remove("fa-pause");
+        musicIcon.classList.add("fa-music");
+    }
+}
+
+
+//FUNCIONES PARA EL MODO OSCURO
+//funcion 1 pantalla grande
+const toggle = document.getElementById('toggle');
+const icon = document.getElementById('icon');
+const body = document.body;
+const h3Elements = document.querySelectorAll('h3');
+const header = document.querySelector('header');
+const navLinks = document.querySelectorAll('.links li a');
+
+function enableDarkMode() {
+    body.classList.add('dark-mode');
+    icon.classList.remove('fa-moon');
+    icon.classList.add('fa-sun');
+    localStorage.setItem('darkMode', 'enabled');
+    h3Elements.forEach(h3 => h3.classList.add('dark-mode'));
+    header.classList.add('dark-mode');
+    navLinks.forEach(a => a.classList.add('dark-mode'));
+}
+
+function disableDarkMode() {
+    body.classList.remove('dark-mode');
+    icon.classList.remove('fa-sun');
+    icon.classList.add('fa-moon');
+    localStorage.setItem('darkMode', 'disabled');
+    h3Elements.forEach(h3 => h3.classList.remove('dark-mode'));
+    header.classList.remove('dark-mode');
+    navLinks.forEach(a => a.classList.remove('dark-mode'));
+}
+
+if (localStorage.getItem('darkMode') === 'enabled') {
+    toggle.checked = true;
+    enableDarkMode();
+}
+
+toggle.addEventListener('change', function () {
+    if (this.checked) {
+        enableDarkMode();
+    } else {
+        disableDarkMode();
+    }
+});
+
+//funcion 2
+
+document.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.getElementById('toggle');
+    const icon = document.getElementById('icon2');
+    const body = document.body;
+    const h3Elements = document.querySelectorAll('h3');
+    const header = document.querySelector('header');
+    const navLinks = document.querySelectorAll('.links li a');
+
+    function enableDarkMode() {
+        body.classList.add('dark-mode');
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+        localStorage.setItem('darkMode', 'enabled');
+        h3Elements.forEach(h3 => h3.classList.add('dark-mode'));
+        header.classList.add('dark-mode');
+        navLinks.forEach(a => a.classList.add('dark-mode'));
+    }
+});
+
+function disableDarkMode() {
+    body.classList.remove('dark-mode');
+    icon.classList.remove('fa-sun');
+    icon.classList.add('fa-moon');
+    localStorage.setItem('darkMode', 'disabled');
+    h3Elements.forEach(h3 => h3.classList.remove('dark-mode'));
+    header.classList.remove('dark-mode');
+    navLinks.forEach(a => a.classList.remove('dark-mode'));
+}
+
+if (localStorage.getItem('darkMode') === 'enabled') {
+    toggle.checked = true;
+    enableDarkMode();
+}
+
+toggle.addEventListener('change', function () {
+    if (this.checked) {
+        enableDarkMode();
+    } else {
+        disableDarkMode();
+    }
+});
+
+//CAMBIO DE ICONO AL PRESIONAR
+//funcion 1
+const toggleCheckbox = document.getElementById('toggle');
+
+toggleCheckbox.addEventListener('change', function () {
+    if (this.checked) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+    } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+    }
+});
+
+
+
+
 //VERIFIACADOR DE CONTRASEÑAS
 const form = document.getElementById('form')
 const firstname_input = document.getElementById('firstname-input')
