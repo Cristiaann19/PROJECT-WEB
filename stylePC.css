@@ -139,7 +139,7 @@ header {
     top: 60px;
     width: 300px;
     height: 0;
-    background: #4d5b50;
+    background: #4d5b50ae;
     backdrop-filter: blur(15px);
     overflow: hidden;
     transition: height 0.2s cubic-bezier(0.175,0.885,0.32,1.275);
@@ -236,6 +236,7 @@ section {
     align-items: center;
     gap: 40px; /* espacio entre juegos */
     margin-top: 40px;
+    animation: fadeIn 0.8s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -402,19 +403,6 @@ footer nav a {
 
 footer nav a:hover {
     text-decoration: underline;
-}
-.payment-logos ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.payment-logos li img {
-    width: 200px;
-    height: auto;
 }
 /* ========================== */
 /*      SOCIAL ICONS          */
