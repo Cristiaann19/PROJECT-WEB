@@ -10,516 +10,568 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-<!--ENCABEZADO-->
-<header>
-    <div class="navbar">
-        <div class="logo">
-            <a href="index.html"><img src="RECURSOS/logoPagina.png"></a>
-        </div>
-        <ul class="links">
-            <li><a href="JuegosPs5.html">PlayStation 5</a></li>
-            <li><a href="JuegosPs4.html">PlayStation 4</a></li>
-            <li><a href="JuegosPs3.html">PlayStation 3</a></li>
-            <li><a href="JuegosPC.html">PC</a></li>
-            <li><a href="JuegosNintendo.html">Nintendo</a></li>
-        </ul>
-        <div>
-            <a href="Loginv1.html" class="action_btn"><i class="fa-solid fa-user"></i></a>
-            <a href="#" class="action_btn"><i class="fa-solid fa-cart-shopping"></i></a>
-            <a href="#" onclick="ReproMusica()" id="BotonMusica" class="action_btn">
-                <i class="fa-solid fa-music"></i>
-                <audio id="Mmusica" src="RECURSOS/Mora - Ansiedades (Instrumental).mp3" preload="auto"></audio>
-            </a>
-            <a href="#" class="action_btn" id="toggle-btn">
-                <label for="toggle" id="label_toggle">
-                    <span id="icon" class="fa-solid fa-moon"></span>
-                </label>
-            </a>
-            <input type="checkbox" id="toggle" hidden>
-        </div>
-        <div class="toggle_btn">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-    </div>
-    <div class="dropdown_menu">
-        <ul class="links">
-            <li><a href="JuegosPs5.html">PlayStation 5</a></li>
-            <li><a href="JuegosPs4.html">PlayStation 4</a></li>
-            <li><a href="JuegosPs3.html">PlayStation 3</a></li>
-            <li><a href="JuegosPC.html">PC</a></li>
-            <li><a href="JuegosNintendo.html">Nintendo</a></li>
-            <li><a href="Loginv1.html" class="action_btn"><i class="fa-solid fa-user"></i></a></li>
-            <li><a href="#" class="action_btn"><i class="fa-solid fa-cart-shopping"></i></a></li>
-            <li>
-                <a href="#" class="action_btn" id="music-btn" onclick="reproducirMusica()">
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="RECURSOS/logoPagina.png"></a>
+            </div>
+            <ul class="links">
+                <li><a href="JuegosPs5.html">PlayStation 5</a></li>
+                <li><a href="JuegosPs4.html">PlayStation 4</a></li>
+                <li><a href="JuegosPs3.html">PlayStation 3</a></li>
+                <li><a href="JuegosPC.html">PC</a></li>
+                <li><a href="JuegosNintendo.html">Nintendo</a></li>
+            </ul>
+            <div>
+                <a href="Loginv1.html" class="action_btn"><i class="fa-solid fa-user"></i></a>
+                <a href="#" class="action_btn"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="#" onclick="ReproMusica()" id="BotonMusica" class="action_btn">
                     <i class="fa-solid fa-music"></i>
+                    <audio id="Mmusica" src="RECURSOS/Mora - Ansiedades (Instrumental).mp3" preload="auto"></audio>
                 </a>
-                <audio id="musica" src="RECURSOS/Mora - Ansiedades (Instrumental).mp3"></audio>
-            </li>
-            <li>
-                <a href="#" class="action_btn" id="toggle-btn2">
-                    <label for="toggle" id="label_toggle2">
-                        <span id="icon2" class="fa-solid fa-moon"></span>
+                <a href="#" class="action_btn" id="toggle-btn">
+                    <label for="toggle" id="label_toggle">
+                        <span id="icon" class="fa-solid fa-moon"></span>
                     </label>
                 </a>
-                <input type="checkbox" id="togle2" hidden>
-            </li>
-        </ul>
-    </div>
-</header>
-<!--CUERPO-->
-<section>
-    <h2>¡Los más vendidos!</h2>
-    <div class="parent">
-        <div><img src="https://i.pinimg.com/736x/0c/0d/fb/0c0dfb2c74fcb81ec51b3f487bd415c7.jpg" alt="RRD2"></div>
-        <div><img src="https://i.pinimg.com/736x/45/dc/34/45dc347a687cc73b991d5da9a7708d2e.jpg" alt="COD black ops cold at war"></div>
-        <div><img src="https://i.pinimg.com/736x/88/03/e2/8803e2090ffd416e3e19abc1fcab7eda.jpg" alt="Assassin's Creed Valhalla"></div>
-        <div><img src="https://i.pinimg.com/736x/51/08/5d/51085df978980b6e34a614a555ff3c1b.jpg" alt="Cyberpunk"></div>
-        <div><img src="https://i.pinimg.com/736x/fc/22/3f/fc223f554bf3d82ebc669e8e0ea2555b.jpg" alt="GTA San Andreas"></div>
-    </div>
-</section>
-
-<section>
-    <div class="juego">
-        <div class="juego-info">
-            <img src="https://i.pinimg.com/736x/5d/8a/41/5d8a41501af6aab5d2e754de44f58834.jpg" alt="The Witcher III" class="juego-img" />
-            <div class="titulo">
-                <h3>The Witcher III</h3>
+                <input type="checkbox" id="toggle" hidden>
             </div>
-            <div class="description">
-                <p>The Witcher 3: Wild Hunt, es un RPG de mundo abierto que sigue la historia de Geralt de Rivia, un cazador de monstruos en busca de su hija adoptiva en un mundo vasto y lleno de criaturas míticas. El juego destaca por su narrativa profunda, decisiones morales complejas y un sistema de combate dinámico.</p>
-            </div>
-            <!--TABLAS VERIFICAR MARGIN-->
-
-            <div class="requisitos">
-                <h4>Requisitos del Sistema – The Witcher 3: Wild Hunt (PC)</h4>
-                <table class="scroll" border="1" cellpadding="8" cellspacing="0">
-                    <thead>
-                    <tr>
-                        <th>Requisitos</th>
-                        <th>Mínimo</th>
-                        <th>Recomendado</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Sistema Operativo</td>
-                        <td>Windows 7/8/10 (64 bits)</td>
-                        <td>Windows 10 (64 bits)</td>
-                    </tr>
-                    <tr>
-                        <td>Procesador</td>
-                        <td>Intel Core i5-2500K / AMD Phenom II X4 940</td>
-                        <td>Intel Core i7 3770 / AMD FX-8350</td>
-                    </tr>
-                    <tr>
-                        <td>RAM</td>
-                        <td>6 GB</td>
-                        <td>8 GB</td>
-                    </tr>
-                    <tr>
-                        <td>Tarjeta Gráfica</td>
-                        <td>NVIDIA GTX 660 / AMD Radeon HD 7870</td>
-                        <td>NVIDIA GTX 770 / AMD Radeon R9 290</td>
-                    </tr>
-                    <tr>
-                        <td>Espacio en disco</td>
-                        <td colspan="2">35 GB disponibles</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="game-actions">
-                <button class="buy-btn" onclick="addToCart()">
-                    <i class="fas fa-shopping-cart"></i> Comprar
-                </button>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
             </div>
         </div>
-    </div>
-
-    <div class="juego">
-        <div class="juego-info">
-            <img src="https://i.pinimg.com/736x/88/7a/6a/887a6a734f7eaa4f9bc10432f3e83e62.jpg" alt="Spiderman Miles Morales" class="juego-img" />
-            <div class="titulo">
-                <h4>Spider-Man Miles Morales</h4>
+        <div class="dropdown_menu">
+            <ul class="links">
+                <li><a href="JuegosPs5.html">PlayStation 5</a></li>
+                <li><a href="JuegosPs4.html">PlayStation 4</a></li>
+                <li><a href="JuegosPs3.html">PlayStation 3</a></li>
+                <li><a href="JuegosPC.html">PC</a></li>
+                <li><a href="JuegosNintendo.html">Nintendo</a></li>
+                <li><a href="Loginv1.html" class="action_btn"><i class="fa-solid fa-user"></i></a></li>
+                <li><a href="#" class="action_btn"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li>
+                    <a href="#" class="action_btn" id="music-btn" onclick="reproducirMusica()">
+                        <i class="fa-solid fa-music"></i>
+                    </a>
+                    <audio id="musica" src="RECURSOS/Mora - Ansiedades (Instrumental).mp3"></audio>
+                </li>
+                <li>
+                    <a href="#" class="action_btn" id="toggle-btn2">
+                        <label for="toggle" id="label_toggle2">
+                            <span id="icon2" class="fa-solid fa-moon"></span>
+                        </label>
+                    </a>
+                    <input type="checkbox" id="togle2" hidden>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <section>
+        <h2>¡Los más vendidos!</h2>
+        <div class="parent">
+            <div><img src="https://i.pinimg.com/736x/0c/0d/fb/0c0dfb2c74fcb81ec51b3f487bd415c7.jpg" alt="RRD2"></div>
+            <div><img src="https://i.pinimg.com/736x/45/dc/34/45dc347a687cc73b991d5da9a7708d2e.jpg" alt="COD black ops cold at war"></div>
+            <div><img src="https://i.pinimg.com/736x/88/03/e2/8803e2090ffd416e3e19abc1fcab7eda.jpg" alt="Assassin's Creed Valhalla"></div>
+            <div><img src="https://i.pinimg.com/736x/51/08/5d/51085df978980b6e34a614a555ff3c1b.jpg" alt="Cyberpunk"></div>
+            <div><img src="https://i.pinimg.com/736x/fc/22/3f/fc223f554bf3d82ebc669e8e0ea2555b.jpg" alt="GTA San Andreas"></div>
+        </div>
+    </section>
+    <main class="centrado">
+        <div class="juegos-wrapper">
+            <div class="contenedor">
+                <div class="section1">
+                    <img src="https://i.pinimg.com/736x/5d/8a/41/5d8a41501af6aab5d2e754de44f58834.jpg" alt="The Witcher III"  />
+                </div>
+                <div class="derecha">
+                    <div class="div1">
+                        <h2>The Witcher III</h2>
+                    </div>
+                    <div class="section2" hidden>
+                        <img src="https://i.pinimg.com/736x/5d/8a/41/5d8a41501af6aab5d2e754de44f58834.jpg" alt="The Witcher III"  />
+                    </div>
+                    <div class="div2">
+                        <p>The Witcher 3: Wild Hunt, es un RPG de mundo abierto que sigue la historia de Geralt de Rivia, un cazador de monstruos en busca de su hija adoptiva en un mundo vasto y lleno de criaturas míticas. El juego destaca por su narrativa profunda, decisiones morales complejas y un sistema de combate dinámico.</p>
+                    </div>
+                    <div class="div3">
+                        <h4>Requisitos del Sistema</h4>
+                        <br>
+                        <table class="scroll" border="1" cellpadding="8" cellspacing="0">
+                            <thead>
+                            <tr>
+                                <th>Requisitos</th>
+                                <th>Mínimo</th>
+                                <th>Recomendado</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Sistema Operativo</td>
+                                <td>Windows 7/8/10 (64 bits)</td>
+                                <td>Windows 10 (64 bits)</td>
+                            </tr>
+                            <tr>
+                                <td>Procesador</td>
+                                <td>Intel Core i5-2500K / AMD Phenom II X4 940</td>
+                                <td>Intel Core i7 3770 / AMD FX-8350</td>
+                            </tr>
+                            <tr>
+                                <td>RAM</td>
+                                <td>6 GB</td>
+                                <td>8 GB</td>
+                            </tr>
+                            <tr>
+                                <td>Tarjeta Gráfica</td>
+                                <td>NVIDIA GTX 660 / AMD Radeon HD 7870</td>
+                                <td>NVIDIA GTX 770 / AMD Radeon R9 290</td>
+                            </tr>
+                            <tr>
+                                <td>Espacio en disco</td>
+                                <td colspan="2">35 GB disponibles</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="div4">
+                        <br>
+                        <button class="buy-btn" onclick="addToCart()">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="description">
-                <p>Spider-Man: Miles Morales, Miles asume el manto de Spider-Man mientras enfrenta una nueva amenaza en Nueva York. Con poderes únicos como el Veneno y la invisibilidad, lucha por equilibrar su vida como adolescente y héroe en un mundo lleno de peligros.</p>
+            <div class="contenedor">
+                <div class="section1">
+                    <img src="https://i.pinimg.com/736x/88/7a/6a/887a6a734f7eaa4f9bc10432f3e83e62.jpg" alt="Spiderman Miles Morales" class="juego-img" />
+                </div>
+                <div class="derecha">
+                    <div class="div1">
+                        <h2>Spider-Man Miles Morales</h2>
+                    </div>
+                    <div class="section2" hidden>
+                        <img src="https://i.pinimg.com/736x/88/7a/6a/887a6a734f7eaa4f9bc10432f3e83e62.jpg" alt="Spiderman Miles Morales" class="juego-img" />
+                    </div>
+                    <div class="div2">
+                        <p>Spider-Man: Miles Morales, Miles asume el manto de Spider-Man mientras enfrenta una nueva amenaza en Nueva York. Con poderes únicos como el Veneno y la invisibilidad, lucha por equilibrar su vida como adolescente y héroe en un mundo lleno de peligros.</p>
+                    </div>
+                    <div class="div3">
+                        <h4>Requisitos del Sistema</h4>
+                        <br>
+                        <table class="scroll" border="1" cellpadding="8" cellspacing="0">
+                            <thead>
+                            <tr>
+                                <th>Requisitos</th>
+                                <th>Mínimo</th>
+                                <th>Recomendado</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Sistema Operativo</td>
+                                <td>Windows 10 (64 bits)</td>
+                                <td>Windows 10/11 (64 bits)</td>
+                            </tr>
+                            <tr>
+                                <td>Procesador</td>
+                                <td>Intel Core i3-4160 / AMD equivalente</td>
+                                <td>Intel Core i5-4670 / AMD Ryzen 5 1600</td>
+                            </tr>
+                            <tr>
+                                <td>RAM</td>
+                                <td>8 GB</td>
+                                <td>16 GB</td>
+                            </tr>
+                            <tr>
+                                <td>Tarjeta Gráfica</td>
+                                <td>NVIDIA GTX 950 / AMD Radeon RX 470</td>
+                                <td>NVIDIA GTX 1060 6GB / AMD Radeon RX 580</td>
+                            </tr>
+                            <tr>
+                                <td>Espacio en disco</td>
+                                <td colspan="2">75 GB (SSD recomendado)</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="div4">
+                        <br>
+                        <button class="buy-btn" onclick="addToCart()">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="requisitos">
-                <h4>Requisitos del Sistema – Spider-Man: Miles Morales (PC)</h4>
-                <table class="scroll" border="1" cellpadding="8" cellspacing="0">
-                    <thead>
-                    <tr>
-                        <th>Requisitos</th>
-                        <th>Mínimo</th>
-                        <th>Recomendado</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Sistema Operativo</td>
-                        <td>Windows 10 (64 bits)</td>
-                        <td>Windows 10/11 (64 bits)</td>
-                    </tr>
-                    <tr>
-                        <td>Procesador</td>
-                        <td>Intel Core i3-4160 / AMD equivalente</td>
-                        <td>Intel Core i5-4670 / AMD Ryzen 5 1600</td>
-                    </tr>
-                    <tr>
-                        <td>RAM</td>
-                        <td>8 GB</td>
-                        <td>16 GB</td>
-                    </tr>
-                    <tr>
-                        <td>Tarjeta Gráfica</td>
-                        <td>NVIDIA GTX 950 / AMD Radeon RX 470</td>
-                        <td>NVIDIA GTX 1060 6GB / AMD Radeon RX 580</td>
-                    </tr>
-                    <tr>
-                        <td>Espacio en disco</td>
-                        <td colspan="2">75 GB (SSD recomendado)</td>
-                    </tr>
-                    </tbody>
-                </table>
+            <div class="contenedor">
+                <div class="section1">
+                    <img src="RECURSOS/dark-souls-3-the-fire-fades-edition-519671.9.webp" alt="Dark Souls 3" class="juego-img" />
+                </div>
+                <div class="derecha">
+                    <div class="div1">
+                        <h2>Dark Souls III</h2>
+                    </div>
+                    <div class="section2" hidden>
+                        <img src="RECURSOS/dark-souls-3-the-fire-fades-edition-519671.9.webp" alt="Dark Souls 3" class="juego-img" />
+                    </div>
+                    <div class="div2">
+                        <p>Dark Souls III es un juego de rol y acción en un mundo oscuro y decadente, donde los jugadores enfrentan enemigos implacables y jefes colosales mientras exploran ruinas llenas de secretos. Con una jugabilidad desafiante y atmósfera sombría, ofrece una experiencia intensa de combate, exploración y superación constante.</p>
+                    </div>
+                    <div class="div3">
+                        <h4>Requisitos del Sistema</h4>
+                        <br>
+                        <table class="scroll" border="1" cellpadding="8" cellspacing="0">
+                            <thead>
+                            <tr>
+                                <th>Requisitos</th>
+                                <th>Mínimo</th>
+                                <th>Recomendado</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Sistema Operativo</td>
+                                <td>Windows 7 SP1 64-bit</td>
+                                <td>Windows 10 64-bit</td>
+                            </tr>
+                            <tr>
+                                <td>Procesador</td>
+                                <td>Intel Core i3-2100 / AMD FX-6300</td>
+                                <td>Intel Core i7-3770 / AMD FX-8350</td>
+                            </tr>
+                            <tr>
+                                <td>RAM</td>
+                                <td>4 GB</td>
+                                <td>8 GB</td>
+                            </tr>
+                            <tr>
+                                <td>Tarjeta Gráfica</td>
+                                <td>NVIDIA GeForce GTX 750 Ti / ATI Radeon HD 7950</td>
+                                <td>NVIDIA GeForce GTX 970 / ATI Radeon R9 series</td>
+                            </tr>
+                            <tr>
+                                <td>Espacio en disco</td>
+                                <td colspan="2">25 GB</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="div4">
+                        <br>
+                        <button class="buy-btn" onclick="addToCart()">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="game-actions">
-                <button class="buy-btn" onclick="addToCart()">
-                    <i class="fas fa-shopping-cart"></i> Comprar
-                </button>
+            <div class="contenedor">
+                <div class="section1">
+                    <img src="https://i.pinimg.com/736x/04/c2/79/04c279b9557116d8e2d1e7db09cecbc3.jpg" alt="Cod modern warfare" class="juego-img" />
+                </div>
+                <div class="derecha">
+                    <div class="div1">
+                        <h2>Call Of Duty: Modern Warfare</h2>
+                    </div>
+                    <div class="section2" hidden>
+                        <img src="https://i.pinimg.com/736x/04/c2/79/04c279b9557116d8e2d1e7db09cecbc3.jpg" alt="Cod modern warfare" class="juego-img" />
+                    </div>
+                    <div class="div2">
+                        <p>Call of Duty: WWII es un videojuego de disparos en primera persona ambientado en la Segunda Guerra Mundial, desarrollado por Sledgehammer Games y publicado por Activision. El juego combina una intensa campaña histórica con modos multijugador competitivos y cooperativos, ofreciendo una experiencia realista y cinematográfica del conflicto.</p>
+                    </div>
+                    <div class="div3">
+                        <h4>Requisitos del Sistema</h4>
+                        <br>
+                        <table class="scroll" border="1" cellpadding="8" cellspacing="0">
+                            <thead>
+                            <tr>
+                                <th>Requisitos</th>
+                                <th>Mínimo</th>
+                                <th>Recomendado</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Sistema Operativo</td>
+                                <td>Windows 7 64-Bit o posterior</td>
+                                <td>Windows 10 64-Bit</td>
+                            </tr>
+                            <tr>
+                                <td>Procesador</td>
+                                <td>Intel Core i3-3225 / AMD Ryzen 5 1400</td>
+                                <td>Intel Core i5-2400 / AMD Ryzen R5 1600X</td>
+                            </tr>
+                            <tr>
+                                <td>RAM</td>
+                                <td>8 GB</td>
+                                <td>12 GB</td>
+                            </tr>
+                            <tr>
+                                <td>Tarjeta Gráfica</td>
+                                <td>NVIDIA GeForce GTX 660 / AMD Radeon HD 7850</td>
+                                <td>NVIDIA GeForce GTX 970 / GTX 1060 / AMD RX 580</td>
+                            </tr>
+                            <tr>
+                                <td>Espacio en disco</td>
+                                <td colspan="2">90 GB</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="div4">
+                        <br>
+                        <button class="buy-btn" onclick="addToCart()">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="section1">
+                    <img src="RECURSOS/Gr-breakpoint-cover-art-digital-standard-edition-september-29-2021.webp" alt="Ghost Recon BreakPoint" class="juego-img" />
+                </div>
+                <div class="derecha">
+                    <div class="div1">
+                        <h2>Ghost Recon: Break Point</h2>
+                    </div>
+                    <div class="section2" hidden>
+                        <img src="RECURSOS/Gr-breakpoint-cover-art-digital-standard-edition-september-29-2021.webp" alt="Ghost Recon BreakPoint" class="juego-img" />
+                    </div>
+                    <div class="div2">
+                        <p>Ghost Recon Breakpoint es un juego de disparos táctico en tercera persona desarrollado por Ubisoft, donde los jugadores asumen el rol de un soldado de élite atrapado tras las líneas enemigas en una isla controlada por excompañeros rebeldes. Combina acción, sigilo y supervivencia en un mundo abierto lleno de misiones cooperativas, vehículos y personalización de armas.</p>
+                    </div>
+                    <div class="div3">
+                        <h4>Requisitos del Sistema</h4>
+                        <br>
+                        <table class="scroll" border="1" cellpadding="8" cellspacing="0">
+                            <thead>
+                            <tr>
+                                <th>Requisitos</th>
+                                <th>Mínimo</th>
+                                <th>Recomendado</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Sistema Operativo</td>
+                                <td>Windows 7/8.1/10 (64 bits)</td>
+                                <td>Windows 10 (64 bits)</td>
+                            </tr>
+                            <tr>
+                                <td>Procesador</td>
+                                <td>Intel Core i5-4460 / AMD FX-6330</td>
+                                <td>Intel Core i7-6700K / AMD Ryzen 5 1600</td>
+                            </tr>
+                            <tr>
+                                <td>RAM</td>
+                                <td>8 GB</td>
+                                <td>16 GB</td>
+                            </tr>
+                            <tr>
+                                <td>Tarjeta Gráfica</td>
+                                <td>NVIDIA GeForce GTX 960 / AMD Radeon R9 280X</td>
+                                <td>NVIDIA GeForce GTX 1060 / AMD Radeon RX 480</td>
+                            </tr>
+                            <tr>
+                                <td>Espacio en disco</td>
+                                <td colspan="2">67 GB (mejor con SSD)</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="div4">
+                        <br>
+                        <button class="buy-btn" onclick="addToCart()">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="section1">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a8/Day_Z_cover.jpg" alt="DayZ" class="juego-img" />
+                </div>
+                <div class="derecha">
+                    <div class="div1">
+                        <h2>DayZ</h2>
+                    </div>
+                    <div class="section2" hidden>
+                        <img src="https://upload.wikimedia.org/wikipedia/en/a/a8/Day_Z_cover.jpg" alt="DayZ" class="juego-img" />
+                    </div>
+                    <div class="div2">
+                        <p>DayZ es un juego de supervivencia en mundo abierto donde los jugadores deben enfrentarse a un apocalipsis zombie, gestionar recursos como comida, agua y armas, y colaborar o competir con otros jugadores. El objetivo es sobrevivir el mayor tiempo posible en un entorno hostil, mientras se enfrentan a peligros tanto de los muertos vivientes como de los otros sobrevivientes.</p>
+                    </div>
+                    <div class="div3">
+                        <h4>Requisitos del Sistema</h4>
+                        <br>
+                        <table class="scroll" border="1" cellpadding="8" cellspacing="0">
+                            <thead>
+                            <tr>
+                                <th>Requisitos</th>
+                                <th>Mínimo</th>
+                                <th>Recomendado</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Sistema Operativo</td>
+                                <td>Windows 7 64-bit</td>
+                                <td>Windows 10 64-bit</td>
+                            </tr>
+                            <tr>
+                                <td>Procesador</td>
+                                <td>Intel Core i5-4430 / AMD FX-6300</td>
+                                <td>Intel Core i7-6700K / AMD Ryzen 5 1600</td>
+                            </tr>
+                            <tr>
+                                <td>RAM</td>
+                                <td>8 GB</td>
+                                <td>16 GB</td>
+                            </tr>
+                            <tr>
+                                <td>Tarjeta Gráfica</td>
+                                <td>NVIDIA GeForce GTX 760 / AMD Radeon RX 470</td>
+                                <td>NVIDIA GeForce GTX 1060 / AMD Radeon RX 580</td>
+                            </tr>
+                            <tr>
+                                <td>Espacio en disco</td>
+                                <td colspan="2">16 GB</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="div4">
+                        <br>
+                        <button class="buy-btn" onclick="addToCart()">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="section1">
+                    <img src="https://i.pinimg.com/736x/4e/96/1e/4e961e73193d840b1727ba2b5d44e010.jpg" alt="Raimbow Six Eige" class="juego-img" />
+                </div>
+                <div class="derecha">
+                    <div class="div1">
+                        <h2>Raimbow Six Siege</h2>
+                    </div>
+                    <div class="section2" hidden>
+                        <img src="https://i.pinimg.com/736x/4e/96/1e/4e961e73193d840b1727ba2b5d44e010.jpg" alt="Raimbow Six Eige" class="juego-img" />
+                    </div>
+                    <div class="div2">
+                        <p>Tom Clancy’s Rainbow Six Siege es un shooter táctico en primera persona centrado en el juego en equipo, estrategia y destrucción del entorno. Los jugadores asumen roles de operadores de élite con habilidades únicas para asegurar zonas, rescatar rehenes o desactivar bombas en intensos combates 5 contra 5.</p>
+                    </div>
+                    <div class="div3">
+                        <h4>Requisitos del Sistema</h4>
+                        <br>
+                        <table class="scroll" border="1" cellpadding="8" cellspacing="0">
+                            <thead>
+                            <tr>
+                                <th>Requisitos</th>
+                                <th>Mínimo</th>
+                                <th>Recomendado</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Sistema Operativo</td>
+                                <td>Windows 7 | 8 | 10 (64 bits)</td>
+                                <td>Windows 10 (64 bits)</td>
+                            </tr>
+                            <tr>
+                                <td>Procesador</td>
+                                <td>Intel Core i3-560 / AMD Phenom II X4 945</td>
+                                <td>Intel Core i5-2500K / AMD Ryzen 5 1600</td>
+                            </tr>
+                            <tr>
+                                <td>RAM</td>
+                                <td>6 GB</td>
+                                <td>8 GB</td>
+                            </tr>
+                            <tr>
+                                <td>Tarjeta Gráfica</td>
+                                <td>NVIDIA GeForce GTX 460 / AMD Radeon HD 5870</td>
+                                <td>NVIDIA GeForce GTX 970 / AMD Radeon RX 570</td>
+                            </tr>
+                            <tr>
+                                <td>Espacio en disco</td>
+                                <td colspan="2">85 GB</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="div4">
+                        <br>
+                        <button class="buy-btn" onclick="addToCart()">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="section1">
+                    <img src="RECURSOS/Call_of_Duty_Black_Ops_II_box_artwork.png" alt="COD Black Ops 2" class="juego-img" />
+                </div>
+                <div class="derecha">
+                    <div class="div1">
+                        <h2>Call Of Duty: Black Ops 2</h2>
+                    </div>
+                    <div class="section2" hidden>
+                        <img src="RECURSOS/Call_of_Duty_Black_Ops_II_box_artwork.png" alt="COD Black Ops 2" class="juego-img" />
+                    </div>
+                    <div class="div2">
+                        <p>Call of Duty: Black Ops II es un shooter en primera persona que mezcla combates futuristas con misiones ambientadas en la Guerra Fría, ofreciendo una campaña con decisiones que afectan la historia. Además, incluye un modo multijugador competitivo y el popular modo Zombis, donde los jugadores enfrentan oleadas de muertos vivientes.</p>
+                    </div>
+                    <div class="div3">
+                        <h4>Requisitos del Sistema</h4>
+                        <br>
+                        <table class="scroll" border="1" cellpadding="8" cellspacing="0">
+                            <thead>
+                            <tr>
+                                <th>Requisitos</th>
+                                <th>Mínimo</th>
+                                <th>Recomendado</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Sistema Operativo</td>
+                                <td>Windows Vista SP2 / Windows 7</td>
+                                <td>Windows 7 (64 bits)</td>
+                            </tr>
+                            <tr>
+                                <td>Procesador</td>
+                                <td>Intel Core2 Duo E8200 2.66 GHz / AMD Phenom X3 8750 2.4 GHz</td>
+                                <td>Intel Core i3-530 / AMD Phenom II X4 810</td>
+                            </tr>
+                            <tr>
+                                <td>RAM</td>
+                                <td>2 GB</td>
+                                <td>4 GB</td>
+                            </tr>
+                            <tr>
+                                <td>Tarjeta Gráfica</td>
+                                <td>NVIDIA GeForce 8800GT / ATI Radeon HD 3870</td>
+                                <td>NVIDIA GeForce GTS 450 / ATI Radeon HD 6670</td>
+                            </tr>
+                            <tr>
+                                <td>Espacio en disco</td>
+                                <td colspan="2">16 GB</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="div4">
+                        <br>
+                        <button class="buy-btn" onclick="addToCart()">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="juego">
-        <div class="juego-info">
-            <img src="RECURSOS/dark-souls-3-the-fire-fades-edition-519671.9.webp" alt="Dark Souls 3" class="juego-img" />
-            <div class="titulo">
-                <h4>Dark Souls III</h4>
-            </div>
-            <div class="description">
-                <p>Dark Souls III es un juego de rol y acción en un mundo oscuro y decadente, donde los jugadores enfrentan enemigos implacables y jefes colosales mientras exploran ruinas llenas de secretos. Con una jugabilidad desafiante y atmósfera sombría, ofrece una experiencia intensa de combate, exploración y superación constante.</p>
-            </div>
-            <div class="requisitos">
-                <h4>Requisitos del Sistema – Dark Souls III (PC)</h4>
-                <table class="scroll" border="1" cellpadding="8" cellspacing="0">
-                    <thead>
-                    <tr>
-                        <th>Requisitos</th>
-                        <th>Mínimo</th>
-                        <th>Recomendado</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Sistema Operativo</td>
-                        <td>Windows 7 SP1 64-bit</td>
-                        <td>Windows 10 64-bit</td>
-                    </tr>
-                    <tr>
-                        <td>Procesador</td>
-                        <td>Intel Core i3-2100 / AMD FX-6300</td>
-                        <td>Intel Core i7-3770 / AMD FX-8350</td>
-                    </tr>
-                    <tr>
-                        <td>RAM</td>
-                        <td>4 GB</td>
-                        <td>8 GB</td>
-                    </tr>
-                    <tr>
-                        <td>Tarjeta Gráfica</td>
-                        <td>NVIDIA GeForce GTX 750 Ti / ATI Radeon HD 7950</td>
-                        <td>NVIDIA GeForce GTX 970 / ATI Radeon R9 series</td>
-                    </tr>
-                    <tr>
-                        <td>Espacio en disco</td>
-                        <td colspan="2">25 GB</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="game-actions">
-                <button class="buy-btn" onclick="addToCart()">
-                    <i class="fas fa-shopping-cart"></i> Comprar
-                </button>
-            </div>
-        </div>
-    </div>
-    <div class="juego">
-        <div class="juego-info">
-            <img src="https://i.pinimg.com/736x/04/c2/79/04c279b9557116d8e2d1e7db09cecbc3.jpg" alt="Cod modern warfare" class="juego-img" />
-            <div class="titulo">
-                <h4>Call Of Duty: Modern Warfare</h4>
-            </div>
-            <div class="description">
-                <p>Call of Duty: WWII es un videojuego de disparos en primera persona ambientado en la Segunda Guerra Mundial, desarrollado por Sledgehammer Games y publicado por Activision. El juego combina una intensa campaña histórica con modos multijugador competitivos y cooperativos, ofreciendo una experiencia realista y cinematográfica del conflicto.</p>
-            </div>
-            <div class="requisitos">
-                <h4>Requisitos del Sistema – Call of Duty: WWII (PC)</h4>
-                <table class="scroll" border="1" cellpadding="8" cellspacing="0">
-                    <thead>
-                    <tr>
-                        <th>Requisitos</th>
-                        <th>Mínimo</th>
-                        <th>Recomendado</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Sistema Operativo</td>
-                        <td>Windows 7 64-Bit o posterior</td>
-                        <td>Windows 10 64-Bit</td>
-                    </tr>
-                    <tr>
-                        <td>Procesador</td>
-                        <td>Intel Core i3-3225 / AMD Ryzen 5 1400</td>
-                        <td>Intel Core i5-2400 / AMD Ryzen R5 1600X</td>
-                    </tr>
-                    <tr>
-                        <td>RAM</td>
-                        <td>8 GB</td>
-                        <td>12 GB</td>
-                    </tr>
-                    <tr>
-                        <td>Tarjeta Gráfica</td>
-                        <td>NVIDIA GeForce GTX 660 / AMD Radeon HD 7850</td>
-                        <td>NVIDIA GeForce GTX 970 / GTX 1060 / AMD RX 580</td>
-                    </tr>
-                    <tr>
-                        <td>Espacio en disco</td>
-                        <td colspan="2">90 GB</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="game-actions">
-                <button class="buy-btn" onclick="addToCart()">
-                    <i class="fas fa-shopping-cart"></i> Comprar
-                </button>
-            </div>
-        </div>
-    </div>
-    <div class="juego">
-        <div class="juego-info">
-            <img src="RECURSOS/Gr-breakpoint-cover-art-digital-standard-edition-september-29-2021.webp" alt="Ghost Recon BreakPoint" class="juego-img" />
-            <div class="titulo">
-                <h4>Ghost Recon: Break Point</h4>
-            </div>
-            <div class="description">
-                <p>Ghost Recon Breakpoint es un juego de disparos táctico en tercera persona desarrollado por Ubisoft, donde los jugadores asumen el rol de un soldado de élite atrapado tras las líneas enemigas en una isla controlada por excompañeros rebeldes. Combina acción, sigilo y supervivencia en un mundo abierto lleno de misiones cooperativas, vehículos y personalización de armas.</p>
-            </div>
-            <div class="requisitos">
-                <h4>Requisitos del Sistema – Ghost Recon: Breakpoint (PC)</h4>
-                <table class="scroll" border="1" cellpadding="8" cellspacing="0">
-                    <thead>
-                    <tr>
-                        <th>Requisitos</th>
-                        <th>Mínimo</th>
-                        <th>Recomendado</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Sistema Operativo</td>
-                        <td>Windows 7/8.1/10 (64 bits)</td>
-                        <td>Windows 10 (64 bits)</td>
-                    </tr>
-                    <tr>
-                        <td>Procesador</td>
-                        <td>Intel Core i5-4460 / AMD FX-6330</td>
-                        <td>Intel Core i7-6700K / AMD Ryzen 5 1600</td>
-                    </tr>
-                    <tr>
-                        <td>RAM</td>
-                        <td>8 GB</td>
-                        <td>16 GB</td>
-                    </tr>
-                    <tr>
-                        <td>Tarjeta Gráfica</td>
-                        <td>NVIDIA GeForce GTX 960 / AMD Radeon R9 280X</td>
-                        <td>NVIDIA GeForce GTX 1060 / AMD Radeon RX 480</td>
-                    </tr>
-                    <tr>
-                        <td>Espacio en disco</td>
-                        <td colspan="2">67 GB (mejor con SSD)</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="game-actions">
-                <button class="buy-btn" onclick="addToCart()">
-                    <i class="fas fa-shopping-cart"></i> Comprar
-                </button>
-            </div>
-        </div>
-    </div>
-    <div class="juego">
-        <div class="juego-info">
-            <img src="https://upload.wikimedia.org/wikipedia/en/a/a8/Day_Z_cover.jpg" alt="DayZ" class="juego-img" />
-            <div class="titulo">
-                <h6>DayZ</h6>
-            </div>
-            <div class="description">
-                <p>DayZ es un juego de supervivencia en mundo abierto donde los jugadores deben enfrentarse a un apocalipsis zombie, gestionar recursos como comida, agua y armas, y colaborar o competir con otros jugadores. El objetivo es sobrevivir el mayor tiempo posible en un entorno hostil, mientras se enfrentan a peligros tanto de los muertos vivientes como de los otros sobrevivientes.</p>
-            </div>
-            <div class="requisitos">
-                <h4>Requisitos del Sistema – DayZ (PC)</h4>
-                <table class="scroll" border="1" cellpadding="8" cellspacing="0">
-                    <thead>
-                    <tr>
-                        <th>Requisitos</th>
-                        <th>Mínimo</th>
-                        <th>Recomendado</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Sistema Operativo</td>
-                        <td>Windows 7 64-bit</td>
-                        <td>Windows 10 64-bit</td>
-                    </tr>
-                    <tr>
-                        <td>Procesador</td>
-                        <td>Intel Core i5-4430 / AMD FX-6300</td>
-                        <td>Intel Core i7-6700K / AMD Ryzen 5 1600</td>
-                    </tr>
-                    <tr>
-                        <td>RAM</td>
-                        <td>8 GB</td>
-                        <td>16 GB</td>
-                    </tr>
-                    <tr>
-                        <td>Tarjeta Gráfica</td>
-                        <td>NVIDIA GeForce GTX 760 / AMD Radeon RX 470</td>
-                        <td>NVIDIA GeForce GTX 1060 / AMD Radeon RX 580</td>
-                    </tr>
-                    <tr>
-                        <td>Espacio en disco</td>
-                        <td colspan="2">16 GB</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="game-actions">
-                <button class="buy-btn" onclick="addToCart()">
-                    <i class="fas fa-shopping-cart"></i> Comprar
-                </button>
-            </div>
-        </div>
-    </div>
-    <div class="juego">
-        <div class="juego-info">
-            <img src="https://i.pinimg.com/736x/4e/96/1e/4e961e73193d840b1727ba2b5d44e010.jpg" alt="Raimbow Six Eige" class="juego-img" />
-            <div class="titulo">
-                <h3>Raimbow Six Eige</h3>
-            </div>
-            <div class="description">
-                <p>Tom Clancy’s Rainbow Six Siege es un shooter táctico en primera persona centrado en el juego en equipo, estrategia y destrucción del entorno. Los jugadores asumen roles de operadores de élite con habilidades únicas para asegurar zonas, rescatar rehenes o desactivar bombas en intensos combates 5 contra 5.</p>
-            </div>
-            <div class="requisitos">
-                <h4>Requisitos del Sistema – Rainbow Six Siege (PC)</h4>
-                <table class="scroll" border="1" cellpadding="8" cellspacing="0">
-                    <thead>
-                    <tr>
-                        <th>Requisitos</th>
-                        <th>Mínimo</th>
-                        <th>Recomendado</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Sistema Operativo</td>
-                        <td>Windows 7 | 8 | 10 (64 bits)</td>
-                        <td>Windows 10 (64 bits)</td>
-                    </tr>
-                    <tr>
-                        <td>Procesador</td>
-                        <td>Intel Core i3-560 / AMD Phenom II X4 945</td>
-                        <td>Intel Core i5-2500K / AMD Ryzen 5 1600</td>
-                    </tr>
-                    <tr>
-                        <td>RAM</td>
-                        <td>6 GB</td>
-                        <td>8 GB</td>
-                    </tr>
-                    <tr>
-                        <td>Tarjeta Gráfica</td>
-                        <td>NVIDIA GeForce GTX 460 / AMD Radeon HD 5870</td>
-                        <td>NVIDIA GeForce GTX 970 / AMD Radeon RX 570</td>
-                    </tr>
-                    <tr>
-                        <td>Espacio en disco</td>
-                        <td colspan="2">85 GB</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="game-actions">
-                <button class="buy-btn" onclick="addToCart()">
-                    <i class="fas fa-shopping-cart"></i> Comprar
-                </button>
-            </div>
-        </div>
-    </div>
-    <div class="juego">
-        <div class="juego-info">
-            <img src="RECURSOS/Call_of_Duty_Black_Ops_II_box_artwork.png" alt="COD Black Ops 2" class="juego-img" />
-            <div class="titulo">
-                <h3>Call Of Duty: Black Ops 2</h3>
-            </div>
-            <div class="description">
-                <p>Call of Duty: Black Ops II es un shooter en primera persona que mezcla combates futuristas con misiones ambientadas en la Guerra Fría, ofreciendo una campaña con decisiones que afectan la historia. Además, incluye un modo multijugador competitivo y el popular modo Zombis, donde los jugadores enfrentan oleadas de muertos vivientes.</p>
-            </div>
-            <div class="requisitos">
-                <h4>Requisitos del Sistema – Call of Duty: Black Ops II (PC)</h4>
-                <table class="scroll" border="1" cellpadding="8" cellspacing="0">
-                    <thead>
-                    <tr>
-                        <th>Requisitos</th>
-                        <th>Mínimo</th>
-                        <th>Recomendado</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Sistema Operativo</td>
-                        <td>Windows Vista SP2 / Windows 7</td>
-                        <td>Windows 7 (64 bits)</td>
-                    </tr>
-                    <tr>
-                        <td>Procesador</td>
-                        <td>Intel Core2 Duo E8200 2.66 GHz / AMD Phenom X3 8750 2.4 GHz</td>
-                        <td>Intel Core i3-530 / AMD Phenom II X4 810</td>
-                    </tr>
-                    <tr>
-                        <td>RAM</td>
-                        <td>2 GB</td>
-                        <td>4 GB</td>
-                    </tr>
-                    <tr>
-                        <td>Tarjeta Gráfica</td>
-                        <td>NVIDIA GeForce 8800GT / ATI Radeon HD 3870</td>
-                        <td>NVIDIA GeForce GTS 450 / ATI Radeon HD 6670</td>
-                    </tr>
-                    <tr>
-                        <td>Espacio en disco</td>
-                        <td colspan="2">16 GB</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="game-actions">
-                <button class="buy-btn" onclick="addToCart()">
-                    <i class="fas fa-shopping-cart"></i> Comprar
-                </button>
-            </div>
-        </div>
-    </div>
-</section>
-<!--FOOTER-->
+    </main>
 <footer>
     <p>The QuackZone – Donde el cuac se convierte en GG. 🦆</p>
     <p>&copy; 2025 The QuackZone. Todos los derechos reservados.</p>
+    <br>
     <div class="social-icons" >
         <a href="https://www.facebook.com" target="_blank" title="Facebook">
             <i class="fa-brands fa-facebook"></i>
@@ -540,6 +592,7 @@
             <i class="fa-brands fa-discord"></i>
         </a>
     </div>
+    <br>
     <nav>
         <a href="#">Política de Privacidad</a> |
         <a href="#">Términos y Condiciones</a>

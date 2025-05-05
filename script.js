@@ -11,7 +11,7 @@ toggleBtn.onclick = function () {
         ? 'fa-solid fa-xmark'
         : 'fa-solid fa-bars'
 }
-//2 FUNCIONES PARA REPRODUCIR MODO OSCURO
+//2 FUNCIONES PARA REPRODUCIR MUSICA
 function reproducirMusica() {
     const music = document.getElementById("musica");
     const musicIcon = document.querySelector("#music-btn i");
