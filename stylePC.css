@@ -134,6 +134,7 @@ header {
 .dropdown_menu{
     display: none;
     position: absolute;
+    border-radius: 10px;
     right: 2rem;
     top: 60px;
     width: 300px;
@@ -488,6 +489,11 @@ h2.dark-mode {
     padding: 20px;
 }
 
+.dark-mode .dropdown_menu.open{
+    background-color: #000000ae;
+    border-radius: 10px;
+}
+
 /*RESPONSIVE*/
 @media screen and (max-width: 600px) {
 
@@ -523,4 +529,27 @@ h2.dark-mode {
     h2{
         font-size: 16px;
     }
+}
+@media screen and (max-width: 550px) {
+    .logo img {
+        width: 15rem;
+        margin: 0px 30px;
+
+    }
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #1c1c1c;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    }
+
 }
