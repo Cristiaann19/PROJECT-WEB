@@ -413,6 +413,10 @@ footer nav a:hover {
     color: #333;
     text-decoration: none;
 }
+.payment-logos li img {
+    width: 200px;
+    height: auto;
+}
 /* ========================== */
 /*        MODO OSCURO         */
 /* ========================== */
