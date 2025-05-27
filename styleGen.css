@@ -26,7 +26,7 @@
 }
 
 .links li a:hover {
-    background-color: orangered;
+    background-color: #000000;
     border-radius: 5px;
     color: white;
 }
@@ -83,7 +83,7 @@ header {
 
 .action_btn:hover {
     scale: 1.05;
-    color: orangered;
+    color: #000000;
 }
 
 /*HEADER*/
@@ -128,7 +128,7 @@ header {
 }
 .action_btn:hover {
     scale: 1.05;
-    color: var(--accent-color);
+    color: #000000;
 }
 
 .dropdown_menu{
@@ -204,6 +204,20 @@ section {
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+.section1 img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.section1 img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
 /*=======================*/
@@ -313,7 +327,7 @@ section {
 }
 
 .buy-btn {
-    background: orangered;
+    background: linear-gradient(to right, rgba(255, 126, 0, 0.76), #ff6300);
     color: #000000;
     padding: 12px 30px;
     font-size: 16px;
@@ -350,8 +364,6 @@ section {
         height: 100%;
     }
 }
-
-
 
 /*=======================*/
 /*        FOOTER         */
@@ -477,6 +489,17 @@ h2.dark-mode {
 .dark-mode .dropdown_menu.open{
     background-color: #000000ae;
     border-radius: 10px;
+}
+
+.dark-mode .links li a:hover {
+    background-color: orangered;
+    border-radius: 5px;
+    color: white;
+}
+
+.dark-mode .action_btn:hover {
+    scale: 1.05;
+    color: orangered;
 }
 
 /*RESPONSIVE*/
