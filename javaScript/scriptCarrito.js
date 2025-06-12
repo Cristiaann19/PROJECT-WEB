@@ -18,24 +18,6 @@ function setRating(valor) {
     renderStars(calificacion);
 }
 
-// Inicializar estrellas y carrito al cargar
-document.addEventListener("DOMContentLoaded", () => {
-    const btnVerCarrito = document.getElementById('btn-ver-carrito');
-    const btnContinuar = document.getElementById('btn-continuar');
-    const modalCarrito = document.getElementById('modal-carrito');
-    if (btnContinuar && btnVerCarrito && modalCarrito) {
-        btnContinuar.onclick = function() {
-            modalCarrito.classList.remove('activo');
-        };
-        btnVerCarrito.onclick = function() {
-            window.location.href = "/html/Carrito.html";
-        };
-        modalCarrito.onclick = function(e) {
-            if (e.target === this) this.classList.remove('activo');
-        };
-    }
-});
-
 // ==================== MENSAJE CARRITO VACÍO ====================
 function mostrarMensajeCarritoVacio(carrito) {
     const vacio = document.getElementById("carritoVacio");
@@ -132,3 +114,31 @@ function calcularTotal() {
     const totalElem = document.querySelector(".total-price");
     if (totalElem) totalElem.textContent = total.toFixed(2);
 }
+
+// ==================== INICIALIZAR AL CARGAR ====================
+document.addEventListener("DOMContentLoaded", () => {
+    // Modal botones (esto solo aplica para la página donde esté el modal)
+    const btnVerCarrito = document.getElementById('btn-ver-carrito');
+    const btnContinuar = document.getElementById('btn-continuar');
+    const modalCarrito = document.getElementById('modal-carrito');
+    if (btnContinuar && btnVerCarrito && modalCarrito) {
+        btnContinuar.onclick = function() {
+            modalCarrito.classList.remove('activo');
+        };
+        btnVerCarrito.onclick = function() {
+            window.location.href = "/html/Carrito.html";
+        };
+        modalCarrito.onclick = function(e) {
+            if (e.target === this) this.classList.remove('activo');
+        };
+    }
+
+    // Mostrar carrito automáticamente si existe el contenedor (página de carrito)
+    if (document.querySelector(".cart-box")) {
+        mostrarCarrito();
+    }
+    // Renderizar estrellas si existe el rating
+    if (document.getElementById("star-rating")) {
+        renderStars(calificacion);
+    }
+});
