@@ -21,27 +21,26 @@ function setRating(valor) {
 // ==================== MENSAJE CARRITO VACÍO ====================
 function mostrarMensajeCarritoVacio(carrito) {
     const vacio = document.getElementById("carritoVacio");
-    if (!vacio) return;
+    const mainContainer = document.querySelector(".main-container");
+    if (!vacio || !mainContainer) return;
+
     if (carrito.length === 0) {
-        vacio.style.display = "block"; // Muestra el mensaje
+        vacio.style.display = "flex";
+        mainContainer.style.display = "none";
     } else {
-        vacio.style.display = "none"; // Oculta el mensaje
+        vacio.style.display = "none";
+        mainContainer.style.display = "flex";
     }
 }
 
 // ==================== MOSTRAR PRODUCTOS DEL CARRITO ====================
 function mostrarCarrito() {
     const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-    const contenedor = document.querySelector(".cart-box");
+    const itemsContenedor = document.querySelector(".cart-items");
+    if (!itemsContenedor) return;
 
-    // Limpia el contenedor (deja solo el título)
-    contenedor.innerHTML = `
-      <h2>
-        Mis compras <i class="fa-solid fa-cart-shopping"> :</i>
-      </h2>
-    `;
+    itemsContenedor.innerHTML = "";
 
-    // Muestra u oculta el mensaje de carrito vacío
     mostrarMensajeCarritoVacio(carrito);
 
     if (carrito.length === 0) {
@@ -53,7 +52,7 @@ function mostrarCarrito() {
         const item = document.createElement("div");
         item.classList.add("cart-item");
         item.innerHTML = `
-            <img src="${juego.imagen}" alt="${juego.nombre}" width="80">
+            <img src="${juego.imagen}" alt="${juego.nombre}" width="80" class="imagen-juego">
             <div class="product-info">
                 <span class="product-title">${juego.nombre}</span>
                 <span class="product-description">${juego.descripcion}</span>
@@ -64,7 +63,7 @@ function mostrarCarrito() {
                 <span class="icon-trash" onclick="eliminarDelCarrito(${index})"><i class="fa-solid fa-trash"></i></span>
             </div>
         `;
-        contenedor.appendChild(item);
+        itemsContenedor.appendChild(item);
     });
 
     calcularTotal();
