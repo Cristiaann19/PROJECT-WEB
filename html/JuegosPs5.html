@@ -5,6 +5,7 @@
     <title>The QuackZone - PS5</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styleGen.css">
+    <link rel="stylesheet" href="/css/styleModal.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -25,12 +26,12 @@
         </ul>
         <div>
             <a href="Loginv1.html" class="action_btn"><i class="fa-solid fa-user"></i></a>
-            <a href="#" class="action_btn"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="/html/Carrito.html" class="action_btn"><i class="fa-solid fa-cart-shopping"></i></a>
             <a href="#" onclick="ReproMusica()" id="BotonMusica" class="action_btn">
                 <i class="fa-solid fa-music"></i>
                 <audio id="Mmusica" src="/RECURSOS/Mora - Ansiedades (Instrumental).mp3" preload="auto"></audio>
             </a>
-            <a href="#" class="action_btn" id="toggle-btn">
+            <a href="" class="action_btn" id="toggle-btn">
                 <label for="toggle" id="label_toggle">
                     <span id="icon" class="fa-solid fa-moon"></span>
                 </label>
@@ -51,7 +52,7 @@
             <li><a href="Loginv1.html" class="action_btn"><i class="fa-solid fa-user"></i></a></li>
             <li><a href="#" class="action_btn"><i class="fa-solid fa-cart-shopping"></i></a></li>
             <li>
-                <a href="#" class="action_btn" id="music-btn" onclick="reproducirMusica()">
+                <a href="/html/Carrito.html" class="action_btn" id="music-btn" onclick="reproducirMusica()">
                     <i class="fa-solid fa-music"></i>
                 </a>
                 <audio id="musica" src="/RECURSOS/Mora - Ansiedades (Instrumental).mp3"></audio>
@@ -114,7 +115,7 @@
                     </div>
                     <div class="div4">
                         <br>
-                        <button class="buy-btn" onclick="addToCart()">
+                        <button class="buy-btn" onclick="addToCart('Grand Thef Auto VI', 'Jason y Lucia siempre han sabido que las cartas estaban en su contra, pero cuando un golpe que parecía fácil sale mal, se ven atrapados en el lado más oscuro del lugar más soleado de América.', '260.20', '/RECURSOS/gta6.jpeg')">
                             <i class="fas fa-shopping-cart"></i> Comprar
                         </button>
                     </div>
@@ -139,7 +140,7 @@
                     </div>
                     <div class="div4">
                         <br>
-                        <button class="buy-btn" onclick="addToCart()">
+                        <button class="buy-btn" onclick="addToCart('Spider-Man 2', 'Miles Morales lucha junto a Peter Parker para proteger Nueva York de amenazas como Venom y Kraven el Cazador.', '159.20', 'https://i.pinimg.com/736x/a0/7e/eb/a07eeb846f05daa0554bdfd609f3fcb7.jpg')">
                             <i class="fas fa-shopping-cart"></i> Comprar
                         </button>
                     </div>
@@ -157,14 +158,14 @@
                         <p>The Texas Chain Saw Massacre es un juego de terror multijugador asimétrico donde un grupo de víctimas intenta escapar de la familia Slaughter, incluyendo al icónico Leatherface. Los jugadores deben usar el sigilo, la estrategia y el trabajo en equipo para sobrevivir o, si juegan como la familia, para atrapar y eliminar a las víctimas antes de que escapen.</p>
                     </div>
                     <div class="section2" hidden>
-                        <img src="RECURSOS/The_Texas_Chain_Saw_Massacre_(2023)_cover.jpg" alt="Spiderman 2" class="juego-img" />
+                        <img src="/RECURSOS/The_Texas_Chain_Saw_Massacre_(2023)_cover.jpg" alt="The Texas Chain Saw Massacre" class="juego-img" />
                     </div>
                     <div class="div3">
                         <iframe class="video-juego" src="https://www.youtube.com/embed/jxbEynEDY7Q" frameborder="0" allowfullscreen></iframe>
                     </div>
                     <div class="div4">
                         <br>
-                        <button class="buy-btn" onclick="addToCart()">
+                        <button class="buy-btn" onclick="addToCart('The Texas Chain Saw Massacre', 'The Texas Chain Saw Massacre es un juego de terror multijugador asimétrico donde un grupo de víctimas intenta escapar de la familia Slaughter, incluyendo al icónico Leatherface.', '70.90', '/RECURSOS/The_Texas_Chain_Saw_Massacre_(2023)_cover.jpg')">
                             <i class="fas fa-shopping-cart"></i> Comprar
                         </button>
                     </div>
@@ -189,7 +190,7 @@
                     </div>
                     <div class="div4">
                         <br>
-                        <button class="buy-btn" onclick="addToCart()">
+                        <button class="buy-btn" onclick="addToCart('Uncharted Legacy of Thieves', 'Uncharted: Legacy of Thieves Collection es una remasterización para PC y PS5 que incluye Uncharted 4: A Thief’s End y Uncharted: The Lost Legacy.', '159.00', 'https://i.pinimg.com/736x/b0/c6/f7/b0c6f7eb4603ebcf0ac6b5fbee59c84a.jpg')">
                             <i class="fas fa-shopping-cart"></i> Comprar
                         </button>
                     </div>
@@ -204,7 +205,7 @@
                         <h2>Call Of Duty: Cold at War</h2>
                     </div>
                     <div class="div2">
-                        <p>Call of Duty: Black Ops Cold War es un shooter en primera persona ambientado en los años 80, donde los jugadores asumen el rol de un agente encubierto en una misión para detener a un espía soviético conocido como Perseus. La campaña ofrece decisiones que afectan el desenlace, mientras que los modos multijugador y Zombies brindan acción intensas. </p>
+                        <p>Call of Duty: Black Ops Cold War es un shooter en primera persona ambientado en los años 80, donde los jugadores asumen el rol de un agente encubierto en una misión para detener a un espía soviético conocido como Perseus. La campaña ofrece decisiones que afectan el desenlace, mientras que los modos multijugador y Zombies brindan acción intensas.</p>
                     </div>
                     <div class="section2" hidden>
                         <img src="https://i.pinimg.com/736x/e1/2c/fb/e12cfb8537f167dd559f272dd76dca69.jpg" alt="cold at war" class="juego-img" />
@@ -214,7 +215,7 @@
                     </div>
                     <div class="div4">
                         <br>
-                        <button class="buy-btn" onclick="addToCart()">
+                        <button class="buy-btn" onclick="addToCart('Call of Duty: Black Ops Cold at War', 'Call of Duty: Black Ops Cold War es un shooter en primera persona ambientado en los años 80, donde los jugadores asumen el rol de un agente encubierto en una misión para detener a un espía soviético conocido como Perseus.', '291.30', 'https://i.pinimg.com/736x/e1/2c/fb/e12cfb8537f167dd559f272dd76dca69.jpg')">
                             <i class="fas fa-shopping-cart"></i> Comprar
                         </button>
                     </div>
@@ -239,7 +240,7 @@
                     </div>
                     <div class="div4">
                         <br>
-                        <button class="buy-btn" onclick="addToCart()">
+                        <button class="buy-btn" onclick="addToCart('World War Z: Aftermath', 'World War Z es un juego cooperativo de disparos en tercera persona donde los jugadores enfrentan hordas masivas de zombis en distintas partes del mundo.', '79.50', 'https://i.pinimg.com/736x/02/58/e7/0258e72b1eb0c41033ec469481b49912.jpg')">
                             <i class="fas fa-shopping-cart"></i> Comprar
                         </button>
                     </div>
@@ -248,7 +249,6 @@
         </div>
     </article>
 </main>
-
 <!--CUERPO-->
 
 <!--FOOTER-->
@@ -292,5 +292,19 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script src="/javaScript/script.js"></script>
+<script src="/javaScript/scriptCarrito.js"></script>
+<!-- Modal Carrito -->
+<div id="modal-carrito" class="modal-carrito">
+    <div class="modal-contenido">
+        <div class="modal-icono">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+        <h2>Añadido al carrito</h2>
+        <div class="modal-botones">
+            <button class="modal-btn amarillo" id="btn-continuar">Continuar comprando</button>
+            <button class="modal-btn morado" id="btn-ver-carrito">Ver carrito</button>
+        </div>
+    </div>
+</div>
 </body>
 </html>

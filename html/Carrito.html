@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carrito de compras</title>
+  <link rel="stylesheet" href="/css/styleCarrito.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<header>
+  <div class="navbar">
+    <div class="logo">
+      <a href="/index.html"><img src="/RECURSOS/logoPagina.png" alt="Logo"></a>
+    </div>
+    <div class="navbar-buttons">
+      <a href="/html/Loginv1.html" class="action_btn" title="Iniciar sesión"><i class="fa-solid fa-user"></i></a>
+      <a href="#" onclick="ReproMusica()" id="BotonMusica" class="action_btn" title="Música">
+        <i class="fa-solid fa-music"></i>
+        <audio id="Mmusica" src="/RECURSOS/Mora - Ansiedades (Instrumental).mp3" preload="auto"></audio>
+      </a>
+      <a href="#" class="action_btn" id="toggle-btn" title="Modo oscuro">
+        <label for="toggle" id="label_toggle" style="cursor:pointer;">
+          <span id="icon" class="fa-solid fa-moon"></span>
+        </label>
+      </a>
+      <input type="checkbox" id="toggle" hidden>
+    </div>
+    <div class="toggle_btn">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </div>
+  <div class="dropdown_menu">
+    <ul class="links">
+      <li><a href="/html/Loginv1.html" class="action_btn"><i class="fa-solid fa-user"></i></a></li>
+      <li>
+        <a href="#" class="action_btn" id="music-btn" onclick="ReproMusica()">
+          <i class="fa-solid fa-music"></i>
+        </a>
+        <audio id="musica" src="/RECURSOS/Mora - Ansiedades (Instrumental).mp3"></audio>
+      </li>
+      <li>
+        <a href="#" class="action_btn" id="toggle-btn2">
+          <label for="togle2" id="label_toggle2" style="cursor:pointer;">
+            <span id="icon2" class="fa-solid fa-moon"></span>
+          </label>
+        </a>
+        <input type="checkbox" id="togle2" hidden>
+      </li>
+    </ul>
+  </div>
+</header>
+<section>
+  <div class="empty-cart-message" id="carritoVacio" style="display:none;">
+    <i class="fa-solid fa-cart-shopping"></i>
+    ¡Tu carrito está vacío!
+    <section>
+      <button class="qty-btn" onclick="window.location.href='/index.html'">Iniciar a comprar</button>
+    </section>
+  </div>
+</section>
+<section>
+  <main class="main-container">
+    <section class="cart-section">
+      <div class="cart-box">
+        <h2>
+          Mis compras <i class="fa-solid fa-cart-shopping"> :</i>
+        </h2>
+      </div>
+    </section>
+    <aside class="summary-section">
+      <div class="summary-box">
+        <h2>Resumen de compra</h2>
+        <button class="yellow-btn">Finalizar compra</button>
+        <div class="summary-details"></div>
+        <div class="summary-total">
+          <span>Total S/. </span>
+          <span class="total-price"></span>
+        </div>
+        <div class="trustpilot">
+          <div id="star-rating"></div>
+        </div>
+      </div>
+    </aside>
+  </main>
+</section>
+<footer>
+  <p>The QuackZone – Donde el cuac se convierte en GG. 🦆</p>
+  <p>&copy; 2025 The QuackZone. Todos los derechos reservados.</p>
+  <div class="social-icons">
+    <a href="https://www.facebook.com" target="_blank" title="Facebook">
+      <i class="fa-brands fa-facebook fa-sm"></i>
+    </a>
+    <a href="https://www.whatsapp.com" target="_blank" title="WhatsApp">
+      <i class="fa-brands fa-whatsapp fa-sm"></i>
+    </a>
+    <a href="https://www.twitter.com" target="_blank" title="Twitter">
+      <i class="fa-brands fa-twitter fa-sm"></i>
+    </a>
+    <a href="https://www.instagram.com" target="_blank" title="Instagram">
+      <i class="fa-brands fa-instagram fa-sm"></i>
+    </a>
+    <a href="https://web.telegram.org/k/" target="_blank" title="Telegram">
+      <i class="fa-brands fa-telegram fa-sm"></i>
+    </a>
+    <a href="http://www.discord.com" target="_blank" title="Discord">
+      <i class="fa-brands fa-discord fa-sm"></i>
+    </a>
+  </div>
+  <nav>
+    <a href="#">Política de Privacidad</a> |
+    <a href="#">Términos y Condiciones</a>
+  </nav>
+  <div class="payment-logos">
+    <ul>
+      <li><img src="/RECURSOS/image-removebg-preview.png" alt="Todos los logos"></li>
+    </ul>
+  </div>
+</footer>
+<script src="/javaScript/scriptCarrito.js"></script>
+</body>
+</html>
