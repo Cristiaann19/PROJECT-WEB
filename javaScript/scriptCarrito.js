@@ -58,7 +58,6 @@ function mostrarCarrito() {
                 <span class="product-title">${juego.nombre}</span>
                 <span class="product-description">${juego.descripcion}</span>
                 <span class="product-price">Precio: S/. ${juego.precio.toFixed(2)}</span>
-                <span class="product-cantidad">Cantidad: ${juego.cantidad}</span>
             </div>
             <div class="cart-icons">
                 <span class="icon-trash" onclick="eliminarDelCarrito(${index})"><i class="fa-solid fa-trash"></i></span>
