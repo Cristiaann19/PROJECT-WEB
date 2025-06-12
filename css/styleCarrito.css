@@ -430,3 +430,191 @@ footer nav a:hover {
 }
 
 /*END FOOTER*/
+
+/* ==============================
+   DISEÑO RESPONSIVO DEBAJO
+============================== */
+
+/* Reducción de márgenes y anchos en pantallas grandes */
+@media (max-width: 1200px) {
+    main.main-container {
+        gap: 50px;
+    }
+    .cart-section {
+        width: 65%;
+        max-width: 600px;
+    }
+    .summary-section {
+        width: 35%;
+        max-width: 320px;
+    }
+}
+
+/* Apilar carrito y resumen verticalmente en tablets */
+@media (max-width: 900px) {
+    main.main-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 20px 0;
+    }
+    .cart-section, .summary-section {
+        width: 90%;
+        max-width: 650px;
+        margin: 15px 0;
+    }
+    .summary-section {
+        align-self: center;
+    }
+}
+
+/* Ajustes de header y menú en pantallas medianas */
+@media (max-width: 700px) {
+    header, .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 0.5rem 1rem;
+    }
+    .logo img {
+        width: 11rem;
+        margin: 0 10px 0 0;
+    }
+    .navbar {
+        max-width: 100%;
+        padding: 0;
+    }
+    .navbar .links {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    .navbar .toggle_btn {
+        display: block;
+        margin-top: 10px;
+    }
+    .dropdown_menu {
+        width: 90vw;
+        right: 5vw;
+        top: 55px;
+    }
+}
+
+/* Disposición y tamaños para móviles */
+@media (max-width: 600px) {
+    main.main-container {
+        padding: 0;
+        gap: 0;
+    }
+    .cart-section, .summary-section {
+        width: 98%;
+        max-width: none;
+        padding: 15px 6px;
+        margin: 10px 0;
+    }
+    .cart-item {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px 4px;
+        gap: 10px;
+    }
+    .imagen-juego {
+        width: 70px;
+        margin: 0 auto 10px auto;
+    }
+    .product-info, .product-title, .seller, .product-price {
+        text-align: center;
+        margin: 0;
+    }
+    .cart-actions {
+        justify-content: center;
+        gap: 10px;
+        margin-top: 8px;
+    }
+    .cart-icons {
+        flex-direction: row;
+        gap: 10px;
+        margin: 8px 0 0 0;
+        justify-content: center;
+    }
+    .summary-section {
+        padding: 12px 4px;
+    }
+    .summary-details div, .summary-total {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 1rem;
+    }
+    .summary-total {
+        font-size: 17px;
+        padding-top: 7px;
+    }
+    .yellow-btn {
+        padding: 10px 0;
+        font-size: 15px;
+    }
+    .trustpilot {
+        font-size: 15px;
+    }
+    h2 {
+        font-size: 16px;
+    }
+    .empty-cart-message {
+        font-size: 20px;
+        padding: 10px 0;
+    }
+    .empty-cart-message i {
+        font-size: 50px;
+    }
+    /* Ajustes de footer */
+    footer {
+        padding: 10px 2px;
+    }
+    footer p, a {
+        font-size: 14px;
+    }
+    .payment-logos li img {
+        width: 110px;
+    }
+    .social-icons a {
+        font-size: 20px;
+    }
+}
+
+/* Ajustes para pantallas extra pequeñas */
+@media (max-width: 400px) {
+    .logo img {
+        width: 8rem;
+    }
+    .summary-section, .cart-section {
+        padding: 7px 2px;
+    }
+    .yellow-btn {
+        font-size: 13px;
+    }
+    .summary-total {
+        font-size: 14px;
+    }
+}
+
+/* Ocultar links de navegación y mostrar botón hamburguesa en móviles */
+@media (max-width: 700px) {
+    .navbar .links {
+        display: none;
+    }
+    .navbar .toggle_btn {
+        display: block;
+    }
+    .dropdown_menu {
+        display: block;
+    }
+}
+
+/* Mostrar links de navegación en escritorio */
+@media (min-width: 701px) {
+    .navbar .links {
+        display: flex !important;
+    }
+    .navbar .toggle_btn, .dropdown_menu {
+        display: none !important;
+    }
+}
