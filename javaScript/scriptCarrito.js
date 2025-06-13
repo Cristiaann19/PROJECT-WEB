@@ -58,6 +58,8 @@ function mostrarCarrito() {
                 <span class="product-description">${juego.descripcion}</span>
                 <span class="product-price">Precio: S/. ${juego.precio.toFixed(2)}</span>
                 <span class="product-cantidad">Cantidad: ${juego.cantidad}</span>
+                <span class="product-plataforma">Plataforma: ${juego.plataforma}</span>
+                <span class="product-categoria">Categoria: ${juego.categoria}</span>
             </div>
             <div class="cart-icons">
                 <span class="icon-trash" onclick="eliminarDelCarrito(${index})"><i class="fa-solid fa-trash"></i></span>
@@ -70,7 +72,7 @@ function mostrarCarrito() {
 }
 
 // ==================== AGREGAR AL CARRITO ====================
-function addToCart(nombre, descripcion, precio, imagen) {
+function addToCart(nombre, descripcion, precio, imagen, plataforma, categoria) {
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
     const index = carrito.findIndex(j => j.nombre === nombre);
@@ -82,7 +84,9 @@ function addToCart(nombre, descripcion, precio, imagen) {
             descripcion: descripcion,
             precio: parseFloat(precio),
             imagen: imagen,
-            cantidad: 1
+            cantidad: 1,
+            plataforma: plataforma,
+            categoria: categoria
         };
         carrito.push(nuevoJuego);
     }

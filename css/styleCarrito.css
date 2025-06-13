@@ -238,7 +238,7 @@ main.main-container {
 }
 
 .imagen-juego {
-    width: 90px;
+    width: 112px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -316,7 +316,7 @@ main.main-container {
     margin-top: 20px;
 }
 
-.product-cantidad {
+.product-cantidad, .product-categoria, .product-plataforma {
     font-size: 15px;
     color: #ffffff;
     font-weight: bold;
