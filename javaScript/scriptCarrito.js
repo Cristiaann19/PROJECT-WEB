@@ -141,3 +141,26 @@ document.addEventListener("DOMContentLoaded", () => {
         renderStars(calificacion);
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const track = document.querySelector(".carousel-track");
+    const items = document.querySelectorAll(".carousel-item");
+
+    if (!track || items.length === 0) return;
+
+    let currentIndex = 0;
+    const itemWidth = items[0].offsetWidth + 20;
+    const totalItems = items.length;
+
+    function moveCarousel() {
+        if (currentIndex >= totalItems - 10) {
+            currentIndex = 0;
+        } else {
+            currentIndex++;
+        }
+
+        const translateX = -currentIndex * itemWidth;
+        track.style.transform = `translateX(${translateX}px)`;
+    }
+    setInterval(moveCarousel, 2500);
+});
