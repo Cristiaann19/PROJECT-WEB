@@ -60,6 +60,7 @@ function mostrarCarrito() {
                 <span class="product-cantidad">Cantidad: ${juego.cantidad}</span>
                 <span class="product-plataforma">Plataforma: ${juego.plataforma}</span>
                 <span class="product-categoria">Categoria: ${juego.categoria}</span>
+                <span class="product-subtotal">Sub Total: S/. ${juego.cantidad * juego.precio}</span>
             </div>
             <div class="cart-icons">
                 <span class="icon-trash" onclick="eliminarDelCarrito(${index})"><i class="fa-solid fa-trash"></i></span>

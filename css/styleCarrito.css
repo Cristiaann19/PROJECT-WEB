@@ -214,7 +214,7 @@ main.main-container {
     width: 60%;
     min-width: 300px;
     max-width: 700px;
-    margin: 30px 0 220px 0;
+    margin: 20px 0 220px 0;
     background: #e57a27;
     border-radius: 12px;
     box-shadow: 0 2px 10px rgba(30,30,30,0.05);
@@ -314,6 +314,16 @@ main.main-container {
     min-width: 80px;
     text-align: right;
     margin-top: 20px;
+}
+
+.product-subtotal {
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-left: 18px;
+    min-width: 80px;
+    text-align: right;
+    margin-top: -52px;
 }
 
 .product-cantidad, .product-categoria, .product-plataforma {
@@ -699,5 +709,68 @@ footer nav a:hover {
     }
     .navbar .toggle_btn, .dropdown_menu {
         display: none !important;
+    }
+}
+
+/* Responsive del carrusel */
+@media (max-width: 600px) {
+    .carousel-container {
+        max-width: 350px;
+        width: 100vw;
+        margin: 40px auto 0 auto;
+        padding: 0.4rem 0.2rem;
+        border-radius: 7px;
+        background-color: #242020;
+        box-sizing: border-box;
+    }
+    .carousel-container h3 {
+        font-size: 12px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        line-height: 1.2;
+        font-family: "Press Start 2P", system-ui;
+        letter-spacing: 0.5px;
+    }
+    #letra {
+        font-size: 13px;
+        gap: 5px;
+    }
+    #letra i {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+    .carousel {
+        max-width: 350px;
+        width: 100%;
+        margin-top: 10px;
+        padding: 0;
+        overflow: hidden;
+    }
+    .carousel-track {
+        display: flex;
+        gap: 12px;
+        padding: 0;
+    }
+    .carousel-item {
+        width: calc(100% / 3);
+        min-width: 0;
+        max-width: none;
+        margin: 0;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .carousel-item img {
+        width: 100%;
+        height: 180px;
+        border-radius: 6px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        object-fit: cover;
+        transition: transform 0.2s;
+        display: block;
+    }
+    .carousel-item img:hover {
+        transform: scale(1.03);
     }
 }

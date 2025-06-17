@@ -521,6 +521,7 @@ body.dark-mode {
     }
 
 }
+
 @media screen and (max-width: 550px) {
     .logo img {
         width: 15rem;
