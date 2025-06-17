@@ -41,6 +41,10 @@ function mostrarCarrito() {
 
     itemsContenedor.innerHTML = "";
 
+    const titulo = document.createElement("h2");
+    titulo.innerHTML = 'Mis compras <i class="fa-solid fa-cart-shopping"> :</i>';
+    itemsContenedor.appendChild(titulo);
+
     mostrarMensajeCarritoVacio(carrito);
 
     if (carrito.length === 0) {
