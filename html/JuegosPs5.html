@@ -12,61 +12,48 @@
 </head>
 <body>
 <!--ENCABEZADO-->
-<header>
-    <div class="navbar">
-        <div class="logo">
-            <a href="/index.html"><img src="/RECURSOS/logoPagina.png"></a>
-        </div>
-        <ul class="links">
-            <li><a href="JuegosPs5.html">PlayStation 5</a></li>
-            <li><a href="JuegosPs4.html">PlayStation 4</a></li>
-            <li><a href="JuegosPs3.html">PlayStation 3</a></li>
-            <li><a href="JuegosPC.html">PC</a></li>
-        </ul>
-        <div>
-            <a href="Loginv1.html" class="action_btn"><i class="fa-solid fa-user"></i></a>
-            <a href="/html/Carrito.html" class="action_btn"><i class="fa-solid fa-cart-shopping"></i></a>
-            <a href="#" onclick="ReproMusica()" id="BotonMusica" class="action_btn">
-                <i class="fa-solid fa-music"></i>
-                <audio id="Mmusica" src="/RECURSOS/Mora - Ansiedades (Instrumental).mp3" preload="auto"></audio>
-            </a>
-            <a href="" class="action_btn" id="toggle-btn">
-                <label for="toggle" id="label_toggle">
-                    <span id="icon" class="fa-solid fa-moon"></span>
-                </label>
-            </a>
-            <input type="checkbox" id="toggle" hidden>
-        </div>
-        <div class="toggle_btn">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-    </div>
-    <div class="dropdown_menu">
-        <ul class="links">
-            <li><a href="JuegosPs5.html">PlayStation 5</a></li>
-            <li><a href="JuegosPs4.html">PlayStation 4</a></li>
-            <li><a href="JuegosPs3.html">PlayStation 3</a></li>
-            <li><a href="JuegosPC.html">PC</a></li>
-            <li><a href="Loginv1.html" class="action_btn"><i class="fa-solid fa-user"></i></a></li>
-            <li><a href="/html/Carrito.html" class="action_btn"><i class="fa-solid fa-cart-shopping"></i></a></li>
-            <li>
-                <a href="#" class="action_btn" id="music-btn" onclick="reproducirMusica()">
-                    <i class="fa-solid fa-music"></i>
-                </a>
-                <audio id="musica" src="/RECURSOS/Mora - Ansiedades (Instrumental).mp3"></audio>
-            </li>
-            <li>
-                <a href="#" class="action_btn" id="toggle-btn2">
-                    <label for="toggle" id="label_toggle2">
-                        <span id="icon2" class="fa-solid fa-moon"></span>
-                    </label>
-                </a>
-                <input type="checkbox" id="togle2" hidden>
-            </li>
-        </ul>
-    </div>
-</header>
-<section>
+<div class="wrapper">
+    <header>
+            <div class="encabezado">
+                <!--ZONA IZQUIERDA DEL HEADER-->
+                <div class="encabezado-izquierda">
+                    <a href="/index.html" class="img1">
+                        <img src="/RECURSOS/logoPagina.png">
+                    </a>
+                </div>
+
+                <!--ZONA CENTRO DEL HEADER-->
+                <div class="encabezado-centro">
+                    <ul class="links">
+                        <li><a href="/html/JuegosPs5.html">PlayStation 5</a></li>
+                        <li><a href="/html/JuegosPs4.html">PlayStation 4</a></li>
+                        <li><a href="/html/JuegosPs3.html">PlayStation 3</a></li>
+                        <li><a href="/html/JuegosPC.html">PC</a></li>
+                    </ul>
+                </div>
+                <!-- ZONA DERECHA DEL HEADER -->
+                <div class="encabezado-derecha">
+                    <a href="html/Carrito.html" class="action_btn"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="/Html/Loginv1.html" class="action_btn"><i class="fa-solid fa-user"></i></a>
+
+                    <!-- Botón hamburguesa -->
+                    <div class="toggle_btn">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+
+                    <!-- Menú desplegable -->
+                    <div class="dropdown_menu">
+                        <ul>
+                            <li><a href="/html/JuegosPs5.html">PlayStation 5</a></li>
+                            <li><a href="/html/JuegosPs4.html">PlayStation 4</a></li>
+                            <li><a href="/html/JuegosPs3.html">PlayStation 3</a></li>
+                            <li><a href="/html/JuegosPC.html">PC</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section>
     <br>
     <h2>¡Los juegos más destacados para PS5!</h2>
     <div class="parent">
@@ -90,7 +77,7 @@
         </div>
         <div class="carousel-dots"></div>
     </div>
-</section>
+</section> <!---->
 <main class="centrado">
     <article>
         <div class="juegos-wrapper">
@@ -247,6 +234,8 @@
         </div>
     </article>
 </main>
+</div>
+
 <!--CUERPO-->
 
 <!--FOOTER-->
@@ -300,6 +289,9 @@
         </div>
     </div>
 </div>
+    <button id="modo-oscuro-btn" class="boton-flotante">
+        <i class="fa-solid fa-moon"></i>
+    </button>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script src="/javaScript/script.js"></script>
