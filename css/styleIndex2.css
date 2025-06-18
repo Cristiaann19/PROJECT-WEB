@@ -1,288 +1,282 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Condensed+One&display=swap');
-/* RESET Y FUENTES */
-*{
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
-     font-family: "Open Sans", sans-serif;
- }
 
-:root{
-    --accent-color: #000000;
-    --base-color: #000000;
-    --text-color:#2E2B41;
-    --input-color:#F3F0FF;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.links li a {
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h2 {
+    margin: 20px auto;
+    text-align: center;
+    font-family: "Press Start 2P", system-ui;
+    font-size: 20px;
+}
+
+.encabezado {
+    background-color: #444141;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    position: relative;
+}
+
+.encabezado-izquierda {
+    display: flex;
+    gap: 7%;
+    flex: 1;
+}
+
+.encabezado-izquierda .img1 img {
+    width: 15rem;
+    margin: 0px 10px;
+}
+
+.encabezado-centro {
+    justify-items: center;
+}
+
+.encabezado-centro .links {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    color: white;
+}
+
+.encabezado-centro .links li {
+    list-style: none;
+}
+
+.encabezado-centro .links li a {
+    text-decoration: none;
+    padding: 8px 12px;
+    display: inline-block;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: "Special Gothic Condensed One", sans-serif;
+    font-size: 1.5;
+}
+
+.encabezado-centro .links li a:hover {
+    background-color: orangered;
+    border-radius: 5px;
+}
+
+.encabezado-derecha {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.encabezado-derecha a {
+    color: white;
+}
+
+.encabezado-derecha a:hover {
+    color: orangered;
+}
+
+.menu-icon {
+    color: white;
+    cursor: pointer;
+}
+
+#toggle-menu {
+    display: none;
+}
+
+.div-android {
+    display: none;
+}
+
+.navegacion-android {
+    display: none;
+}
+
+li a {
     text-decoration: none;
     padding: 8px 12px;
     display: inline-block;
     transition: background-color 0.3s ease, color 0.3s ease;
     color: white;
     font-family: "Special Gothic Condensed One", sans-serif;
-    font-size: 18px;
-}
-
-.links li a:hover {
-    background-color: #000000;
-    border-radius: 5px;
-    color: white;
-}
-
-body{
-    min-height: 100vh;
-    background-color: var(--base-color);
-}
-
-li{
-    list-style: none;
-}
-
-a{
-    text-decoration: none;
-    color: var(--base-color);
-    font-size: 1.5rem;
-}
-
-h2 {
-    margin-right: 10px;
-    margin-top: 20px;
-    margin-bottom: 15px;
-    text-align: center;
-    font-family: "Press Start 2P", system-ui;
-    font-size: 20px;
-}
-
-/*HEADER*/
-header {
-    background-color: #6d7e6f;
-    color: white;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-}
-
-.logo {
-    background-color: transparent;
-    color: white;
-    padding: 0;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-}
-
-.logo img {
-    width: 18rem;
-    margin: 0px 30px;
-
-}
-
-.action_btn:hover {
-    scale: 1.05;
-    color: #000000;
-}
-
-/*HEADER*/
-.navbar{
-    width: 100%;
-    height: 60px;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.navbar .logo a{
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-.navbar .links{
-    display: flex;
-    gap:2rem;
-}
-.navbar .toggle_btn{
-    color: var(--base-color);
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: none;
-}
-
-.action_btn{
-    color: var(--base-color);
-    padding: 0.5rem 1rem;
-    border: none;
-    outline: none;
-    font-size:0.8rem ;
-    font-weight: bold;
-    cursor: pointer;
-    position: relative;
-}
-
-.action_btn:hover {
-    scale: 1.05;
-    color: #000000;
-}
-
-.dropdown_menu{
-    display: none;
-    position: absolute;
-    right: 2rem;
-    top: 60px;
-    width: 300px;
-    height: 0;
-    background: #4d5b50ae;
-    backdrop-filter: blur(15px);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: height 0.2s cubic-bezier(0.175,0.885,0.32,1.275);
-}
-
-.dropdown_menu .links .fa-solid{
     font-size: 1rem;
 }
 
-.dropdown_menu .links li a {
-    font-size: 1rem  ;
-}
-.dropdown_menu .links li {
-    padding: 0.7rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-.dropdown_menu .action_btn{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-}
-.dropdown_menu.open{
-    height:510px ;
-}
-
-/*MAIN*/
-main {
-    padding: 5px;
-}
-
-/* ========================== */
-/*   SECCIÓN DE CARRUSEL     */
-/* ========================== */
-.container-carrusel {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    margin: 20px;
-    padding: 0 20px;
-}
-
-.game img {
-    width: 100%;
-    height: 360px;
-    object-fit: cover;
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.game img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* ========================== */
-/*     SECCIONES DE JUEGOS   */
-/* ========================== */
-#Accion, #Aventura, #Deportes, #Lucha, #Supervivencia {
-    text-align: center;
-    margin: 20px;
-    padding: 0 20px;
-    color: #000000;
-}
-
-#Accion h3, #Aventura h3, #Deportes h3, #Lucha h3, #Supervivencia h3 {
-    font-size: 22px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    font-family: "Press Start 2P", system-ui;;
-}
-
-.juegosAccion, .juegosAventura, .juegosDeportes, .juegosLucha, .juegosSupervivencia {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    justify-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.juegoA, .juegoAvtr, .juegoD, .juegoL, .juegoS {
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-    width: 100%;
-    height: 300px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.juegoA img, .juegoAvtr img, .juegoD img, .juegoL img, .juegoS img {
-    width: 100%;
-    object-fit: contain;
-    transition: opacity 0.3s ease;
-    border-radius: 12px;
-    display: block;
-}
-
-.juegoA:hover, .juegoAvtr:hover, .juegoD:hover, .juegoL:hover, .juegoS:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
-}
-
-.juegoA:hover img, .juegoAvtr:hover img, .juegoD:hover img, .juegoL:hover img, .juegoS:hover img {
-    opacity: 0.8;
-}
-
-.descripcion {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7);
+/*BOTON OSCURO*/
+.boton-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #444141;
     color: white;
-    padding: 10px;
-    font-size: 14px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    height: auto;
-    border-radius: 0 0 12px 12px;
-    transform: translateY(100%);
-    max-height: 100%;
-    overflow-y: auto;
+    border: none;
+    border-radius: 30%;
+    padding: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
 }
 
-.juegoA:hover .descripcion,
-.juegoAvtr:hover .descripcion,
-.juegoD:hover .descripcion,
-.juegoL:hover .descripcion,
-.juegoS:hover .descripcion {
-    transform: translateY(0);
-    opacity: 1;
+.boton-flotante:hover {
+    background-color: orangered;
 }
+
+body.modo-oscuro {
+    background-color: #191919;
+    color: white;
+}
+
+/* Ocultar el menú en escritorio */
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    /* ajusta según tu header */
+    right: 10px;
+    width: 150px;
+    background: #333;
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 999;
+}
+
+.dropdown_menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown_menu ul li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.dropdown_menu ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown_menu.open {
+    display: block;
+    height: 190px;
+}
+
+.toggle_btn {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.toggle_btn {
+    display: none;
+}
+
+/* Responsive: oculta nav grande y muestra hamburguesa */
+@media (max-width: 768px) {
+
+    .toggle_btn {
+        display: block;
+    }
+}
+
+
+
+/*MODAL*/
+/* Agrega esto a tu archivo CSS */
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    border-radius: 8px;
+    padding: 24px;
+    max-width: 500px;
+    width: 90vw;
+    position: relative;
+    color: #222;
+    font-family: "Special Gothic Condensed One", sans-serif;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body.modo-oscuro .modal-content {
+    background: #222;
+    color: #fff;
+}
+
+#modal-image {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.btn-details {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 16px;
+    color: #000000;
+    background: linear-gradient(to right, rgba(255, 126, 0, 0.76), #ff6300);
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+
+.buy-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 126, 95, 0.5);
+}
+
+
 
 /*FOOTER*/
 footer {
-    background-color: #6d7e6f;
+    background-color: #444141;
     color: white;
     text-align: center;
     padding: 20px;
+    margin-top: auto;
 }
 
-footer p, a {
+footer p,
+a {
     font-size: 16px;
 }
 
@@ -326,170 +320,148 @@ footer nav a:hover {
 }
 
 /*END FOOTER*/
+main {
+    padding: 5px;
+}
 
-
+/*====================================================*/
 /* ========================== */
-/*         MODO OSCURO         */
+/*   SECCIÓN DE CARRUSEL     */
 /* ========================== */
-.dark-mode .logo {
-    color: white;
-    padding: 0;
-    display: flex;
-    justify-content: left;
-    align-items: center;
+.container-carrusel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 20px;
+    padding: 0 20px;
 }
 
-.dark-mode .header {
-    color: white;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
+.game img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.dark-mode .logo {
-    color: white;
-    padding: 0;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-}
-
-
-.navbar .links a {
-    text-decoration: none;
-    color: var(--base-color);
-    font-size: 1rem;
-}
-
-/* Body */
-body.dark-mode {
-    background-color: #121212;
-    color: #fff;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-/* Encabezado en modo oscuro */
-.dark-mode header {
-    color: white;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-}
-
-/* Texto en modo oscuro */
-.dark-mode h2, .dark-mode h3, .dark-mode .descripcion {
-    color: #ffffff;
-}
-
-/* Fondo y texto en contenedores */
-.dark-mode .descripcion {
-    background: rgb(98, 94, 94);
+.game img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 
-/* Estilo del icono del toggle (de la luna al sol) */
-#icon.fa-sun {
-    color: #ffffff; /* Icono de sol en el modo oscuro */
-}
-
-/* Estilo del icono de la luna */
-#icon.fa-moon {
-    color: white; /* Icono de luna */
-}
-
+/*JUEGOS*/
 /* ========================== */
-/*        SWITCH PARA MODO OSCURO (Toggle)  */
+/*     SECCIONES DE JUEGOS   */
 /* ========================== */
-#toggle {
-    display: none; /* Checkbox oculto */
-}
-
-#label_toggle {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: transform 0.3s ease;
-}
-
-/* Transformación del ícono al activar el toggle */
-#toggle:checked + #label_toggle #icon {
-    content: "\f185"; /* Cambio de ícono (sol) */
-    transform: rotate(360deg);
-}
-
-/* Cuando el toggle está marcado, el icono cambia */
-#toggle:checked + #label_toggle #icon {
-    content: "\f185"; /* Ícono de sol */
-}
-
-/* ========================== */
-/*        BODY Y HEADER        */
-/* ========================== */
-.dark {
-    background-color: black;
-    color: #ffffff;
-    transition: all 1.5s ease;
-}
-
-.dark-mode header {
-    background-color: #444141;
-}
-
-.dark-mode .links li a {
-    text-decoration: none;
-    padding: 8px 12px;
-    display: inline-block;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    color: white;
-}
-
-.dark-mode .links li a:hover {
-    background-color: orangered;
-    border-radius: 5px;
-    color: white;
-}
-
-.dark-mode .action_btn:hover {
-    scale: 1.05;
-    color: orangered;
-}
-
-.dark-mode .dropdown_menu .action_btn{
-    padding: 0.7rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.dark-mode footer {
-    background-color: #000000;
-    color: white;
+#Accion,
+#Aventura,
+#Deportes,
+#Lucha,
+#Supervivencia {
     text-align: center;
-    padding: 20px;
+    margin: 20px;
+    padding: 0 20px;
 }
 
-/* ========================== */
-/*          RESPONSIVE        */
-/* ========================== */
-@media (max-width:992px ) {
-    .navbar .links, .navbar .action_btn{
-        display: none;
-    }
-    .navbar .toggle_btn{
-        display: block;
-    }
-    .dropdown_menu{
-        display: block;
-    }
+#Accion h3,
+#Aventura h3,
+#Deportes h3,
+#Lucha h3,
+#Supervivencia h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: "Press Start 2P", system-ui;
+    ;
 }
-@media (max-width:576px ) {
-    .dropdown_menu{
-        left: 2rem;
-        width: unset;
-    }
+
+.juegosAccion,
+.juegosAventura,
+.juegosDeportes,
+.juegosLucha,
+.juegosSupervivencia {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
+
+.juegoA,
+.juegoAvtr,
+.juegoD,
+.juegoL,
+.juegoS {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.juegoA img,
+.juegoAvtr img,
+.juegoD img,
+.juegoL img,
+.juegoS img {
+    width: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+    border-radius: 12px;
+    display: block;
+}
+
+.juegoA:hover,
+.juegoAvtr:hover,
+.juegoD:hover,
+.juegoL:hover,
+.juegoS:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.juegoA:hover img,
+.juegoAvtr:hover img,
+.juegoD:hover img,
+.juegoL:hover img,
+.juegoS:hover img {
+    opacity: 0.8;
+}
+
+.descripcion {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    height: auto;
+    border-radius: 0 0 12px 12px;
+    transform: translateY(100%);
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.juegoA:hover .descripcion,
+.juegoAvtr:hover .descripcion,
+.juegoD:hover .descripcion,
+.juegoL:hover .descripcion,
+.juegoS:hover .descripcion {
+    transform: translateY(0);
+    opacity: 1;
+}
+
 @media screen and (max-width: 768px) {
     #music-btn {
         font-size: 10px;
@@ -507,62 +479,88 @@ body.dark-mode {
         background-color: orangered;
     }
 
-    .juegoA, .juegoAvtr, .juegoD, .juegoL, .juegoS {
+    .juegoA,
+    .juegoAvtr,
+    .juegoD,
+    .juegoL,
+    .juegoS {
         height: auto;
     }
 
-    .juegosAccion, .juegosAventura, .juegosDeportes, .juegosLucha, .juegosSupervivencia {
+    .juegosAccion,
+    .juegosAventura,
+    .juegosDeportes,
+    .juegosLucha,
+    .juegosSupervivencia {
         grid-template-columns: 1fr;
     }
 
-    .juegoA img, .juegoAvtr img, .juegoD img, .juegoL img, .juegoS img {
+    .juegoA img,
+    .juegoAvtr img,
+    .juegoD img,
+    .juegoL img,
+    .juegoS img {
         width: 100%;
         height: auto;
     }
 
 }
 
-@media screen and (max-width: 550px) {
-    .logo img {
-        width: 15rem;
-        margin: 0px 30px;
 
+/* ========== RESPONSIVE: TABLET ========== */
+@media (max-width: 992px) {
+    .game {
+        width: calc(33.33% - 13px);
+        /* 3 tarjetas por fila */
     }
-    .nav {
-        opacity: 0;
-        visibility: hidden;
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        gap: 1rem;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #1c1c1c;
-        padding: 2rem;
-        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+
+    .game img {
+        height: 300px;
+    }
+}
+
+/* ========== RESPONSIVE: CELULAR ========== */
+@media (max-width: 768px) {
+    .game {
+        width: calc(50% - 10px);
+        /* 2 tarjetas por fila */
+    }
+
+    .game img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
     }
 
 }
 
-@media screen and (max-width: 480px) {
-
-    .logo h1 {
-        font-size: 20px;
-    }
-
-    #Accion h3, #Aventura h3, #Deportes h3, #Lucha h3, #Supervivencia h3 {
-        font-size: 1.5rem;
+@media (max-width: 480px) {
+    .game {
+        width: 100%;
+        /* 1 tarjeta por fila en celulares pequeños */
     }
 }
 
-#toggle:checked + #toggle-btn #icon {
-    content: "\f185";
-    display: inline-block;
-    color: #000000;
-}
+/*====================================================*/
 
-#togle {
-    display: none;
+
+@media (max-width: 900px) {
+    .encabezado {
+        padding: 10px 15px;
+    }
+
+    .encabezado-izquierda .img1 img {
+        display: block;
+        width: 13rem;
+        margin: 0px auto;
+    }
+
+    .encabezado-centro {
+        display: none;
+    }
+
+    .encabezado-derecha {
+        flex: 0 0 auto;
+        gap: 10px;
+    }
 }

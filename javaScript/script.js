@@ -1,146 +1,88 @@
-//FUNCION DEL NAVBAR- MENU_HANBURGERSA//
-const toggleBtn = document.querySelector('.toggle_btn')
-const toggleBtnIcon = document.querySelector('.toggle_btn i')
-const dropDownMenu = document.querySelector('.dropdown_menu')
+//Menu HAMBUERGUESA RESPONSIVE
+const toggleBtn = document.querySelector('.toggle_btn');
+const toggleBtnIcon = toggleBtn.querySelector('i');
+const dropDownMenu = document.querySelector('.dropdown_menu');
 
 toggleBtn.onclick = function () {
-    dropDownMenu.classList.toggle('open')
-    const isOpen = dropDownMenu.classList.contains('open')
+    dropDownMenu.classList.toggle('open');
+    const isOpen = dropDownMenu.classList.contains('open');
 
     toggleBtnIcon.classList = isOpen
         ? 'fa-solid fa-xmark'
-        : 'fa-solid fa-bars'
-}
-//2 FUNCIONES PARA REPRODUCIR MUSICA
-function reproducirMusica() {
-    const music = document.getElementById("musica");
-    const musicIcon = document.querySelector("#music-btn i");
-    if (music.paused) {
-        music.play();
-        musicIcon.classList.remove("fa-music");
-        musicIcon.classList.add("fa-pause");
-    } else {
-        music.pause();
-        musicIcon.classList.remove("fa-pause");
-        musicIcon.classList.add("fa-music");
-    }
-}
-
-function ReproMusica() {
-    const music = document.getElementById("Mmusica");
-    const musicIcon = document.querySelector("#BotonMusica i");
-
-    if (music.paused) {
-        music.play();
-        musicIcon.classList.remove("fa-music");
-        musicIcon.classList.add("fa-pause");
-    } else {
-        music.pause();
-        musicIcon.classList.remove("fa-pause");
-        musicIcon.classList.add("fa-music");
-    }
-}
-
-
-//FUNCIONES PARA EL MODO OSCURO
-//funcion 1 pantalla grande
-const toggle = document.getElementById('toggle');
-const icon = document.getElementById('icon');
-const body = document.body;
-const h3Elements = document.querySelectorAll('h3');
-const header = document.querySelector('header');
-const navLinks = document.querySelectorAll('.links li a');
-
-function enableDarkMode() {
-    body.classList.add('dark-mode');
-    icon.classList.remove('fa-moon');
-    icon.classList.add('fa-sun');
-    localStorage.setItem('darkMode', 'enabled');
-    h3Elements.forEach(h3 => h3.classList.add('dark-mode'));
-    header.classList.add('dark-mode');
-    navLinks.forEach(a => a.classList.add('dark-mode'));
-}
-
-function disableDarkMode() {
-    body.classList.remove('dark-mode');
-    icon.classList.remove('fa-sun');
-    icon.classList.add('fa-moon');
-    localStorage.setItem('darkMode', 'disabled');
-    h3Elements.forEach(h3 => h3.classList.remove('dark-mode'));
-    header.classList.remove('dark-mode');
-    navLinks.forEach(a => a.classList.remove('dark-mode'));
-}
-
-if (localStorage.getItem('darkMode') === 'enabled') {
-    toggle.checked = true;
-    enableDarkMode();
-}
-
-toggle.addEventListener('change', function () {
-    if (this.checked) {
-        enableDarkMode();
-    } else {
-        disableDarkMode();
+        : 'fa-solid fa-bars';
+};
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+        dropDownMenu.classList.remove('open');
+        toggleBtnIcon.classList = 'fa-solid fa-bars';
     }
 });
 
-//funcion 2
 
-document.addEventListener('DOMContentLoaded', function () {
-    const toggle = document.getElementById('toggle');
-    const icon = document.getElementById('icon2');
-    const body = document.body;
-    const h3Elements = document.querySelectorAll('h3');
-    const header = document.querySelector('header');
-    const navLinks = document.querySelectorAll('.links li a');
 
-    function enableDarkMode() {
-        body.classList.add('dark-mode');
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
-        localStorage.setItem('darkMode', 'enabled');
-        h3Elements.forEach(h3 => h3.classList.add('dark-mode'));
-        header.classList.add('dark-mode');
-        navLinks.forEach(a => a.classList.add('dark-mode'));
+// Función para aplicar el modo oscuro si estaba activado
+document.addEventListener("DOMContentLoaded", function () {
+    const modoOscuroActivado = localStorage.getItem("modoOscuro") === "true";
+
+    if (modoOscuroActivado) {
+        document.body.classList.add("modo-oscuro");
+
+        // Cambiar el ícono también si ya estaba activado
+        const icono = document.querySelector("#modo-oscuro-btn i");
+        if (icono) {
+            icono.classList.remove("fa-moon");
+            icono.classList.add("fa-sun");
+        }
     }
 });
 
-function disableDarkMode() {
-    body.classList.remove('dark-mode');
-    icon.classList.remove('fa-sun');
-    icon.classList.add('fa-moon');
-    localStorage.setItem('darkMode', 'disabled');
-    h3Elements.forEach(h3 => h3.classList.remove('dark-mode'));
-    header.classList.remove('dark-mode');
-    navLinks.forEach(a => a.classList.remove('dark-mode'));
-}
+// Evento del botón
+document.getElementById("modo-oscuro-btn").addEventListener("click", function () {
+    const modoOscuroActivo = document.body.classList.toggle("modo-oscuro");
 
-if (localStorage.getItem('darkMode') === 'enabled') {
-    toggle.checked = true;
-    enableDarkMode();
-}
+    // Guardar el estado en localStorage
+    localStorage.setItem("modoOscuro", modoOscuroActivo);
 
-toggle.addEventListener('change', function () {
-    if (this.checked) {
-        enableDarkMode();
-    } else {
-        disableDarkMode();
-    }
+    // Cambiar íconos
+    const icono = this.querySelector("i");
+    icono.classList.toggle("fa-moon");
+    icono.classList.toggle("fa-sun");
 });
 
-//CAMBIO DE ICONO AL PRESIONAR
-//funcion 1
-const toggleCheckbox = document.getElementById('toggle');
 
-toggleCheckbox.addEventListener('change', function () {
-    if (this.checked) {
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
-    } else {
-        icon.classList.remove('fa-sun');
-        icon.classList.add('fa-moon');
-    }
+/*FUNCIONES DEL MODAL*/
+// Selecciona imágenes dentro de todas las clases de juegos
+document.querySelectorAll(
+  '.juegoS .imagen-con-descripcion img, ' +
+  '.juegoA .imagen-con-descripcion img, ' +
+  '.juegoAvtr .imagen-con-descripcion img, ' +
+  '.juegoL .imagen-con-descripcion img, ' +
+  '.juegoD .imagen-con-descripcion img'
+).forEach((img) => {
+  img.style.cursor = 'pointer';
+  img.addEventListener('click', function() {
+    const title = img.alt;
+    const imageSrc = img.src;
+    const description = img.parentElement.querySelector('.descripcion').textContent;
+
+    document.getElementById('modal-title').textContent = title;
+    document.getElementById('modal-image').src = imageSrc;
+    document.getElementById('modal-description').textContent = description;
+
+    document.getElementById('modal').style.display = 'flex';
+  });
 });
+
+// Cierra el modal al hacer clic en la X
+document.querySelector('.close-btn').onclick = function() {
+  document.getElementById('modal').style.display = 'none';
+};
+
+// Cierra el modal al hacer clic fuera del contenido
+document.getElementById('modal').onclick = function(e) {
+  if (e.target === this) this.style.display = 'none';
+};
+
 
 //Metodo para el carrusel dinamico de las paginas internas
 const slides = document.querySelector('.slides');
