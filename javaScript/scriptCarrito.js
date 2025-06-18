@@ -1,3 +1,4 @@
+
 // ==================== CALIFICACIÓN DE ESTRELLAS ====================
 let calificacion = 0;
 

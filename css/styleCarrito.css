@@ -25,7 +25,7 @@
 
 body{
     min-height: 100vh;
-    background-color: #121212;
+    background-color: #ffffff;
 }
 
 li{
@@ -53,7 +53,7 @@ h2 {
     text-align: center;
     margin: 150px 0 50px 0;
     font-size: 30px;
-    color: #ffffff;
+    color: #000000;
     font-family: 'Open Sans', system-ui, sans-serif;
     font-weight: 600;
     letter-spacing: 0.5px;
@@ -63,10 +63,18 @@ h2 {
     align-items: center;
     justify-content: center;
 }
+body.modo-oscuro .empty-cart-message {
+    color: #ffffff;
+    background-color: #191919;
+}
+
+body.modo-oscuro .empty-cart-message i {
+    color: #ffffff;
+}
 
 .empty-cart-message i {
     font-size: 100px;
-    color: #ffffff;
+    color: #000000;
     margin-bottom: 12px;
     display: block;
 }
@@ -206,7 +214,31 @@ main.main-container {
     gap: 100px;
     padding: 5px;
 }
+/*BOTON OSCURO*/
+.boton-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #444141;
+    color: white;
+    border: none;
+    border-radius: 30%;
+    padding: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
 
+.boton-flotante:hover {
+    background-color: orangered;
+}
+
+body.modo-oscuro {
+    background-color: #191919;
+    color: white;
+}
 /* ========================== */
 /*   SECCIÓN CARRITO SIMPLE   */
 /* ========================== */
