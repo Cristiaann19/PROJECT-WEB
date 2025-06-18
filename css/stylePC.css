@@ -216,11 +216,11 @@ section {
     padding: 0 20px;
 }
 .parent {
-    display: grid;
+    display: none;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
     max-width: 1200px;
-    margin: auto;
+    margin: 0 15px;
 }
 
 .parent div {
@@ -256,6 +256,65 @@ section {
 .section1 img:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.contenedorCarrusel {
+    width: 100%;
+    overflow: hidden;
+    position:relative;
+}
+
+.carrusel {
+    width: 200vw;
+    margin: 50px 0;
+    overflow: hidden;
+    height: 540px;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.slides {
+    display: flex;
+    width: 100vw;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 100vw;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: transparent;
+    border: 2.5px solid var(--accent-color, #ff4500);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    display: inline-block;
+}
+
+.carousel-dot.active {
+    background: var(--accent-color, #ff4500);
+    border: 2px solid var(--accent-color, #ff4500);
 }
 
 h4 {
@@ -492,6 +551,9 @@ footer nav a:hover {
         padding: 25px;
     }
 
+    .parent {
+        display: grid;
+    }
     .derecha {
         width: 100%;
         justify-content: center;
@@ -517,6 +579,9 @@ footer nav a:hover {
         width: 15rem;
         margin: 0px 30px;
 
+    }
+    .contenedorCarrusel {
+        display: none;
     }
     .nav {
         opacity: 0;
