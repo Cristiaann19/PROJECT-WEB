@@ -62,22 +62,49 @@
                     <div class="game">
                         <img src="https://i.pinimg.com/736x/83/58/9d/83589d8de990e45c165d25d5cd676bb5.jpg"
                             alt="COD black ops 6">
+                        <span class="descripcion">Call of Duty: Black Ops 6 es un juego de disparos en primera persona
+                            que
+                            ofrece una experiencia intensa y emocionante con una narrativa cautivadora y un modo
+                            multijugador competitivo. Los jugadores se sumergen en operaciones encubiertas y combates
+                            tácticos en diversos escenarios globales.</span>
+                        </span>
                     </div>
                     <div class="game">
                         <img src="https://i.pinimg.com/736x/b2/48/a4/b248a47671cc9b3d3f7c1fdd23a0a8a5.jpg"
                             alt="Call of Duty Modern Warfare III">
+                        <span class="descripcion">Call of Duty: Modern Warfare III es un videojuego de disparos en
+                            primera persona que continúa la historia de la serie Modern Warfare, ofreciendo una
+                            narrativa
+                            intensa y un modo multijugador competitivo. Los jugadores se sumergen en operaciones
+                            militares
+                            globales, enfrentándose a enemigos en diversos escenarios mientras utilizan una amplia gama
+                            de armas y tácticas.</span>
                     </div>
                     <div class="game">
                         <img src="https://i.pinimg.com/736x/1c/02/29/1c02294c7c71202d72c1561b204ee235.jpg"
                             alt="The last of us">
+                        <span class="descripcion">The Last of Us es una serie de videojuegos de acción y aventura, así
+                            como una franquicia multimedia, creada por Naughty Dog y publicada por Sony Interactive
+                            Entertainment.​ La serie está ambientada en unos Estados Unidos devastados por humanos
+                            caníbales infectados por un hongo mutado del género Cordyceps. </span>
                     </div>
                     <div class="game">
-                        <img src="RECURSOS/91f329fddd9835a6dbfa0b1b5b949f6c.jpg"
-                            alt="DAYS GONE">
+                        <img src="RECURSOS/91f329fddd9835a6dbfa0b1b5b949f6c.jpg" alt="DAYS GONE">
+                        <span class="descripcion">Days Gone es un videojuego de acción y aventura en mundo abierto,
+                            desarrollado por Bend Studio y publicado por Sony Interactive Entertainment. Ambientado en
+                            un mundo post-apocalíptico, el jugador asume el papel de Deacon St. John, un
+                            cazarrecompensas que lucha por sobrevivir en un entorno hostil lleno de criaturas infectadas
+                            y otros supervivientes.</span>
+
                     </div>
                     <div class="game">
                         <img src="https://i.pinimg.com/736x/54/39/c8/5439c8c20368017e14aabb133d9abe2d.jpg"
                             alt="Ghost Recon">
+                        <span class="descripcion">Tom Clancy's Ghost Recon es una serie de videojuegos de disparos
+                            tácticos en primera persona que se caracteriza por su enfoque en operaciones militares de
+                            élite y conflictos futuristas. Los jugadores asumen el papel de un "Ghost", miembro de una
+                            unidad de fuerzas especiales estadounidense, y deben llevar a cabo misiones peligrosas en
+                            entornos diversos</span>
                     </div>
                 </div>
             </section>
@@ -197,12 +224,11 @@
                     </div>
                     <div class="juegoD">
                         <div class="imagen-con-descripcion">
-                            <img src="https://i.pinimg.com/736x/01/9c/5b/019c5b73605c7e201611ecbacc6b66af.jpg"
-                                alt="Efootball">
-                            <span class="descripcion">eFootball 2025 ofrece una experiencia de fútbol ultra realista con
-                                gráficos de última generación y jugabilidad fluida, permitiendo a los jugadores competir
-                                en tiempo real con equipos de todo el mundo. Con un enfoque en el juego en línea y
-                                actualizaciones periódicas, el título continúa evolucionando año tras año.</span>
+                            <img src="https://vracingnews.de/media/31607-f1-25-ank%C3%BCndigung-2503-jpg/?thumbnail=large"
+                                alt="F1 25">
+                            <span class="descripcion">F1 25 es un videojuego de carreras desarrollado por Codemasters y
+                                publicado por EA Sports. Es la decimoctava entrada en la serie F1 y cuenta con la
+                                licencia para los campeonatos de Fórmula Uno y Fórmula 2 de la temporada 2025.</span>
                         </div>
                     </div>
                     <div class="juegoD">
@@ -366,18 +392,24 @@
             </div>
         </div>
     </footer>
-    <!-- Modal para la imagen -->
     <div id="modal" class="modal">
         <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h3 id="modal-title"></h3>
-            <div class="modal-body">
-                <img src="" alt="Imagen Modal" id="modal-image">
-                <div class="info-container">
-                    <div class="description">
+            <div class="modal-header-row">
+                <h3 id="modal-title"></h3>
+                <span class="close-btn">&times;</span>
+            </div>
+            <div class="modal-body-horizontal">
+                <div class="modal-img-container">
+                    <img src="" alt="Imagen Modal" id="modal-image">
+                </div>
+                <div class="modal-info-container">
+                    <div class="modal-description-box">
                         <p id="modal-description"></p>
                     </div>
-                    <a href="#" class="btn-details" id="modal-button"><i class="fas fa-shopping-cart"></i> Comprar</a>
+                    <button class="buy-btn"
+                        onclick="addToCart()">
+                        <i class="fas fa-shopping-cart"></i> Comprar
+                    </button>
                 </div>
             </div>
         </div>

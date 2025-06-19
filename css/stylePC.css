@@ -212,9 +212,7 @@ body.modo-oscuro {
 /*=======================*/
 /*  SECCION DE JUEGOS    */
 /*=======================*/
-section {
-    padding: 0 20px;
-}
+
 .parent {
     display: none;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -494,7 +492,7 @@ td {
 /*        FOOTER         */
 /*=======================*/
 footer {
-    background-color: #6d7e6f;
+    background-color: #000000;
     color: white;
     text-align: center;
     padding: 20px;
