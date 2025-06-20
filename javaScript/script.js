@@ -18,8 +18,6 @@ window.addEventListener('resize', function() {
     }
 });
 
-
-
 // Selecciona imágenes dentro de todas las clases de juegos y el carrusel
 document.querySelectorAll(
   '.juegoS .imagen-con-descripcion img, ' +

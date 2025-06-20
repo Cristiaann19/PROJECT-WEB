@@ -193,7 +193,7 @@ body.modo-oscuro {
         display: block;
     }
 }
-
+/*
 .modal {
     display: none;
     position: fixed;
@@ -324,7 +324,141 @@ body.modo-oscuro {
     }
     
 }
+*/
+/*======================================================================*/
+.centrado {
+    display: flex;
+    flex-direction: column; /* pone los juegos uno debajo del otro */
+    align-items: center;
+    gap: 40px; /* espacio entre los juegos */
+    padding: 0px 20px 40px; /* espacio arriba para que no se solape con la navbar */
+    box-sizing: border-box;
+}
 
+.contenedor {
+    background-color: #2e2e2e;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 650px;
+    width: 1000px;
+    margin-top: auto;
+    display: flex;
+
+}
+.juegos-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /* espacio entre juegos */
+    margin-top: 40px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+
+.section1 { /* imagen izquierda */
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+
+.section1 img {
+    border-radius: 5%;
+    width: 350px;
+    margin: auto;
+}
+
+.derecha { /* contenedor derecho */
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Estilos individuales de cada sección */
+.div1, .div2, .div3, .div4 {
+    color: white;
+    border-radius: 10px;
+}
+
+/* Texto descriptivo */
+.div2 p {
+    padding: 15px;
+    margin: auto;
+    font-size: 15.5px;
+    line-height: 1.5;
+    text-align: justify;
+    font-family: "Comic Sans MS";
+    color: white;
+}
+
+
+.div3 {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.div3 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 20px;
+}
+
+
+/* Botón */
+.div4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buy-btn {
+    background: linear-gradient(to right, rgba(255, 126, 0, 0.76), #ff6300);
+    color: #000000;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.buy-btn:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column;
+        height: auto;
+        width: 95%;
+    }
+
+    .section1,
+    .derecha {
+        width: 100%;
+    }
+
+    .section1 img {
+        width: 80%;
+    }
+
+
+    .div3 iframe {
+        width: 100%;
+        height: 100%;
+    }
+}
 /*FOOTER*/
 footer {
     background-color: #000000;
