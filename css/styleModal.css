@@ -35,9 +35,8 @@
     text-shadow: 0 2px 12px #00000088;
 }
 
-/* Ícono mantiene el color original (puedes ajustar si deseas un color personalizado para el ícono) */
 .modal-icono i {
-    color: #dc6314; /* color original del logo del carrito */
+    color: #dc6314;
     font-size: 60px;
     margin-bottom: 18px;
     text-shadow: 0 2px 12px #000000aa;
@@ -64,7 +63,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #e57a27; /* naranja más claro */
+    background: linear-gradient(to right, rgba(255, 126, 0, 0.76), #ff6300);
     color: #111;
 }
 
@@ -76,7 +75,7 @@
 
 .modal-btn.amarillo,
 .modal-btn.morado {
-    background: #e57a27; /* ambos botones igual color, naranja claro */
+    background: #e57a27;
     color: #111;
     border: none;
 }

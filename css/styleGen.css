@@ -64,7 +64,7 @@ h2 {
     color: white;
     transition: background-color 0.3s ease, color 0.3s ease;
     font-family: "Special Gothic Condensed One", sans-serif;
-    font-size: 1.5;
+    font-size: 1.1rem;
 }
 
 .encabezado-centro .links li a:hover {

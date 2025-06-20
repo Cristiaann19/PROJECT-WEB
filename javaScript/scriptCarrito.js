@@ -101,12 +101,30 @@ function addToCart(nombre, descripcion, precio, imagen, plataforma, categoria) {
 }
 
 // ==================== MODAL FUNCIONES ====================
+//Funcion para mostrar el modal
 function mostrarModalCarrito() {
     const modal = document.getElementById('modal-carrito');
     if (modal) {
         modal.classList.add('activo');
+        document.body.style.overflow = 'hidden';
+
     }
 }
+
+//Funcion para cerrar el modal
+function cerrarModalCarrito() {
+    const modal = document.getElementById('modal-carrito');
+    if (modal) {
+        modal.classList.remove('activo');
+        document.body.style.overflow = '';
+    }
+}
+
+// Asigna el evento a los dos botones después de que el DOM cargue
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('btn-continuar').addEventListener('click', cerrarModalCarrito);
+    document.getElementById('btn-ver-carrito').addEventListener('click', cerrarModalCarrito);
+});
 
 // ==================== ELIMINAR PRODUCTO ====================
 function eliminarDelCarrito(index) {
