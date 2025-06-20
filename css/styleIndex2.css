@@ -531,10 +531,10 @@ main {
 
 .cover-container {
     position: relative;
-    width: 260px;      /* cuadrado por defecto */
+    width: 260px;
     height: 360px;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 19px;
     transition: width 0.4s, height 0.4s, box-shadow 0.3s;
     background: #181818;
     box-shadow: 0 2px 16px 0 rgba(0,0,0,0.12);
