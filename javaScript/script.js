@@ -80,6 +80,7 @@ form.addEventListener('submit',(e)=>{
         error_message.innerText = errors.join(". ")
     }
 })
+
 function getSignupFormErrors(firstname,email,password,repeatPassword){
     let errors = []
     if (firstname === '' || firstname == null){
