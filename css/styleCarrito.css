@@ -263,7 +263,7 @@ body.modo-oscuro .empty-cart-message i {
     padding: 12px 20px;
     cursor: pointer;
     transition: transform 0.2s, background-color 0.2s;
-    font-family: "Agency FB", cursive;
+    font-family: 'Open Sans', system-ui, sans-serif;
     margin-top: 20px;
 }
 
@@ -562,7 +562,7 @@ footer nav a:hover {
        ESTILO DEL CARRUSEL
 ============================== */
 #letra {
-    font-family: 'Agency FB', cursive !important;
+    font-family: 'Open Sans', system-ui, sans-serif;
     font-size: 28px;
     display: inline-flex;
     align-items: center;
