@@ -37,7 +37,7 @@
             <!-- ZONA DERECHA DEL HEADER -->
             <div class="encabezado-derecha">
                 <a href="/html/Carrito.html" class="action_btn"><i class="fa-solid fa-cart-shopping"></i></a>
-                <a href="/Html/Loginv1.html" class="action_btn"><i class="fa-solid fa-user"></i></a>
+                <a href="/html/Loginv1.html" class="action_btn"><i class="fa-solid fa-user"></i></a>
 
                 <!-- Botón hamburguesa -->
                 <div class="toggle_btn">
@@ -75,17 +75,54 @@
         <div class="contenedorCarrusel">
             <div class="carrusel">
                 <div class="slides">
-                    <div class="slide"><img
-                            src="https://wallpapers.com/images/hd/call-of-duty-black-ops-2-zrsgrwvomyz6nc37.jpg"
-                            alt="black ops 2"></div>
-                    <div class="slide"><img src="/RECURSOS/68246750da861.jpeg" alt="Minecraft"></div>
-                    <div class="slide"><img src="/RECURSOS/GcSJFJdW8AAvW1d.jpg" alt="cod black ops 2"></div>
-                    <div class="slide"><img
-                            src="/RECURSOS/ac2-gamename-store-landscape-2560x1440-2560x1440-aa944fa0e8c6.jpg"
-                            alt="AS 2"></div>
-                    <div class="slide"><img src="/RECURSOS/RedDeadRedeption.png" alt="RedDeadRedeption"></div>
-                    <div class="slide"><img src="/RECURSOS/Uncharted2_01.png" alt=""></div>          
+                    <div class="slide">
+                        <div class="blur-container">
+                            <img src="https://wallpapers.com/images/hd/call-of-duty-black-ops-2-zrsgrwvomyz6nc37.jpg" alt="COD Black Ops">
+                            <div class="blur-content">
+                                <h3>Call of Duty: Black Ops</h3>
+                                <button onclick="addToCart('Call of Duty: Black Ops', 'Call of Duty: Black Ops te lleva a una guerra secreta durante la Guerra Fría, donde asumes el rol de un agente encubierto en operaciones altamente clasificadas. Combina una campaña intensa, multijugador lleno de acción y el aclamado modo Zombis para una experiencia completa.', '145.00', '/RECURSOS/CoD_Black_Ops_cover.webp', 'PS3', 'Shooter y Accion')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="blur-container">
+                            <img src="/RECURSOS/68246750da861.jpeg" alt="Minecraft">
+                            <div class="blur-content">
+                                <h3>Minecraft</h3>
+                                <button onclick="addToCart('Minecraft', 'Minecraft es un juego de construcción y aventura en mundo abierto donde puedes explorar, minar, crear y sobrevivir en mundos infinitos. Con gráficos pixelados y libertad total, fomenta la creatividad tanto en solitario como en modo multijugador.', '123.30', 'https://i.pinimg.com/474x/d2/45/9d/d2459de3246eb8a7d3504903d200f26c.jpg', 'PS3', 'Shooter y Accion')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="blur-container">
+                            <img src="/RECURSOS/call-of-duty-ghost-characters-c33syrbwesw3da92 (1).jpg" alt="COD Black Ops 2">
+                            <div class="blur-content">
+                                <h3>Call of Duty: Ghost</h3>
+                                <button onclick="addToCart('Call of Duty: Ghost', 'Call of Duty: Ghosts te sumerge en una guerra táctica tras un ataque devastador en Estados Unidos, donde un escuadrón de élite llamado (Ghosts) lucha por la supervivencia, con intensas campañas, sigilo y multijugador renovado, ofrece acción explosiva y narrativa oscura.', '216.20', 'https://i.pinimg.com/736x/73/6c/91/736c91e2c3790393e984366809824c21.jpg', 'PS3', 'Shooter y Accion')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="blur-container">
+                            <img src="/RECURSOS/946753.png" alt="FIFA 17">
+                            <div class="blur-content">
+                                <h3>FIFA 17</h3>
+                                <button onclick="addToCart('FIFA 17', 'FIFA 17 lleva el fútbol a un nuevo nivel con la introducción del motor Frostbite, ofreciendo gráficos más realistas y una jugabilidad más dinámica.', '150.50', 'https://i.pinimg.com/736x/0f/3c/36/0f3c366952ea64d2503133191e52c38e.jpg', 'PS3', 'Deportes')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="blur-container">
+                            <img src="/RECURSOS/149156.jpg" alt="COD Modern Warfare 3">
+                            <div class="blur-content">
+                                <h3>Call of Duty: Modern Warfare 3</h3>
+                                <button onclick="addToCart('Call of Duty: Modern Warfare 3', 'Call of Duty: Modern Warfare 3 para PS3 te sumerge en una intensa guerra global con acción cinematográfica y combates rápidos. Continúa la épica historia de la saga con misiones cooperativas, multijugador competitivo y un ritmo trepidante de principio a fin.', '120.80', 'https://wallpaperswide.com/download/call_of_duty_modern_warfare_3-wallpaper-480x640.jpg', 'PS3', 'Deportes')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <button class="carousel-btn prev" aria-label="Anterior">&#10094;</button>
+                <button class="carousel-btn next" aria-label="Siguiente">&#10095;</button>
             </div>
             <div class="carousel-dots"></div>
         </div>
@@ -282,8 +319,6 @@
     <script src="/javaScript/script.js"></script>
     <script src="/javaScript/scriptCarrito.js"></script>
     <script src="/javaScript/scriptModoOscuro.js"></script>
-    <script src="/javaScript/scriptCarritoCarrusel.js"></script>    
-
+    <script src="/javaScript/scriptCarrusel.js"></script>
 </body>
-
 </html>

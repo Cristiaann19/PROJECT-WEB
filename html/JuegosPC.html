@@ -37,7 +37,7 @@
             <!-- ZONA DERECHA DEL HEADER -->
             <div class="encabezado-derecha">
                 <a href="/html/Carrito.html" class="action_btn"><i class="fa-solid fa-cart-shopping"></i></a>
-                <a href="/Html/Loginv1.html" class="action_btn"><i class="fa-solid fa-user"></i></a>
+                <a href="/html/Loginv1.html" class="action_btn"><i class="fa-solid fa-user"></i></a>
 
                 <!-- Botón hamburguesa -->
                 <div class="toggle_btn">
@@ -73,18 +73,63 @@
         <div class="contenedorCarrusel">
             <div class="carrusel">
                 <div class="slides">
-                    <div class="slide"><img src="/RECURSOS/1366_2000.jpeg" alt="Cyberpunk"></div>
-                    <div class="slide"><img
-                            src="/RECURSOS/assassin-s-creed-valhalla-pc-juego-ubisoft-connect-europe-cover.jpg"
-                            alt="Asessin Cread Valhalla"></div>
-                    <div class="slide"><img src="/RECURSOS/call-of-duty-black-ops-cold-war-pc-spil-battle-net-cover.jpg"
-                            alt="cold at war"></div>
-                    <div class="slide"><img
-                            src="/RECURSOS/EGS_TheWitcher3WildHuntCompleteEdition_CDPROJEKTRED_S1_2560x1440-82eb5cf8f725e329d3194920c0c0b64f.jpeg"
-                            alt="the witcher 3"></div>
-                    <div class="slide"><img src="/RECURSOS/gta-sa-4k-game-poster-9c5eui82x3dmftjp.jpg"
-                            alt="GTA san andreas"></div>
+                    <div class="slide">
+                        <div class="blur-container">
+                            <img src="/RECURSOS/1366_2000.jpeg" alt="Cyberpunk">
+                            <div class="blur-content">
+                                <h3>Cyberpunk 2077</h3>
+                                <button onclick="addToCart('Cyberpunk 2077', 'Cyberpunk 2077 te transporta a Night City, una metrópolis futurista donde el poder, el estilo y la tecnología dominan, vive una historia intensa como V, un mercenario en busca de la inmortalidad en un mundo abierto lleno de caos y decisiones.', '291.10', '/RECURSOS/is-cyberpunk-cover-art-based-on-blade-runners-v0-p99esbve7sf81.png', 'PC', 'Accion y Aventura')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="blur-container">
+                            <img src="/RECURSOS/assassin-s-creed-valhalla-pc-juego-ubisoft-connect-europe-cover.jpg" alt="ASC Valhalla">
+                            <div class="blur-content">
+                                <h3>Assassin's Creed: Valhalla</h3>
+                                <button onclick="addToCart('Assassin´s Credd: Valhalla', 'Assassins Creed Valhalla te pone en la piel de Eivor, un guerrero vikingo en busca de gloria en tierras inglesas. Conquista, explora y forja alianzas en un mundo abierto lleno de batallas épicas y mitología nórdica.', '174.40', 'https://i5.walmartimages.com/seo/Assassins-Creed-Valhalla-Wall-Decor-Hidden-Blade-Bedroom-Poster-Gaming-Female-Viking-Eivor-Varinsdottir-Video-Game-Merchandise-Gamer-Art-Cool-Print-1_9b3e1409-43c6-40a7-ad0b-fc9057b3a81a.0dac4a415fce074d3120c44cb71e5f76.jpeg', 'PC', 'Accion')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="blur-container">
+                            <img src="/RECURSOS/call-of-duty-black-ops-cold-war-pc-spil-battle-net-cover.jpg" alt="COD Cold At War">
+                            <div class="blur-content">
+                                <h3>Call of Duty: Black Ops Cold At War</h3>
+                                <button onclick="addToCart('Call of Duty: Black Ops Cold At War', 'Call of Duty: Black Ops Cold War te sumerge en el caos de la Guerra Fría con una campaña cargada de espionaje y acción encubierta. Disfruta de intensos combates multijugador y el regreso del modo Zombis en una experiencia cinematográfica.', '291.10', 'https://i.pinimg.com/736x/2a/88/c7/2a88c79b4c82ffbca67a785528a228d3.jpg', 'PC', 'Shooter y Accion')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="blur-container">
+                            <img src="/RECURSOS/710281.jpg" alt="RD7">
+                            <div class="blur-content">
+                                <h3>Resident Evil VII: Biohazard</h3>
+                                <button onclick="addToCart('Resident Evil VII: Biohazard', 'Resident Evil 7: Biohazard reinventa el terror con una experiencia en primera persona aterradora y visceral. Explora una mansión abandonada en Luisiana mientras luchas por sobrevivir a los horrores de la familia Baker.', '124.40', '/RECURSOS/cb5e306abef1ea10f4e9545eb8d7b94d.jpg', 'PC', 'Terror y Accion')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="blur-container">
+                            <img src="/RECURSOS/gta-sa-4k-game-poster-9c5eui82x3dmftjp.jpg" alt="GTA San Andreas">
+                            <div class="blur-content">
+                                <h3>Grand Theft Auto: San Andreas</h3>
+                                <button onclick="addToCart('Grand Theft Auto: San Andreas', 'Grand Theft Auto: San Andreas (PS5) te lleva de regreso a los años 90 en una historia de crimen, traición y redención. Explora libremente ciudades, participa en misiones intensas y domina las calles como Carl Johnson (CJ).', '269.90', 'https://i.3djuegos.com/juegos/1012/grand_theft_auto_san_andreas/fotos/ficha/grand_theft_auto_san_andreas-3785649.jpg', 'PC', 'Accion')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="blur-container">
+                            <img src="/RECURSOS/wp3963353.jpg" alt="The Division 2">
+                            <div class="blur-content">
+                                <h3>Tom Clancy's: The Division 2</h3>
+                                <button onclick="addToCart('Tom Clancy’s: The Division 2', 'Tom Clancy’s The Division 2 te sitúa en un Washington D.C. colapsado, donde deberás restaurar el orden como agente de élite. Enfrenta a facciones enemigas en un mundo abierto lleno de acción táctica y cooperación multijugador.', '127.30', '/RECURSOS/cb5e306abef1ea10f4e9545eb8d7b94d.jpg', 'PC', 'Shooter Tactico y Accion')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <button class="carousel-btn prev" aria-label="Anterior">&#10094;</button>
+                <button class="carousel-btn next" aria-label="Siguiente">&#10095;</button>
             </div>
             <div class="carousel-dots"></div>
         </div>
@@ -618,8 +663,6 @@
     <script src="/javaScript/script.js"></script>
     <script src="/javaScript/scriptCarrito.js"></script>
     <script src="/javaScript/scriptModoOscuro.js"></script>
-    <script src="/javaScript/scriptCarritoCarrusel.js"></script>    
-
+    <script src="/javaScript/scriptCarrusel.js"></script>
 </body>
-
 </html>

@@ -58,7 +58,6 @@ document.getElementById('modal').onclick = function(e) {
   if (e.target === this) this.style.display = 'none';
 };
 
-
 //VERIFIACADOR DE CONTRASEÑAS
 const form = document.getElementById('form')
 const firstname_input = document.getElementById('firstname-input')
@@ -126,3 +125,4 @@ function getLoginFormsErrors(email,password){
 
     return errors;
 }
+

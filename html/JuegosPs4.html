@@ -37,7 +37,7 @@
             <!-- ZONA DERECHA DEL HEADER -->
             <div class="encabezado-derecha">
                 <a href="/html/Carrito.html" class="action_btn"><i class="fa-solid fa-cart-shopping"></i></a>
-                <a href="/Html/Loginv1.html" class="action_btn"><i class="fa-solid fa-user"></i></a>
+                <a href="/html/Loginv1.html" class="action_btn"><i class="fa-solid fa-user"></i></a>
 
                 <!-- Botón hamburguesa -->
                 <div class="toggle_btn">
@@ -71,18 +71,54 @@
         <div class="contenedorCarrusel">
             <div class="carrusel">
                 <div class="slides">
-                    <div class="slide"><img
-                            src="https://cdn1.epicgames.com/offer/0c40923dd1174a768f732a3b013dcff2/EGS_TheLastofUsPartI_NaughtyDogLLC_S1_2560x1440-3659b5fe340f8fc073257975b20b7f84"
-                            alt="the last of us"></div>
-                    <div class="slide"><img src="/RECURSOS/Diseño sin título.png" alt="Elden Ring"></div>
-                    <div class="slide"><img src="/RECURSOS/red-dead-redemption-2-desktop-6l9sm1fd0wc2ibs0.jpg"
-                            alt="RRD2"></div>
-                    <div class="slide"><img src="/RECURSOS/1006970.jpg" alt="MK11"></div>
-                    <div class="slide"><img src="/RECURSOS/days-gone-zombie-strike-poster-808vz2axmhw4zege.png"
-                            alt="days gone"></div>
-                    <div class="slide"><img src="/RECURSOS/spiderman-wallpaper-desktop-04-zz-11apr18.jpg"
-                            alt="spiderman"></div>
+                    <div class="slide">
+                        <div class="blur-container">
+                            <img src="https://cdn1.epicgames.com/offer/0c40923dd1174a768f732a3b013dcff2/EGS_TheLastofUsPartI_NaughtyDogLLC_S1_2560x1440-3659b5fe340f8fc073257975b20b7f84" alt="The last of us parte 1">
+                            <div class="blur-content">
+                                <h3>The Last of Us Parte I</h3>
+                                <button onclick="addToCart('The Last of Us Parte I', 'The Last of Us es una aventura emocional y postapocalíptica donde Joel y Ellie luchan por sobrevivir en un mundo devastado. Con una narrativa profunda, sigilo, acción y vínculos humanos, redefine el género de los juegos narrativos.', '140.80', '/RECURSOS/Portada_Parte_I_R_limpia.webp', 'PS4', 'Accion y Aventura')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="blur-container">
+                            <img src="/RECURSOS/Diseño sin título.png" alt="Elden Ring">
+                            <div class="blur-content">
+                                <h3>Elden Ring</h3>
+                                <button onclick="addToCart('Elden Ring', 'Elden Ring es un RPG de acción en mundo abierto creado por FromSoftware y George R.R. Martin, donde explorarás Las Tierras Intermedias enfrentando desafiantes enemigos. Con combates exigentes, libertad total y una narrativa oscura, es una aventura épica y envolvente.', '175.80', 'https://p325k7wa.twic.pics/high/elden-ring/elden-ring/03-news/ER-Logo-keyart-23may.jpg?twic=v1/cover=500x556/step=10/quality=80', 'PS4', 'Accion y Aventura')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="blur-container">
+                            <img src="/RECURSOS/red-dead-redemption-2-desktop-6l9sm1fd0wc2ibs0.jpg" alt="RRD2">
+                            <div class="blur-content">
+                                <h3>Red Dead Redeption 2</h3>
+                                <button onclick="addToCart('Red Dead Redeption 2', 'Red Dead Redemption 2 te transporta al salvaje oeste como Arthur Morgan, un forajido que lucha por sobrevivir mientras su banda se desmorona. Con un mundo abierto inmersivo, historia profunda y jugabilidad detallada, es una obra maestra del western interactivo.', '249.80', 'https://i.blogs.es/juegos/13424/red_dead_3__nombre_temporal_/fotos/maestras/red_dead_3__nombre_temporal_-4030936.jpg', 'PS4', 'Accion y Aventura')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="blur-container">
+                            <img src="/RECURSOS/1006970.jpg" alt="MK11">
+                            <div class="blur-content">
+                                <h3>Mortal Kombat 11</h3>
+                                <button onclick="addToCart('Mortal Kombat 11', 'Mortal Kombat 11 ofrece combates intensos con gráficos impresionantes, movimientos finales brutales y una narrativa cinematográfica envolvente. Personaliza luchadores, domina combos y enfréntate en épicas batallas tanto offline como en línea.', '155.80', 'https://i.pinimg.com/736x/1b/a3/ea/1ba3ea6ff3f49c631268573d56d6adae.jpg', 'PS4', 'Accion y Peleas')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="blur-container">
+                            <img src="/RECURSOS/spiderman-wallpaper-desktop-04-zz-11apr18.jpg" alt="Spiderman">
+                            <div class="blur-content">
+                                <h3>Marvel's Spider-Man</h3>
+                                <button onclick="addToCart('Marvel’s Spider-Man', 'Marvel’s Spider-Man te pone en la piel de Peter Parker en un mundo abierto lleno de acción, con una historia profunda y emocionante. Surca los cielos de Nueva York con movimientos ágiles, combate el crimen y enfréntate a icónicos villanos del universo Marvel.', '198.80', 'https://i.pinimg.com/736x/72/5f/a7/725fa73cc2577e67713e0291bdd5266b.jpg', 'PS4', 'Accion y Peleas')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <button class="carousel-btn prev" aria-label="Anterior">&#10094;</button>
+                <button class="carousel-btn next" aria-label="Siguiente">&#10095;</button>
             </div>
             <div class="carousel-dots"></div>
         </div>
@@ -91,18 +127,15 @@
         <div class="juegos-wrapper">
             <div class="contenedor">
                 <div class="section1">
-                    <img src="https://i.pinimg.com/736x/c7/a0/aa/c7a0aaf1dff4dfa8c945a289b168c8de.jpg"
-                        alt="The last Of Us 1" class="juego-img" />
+                    <img src="https://i.pinimg.com/736x/aa/65/be/aa65be39f98195b92ee2239b97c9866e.jpg"
+                        alt="Ghost Of Tsushima" class="juego-img" />
                 </div>
                 <div class="derecha">
                     <div class="div1">
-                        <h2>The Last Of Us - Remastered</h2>
+                        <h2>Ghost of Tsushima</h2>
                     </div>
                     <div class="div2">
-                        <p>The Last of Us Parte I es un videojuego de acción y aventura que narra el emotivo viaje de
-                            Joel y Ellie a través de un mundo postapocalíptico devastado por una infección fúngica. Esta
-                            versión reconstruida del clásico original ofrece mejoras gráficas, jugabilidad refinada y
-                            una narrativa intensa que explora el amor, la pérdida y la supervivencia.
+                        <p>Ghost of Tsushima es una épica aventura de mundo abierto ambientada en el Japón del siglo XIII durante la invasión mongola. Asumes el rol de Jin Sakai, un honorable samurái que debe adoptar tácticas furtivas y poco convencionales para proteger a su pueblo y recuperar su hogar. A lo largo del juego, vivirás intensos combates con katana, exploración libre por paisajes impresionantes y una historia emocional.
                         </p>
                     </div>
                     <div class="section2" hidden>
@@ -110,13 +143,13 @@
                             alt="The last of us 1" class="juego-img" />
                     </div>
                     <div class="div3">
-                        <iframe class="video-juego" src="https://www.youtube.com/embed/46ohP30YA_Y" frameborder="0"
+                        <iframe class="video-juego" src="https://www.youtube.com/embed/iqysmS4lxwQ" frameborder="0"
                             allowfullscreen></iframe>
                     </div>
                     <div class="div4">
                         <br>
                         <button class="buy-btn"
-                            onclick="addToCart('The Last Of Us Parte I', 'The Last of Us Parte I es un videojuego de acción y aventura que narra el emotivo viaje de Joel y Ellie a través de un mundo postapocalíptico devastado por una infección fúngica.', '199.90', 'https://i.pinimg.com/736x/c7/a0/aa/c7a0aaf1dff4dfa8c945a289b168c8de.jpg', 'PS4', 'Acción y Aventura')">
+                            onclick="addToCart('Ghost of Tsushima', 'Ghost of Tsushima es una épica aventura de mundo abierto ambientada en el Japón del siglo XIII durante la invasión mongola. Asumes el rol de Jin Sakai, un honorable samurái que debe adoptar tácticas furtivas y poco convencionales para proteger a su pueblo y recuperar su hogar.', '199.90', 'https://i.pinimg.com/736x/c7/a0/aa/c7a0aaf1dff4dfa8c945a289b168c8de.jpg', 'PS4', 'Acción y Aventura')">
                             <i class="fas fa-shopping-cart"></i> Comprar
                         </button>
                     </div>
@@ -311,6 +344,6 @@
 <script src="/javaScript/script.js"></script>
 <script src="/javaScript/scriptCarrito.js"></script>
 <script src="/javaScript/scriptModoOscuro.js"></script>
-<script src="/javaScript/scriptCarritoCarrusel.js"></script>    
+<script src="/javaScript/scriptCarrusel.js"></script>
 
 </html>

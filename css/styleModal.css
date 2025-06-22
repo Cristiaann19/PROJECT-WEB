@@ -36,7 +36,7 @@
 }
 
 .modal-icono i {
-    color: #dc6314;
+    color: #ee6612;
     font-size: 60px;
     margin-bottom: 18px;
     text-shadow: 0 2px 12px #000000aa;
@@ -68,14 +68,14 @@
 }
 
 .modal-btn:hover {
-    background: #e57a27;
+    background: linear-gradient(to right, rgba(255, 126, 0, 0.76), #ff6300);
     color: #111;
     scale: max(0.95, 0.95, 0.95);
 }
 
 .modal-btn.amarillo,
 .modal-btn.morado {
-    background: #e57a27;
+    background: linear-gradient(to right, rgba(255, 126, 0, 0.76), #ff6300);
     color: #111;
     border: none;
 }

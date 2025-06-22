@@ -34,7 +34,7 @@
                 <!-- ZONA DERECHA DEL HEADER -->
                 <div class="encabezado-derecha">
                     <a href="/html/Carrito.html" class="action_btn"><i class="fa-solid fa-cart-shopping"></i></a>
-                    <a href="/Html/Loginv1.html" class="action_btn"><i class="fa-solid fa-user"></i></a>
+                    <a href="/html/Loginv1.html" class="action_btn"><i class="fa-solid fa-user"></i></a>
 
                     <!-- Botón hamburguesa -->
                     <div class="toggle_btn">
@@ -66,18 +66,58 @@
     <div class="contenedorCarrusel">
         <div class="carrusel">
             <div class="slides">
-                <div class="slide"><img src="https://esports.as.com/2022/06/08/bonus/videojuegos/Call-of-Duty-Modern-Warfare_1581451866_1124841_1440x600.jpg" alt="modernwarfare 2"></div>
-                <div class="slide"><img src="https://www.gameplayscassi.com.br/ofertas/wp-content/uploads/2025/01/The-Last-of-Us-Part-II-Remastered.jpg" alt="the last of us 2"></div>
-                <div class="slide"><img src="/RECURSOS/god-war-ragnarok-2466115.png" alt="god of war"></div>
-                <div class="slide"><img src="https://i.blogs.es/6a071d/gtav/1366_2000.jpg" alt="gta 5"></div>
-                <div class="slide"><img src="/RECURSOS/F3gMLgVWgAArZfl.jpeg" alt="resident evil 2"></div>
-                <div class="slide"><img src="/RECURSOS/gta-vi-portada.jpg" alt="gta 6"></div>
-                <div class="slide"><img src="https://gaming-cdn.com/images/news/articles/8809/cover/estos-son-los-requisitos-de-call-of-duty-black-ops-6-en-pc-y-el-trailer-de-lanzamiento-del-juego-cover670ebc3ec1915.jpg" alt="black ops 6"></div>
+                <div class="slide">
+                    <div class="blur-container">
+                        <img src="https://esports.as.com/2022/06/08/bonus/videojuegos/Call-of-Duty-Modern-Warfare_1581451866_1124841_1440x600.jpg" alt="modernwarfare 2">
+                        <div class="blur-content">
+                            <h3>Call of Duty: Modern Warfare II</h3>
+                            <button onclick="addToCart('Call of Duty: Modern Warfare II', 'Call of Duty: Modern Warfare 2, te sumerge en combates tácticos intensos con gráficos de última generación y una campaña cinematográfica.', '165.50', 'https://i.3djuegos.com/juegos/18491/call_of_duty_modern_warfare_2/fotos/ficha/call_of_duty_modern_warfare_2-5754880.webp', 'PS5', 'Shooter y Accion')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="blur-container">
+                        <img src="https://www.gameplayscassi.com.br/ofertas/wp-content/uploads/2025/01/The-Last-of-Us-Part-II-Remastered.jpg" alt="the last of us 2">
+                        <div class="blur-content">
+                            <h3>The Last of Us Parte II Remastered</h3>
+                            <button onclick="addToCart('The Last of Us Parte II', 'The Last of Us Parte II es una obra maestra narrativa que combina emoción, tensión, a través de Ellie, vivirás una travesía cruda y poderosa en un mundo devastado por la pérdida y la venganza.', '159.50', '/RECURSOS/Part_II_Remastered_cover_art.webp', 'PS5', 'Accion y Aventura')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="blur-container">
+                        <img src="/RECURSOS/god-war-ragnarok-2466115.png" alt="god of war">
+                        <div class="blur-content">
+                            <h3>God of War Ragnarök</h3>
+                            <button onclick="addToCart('God of War Ragnarök', 'God of War: Ragnarök eleva la saga a nuevas alturas con combates épicos, paisajes nórdicos impresionantes y una narrativa profundamente emotiva. Acompaña a Kratos y Atreus en su lucha contra el destino mientras el fin de los dioses se aproxima.', '182.20', 'https://image.api.playstation.com/vulcan/ap/rnd/202207/1117/CyWGhpXfSmIcuecOFXG841JE.png', 'PS5', 'Accion y Aventura')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="blur-container">
+                        <img src="https://i.blogs.es/6a071d/gtav/1366_2000.jpg" alt="gta 5">
+                        <div class="blur-content">
+                            <h3>Grand Theft Auto V</h3>
+                            <button onclick="addToCart('Grand Theft Auto V', 'Grand Theft Auto V te sumerge en el caótico y vibrante mundo de Los Santos con gráficos mejorados y una jugabilidad fluida. Vive una historia criminal épica a través de tres personajes únicos en un mundo abierto lleno de acción y libertad.', '124.40', 'https://thegamekeys.in/wp-content/uploads/2023/08/71uizbdZ5dL.jpg', 'PS5', 'Accion')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="blur-container">
+                        <img src="/RECURSOS/2x1_NSwitchDS_ResidentEvil2Cloud.jpg" alt="resident evil 2">
+                        <div class="blur-content">
+                            <h3>Resident Evil 2</h3>
+                            <button onclick="addToCart('Resident Evil 2', 'Resident Evil 2 es una reinvención del clásico de 1998, con gráficos modernos y una atmósfera opresiva que revive el terror en Raccoon City. Acompaña a Leon y Claire en una desesperada lucha por sobrevivir al apocalipsis zombi.', '95.50', 'https://m.media-amazon.com/images/M/MV5BNDFhYjRjMzQtNDQxMC00ODMyLWJjZmItOTM1MWVhYjRmZTA5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg', 'PS5', 'Terror y Accion')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <button class="carousel-btn prev" aria-label="Anterior">&#10094;</button>
+            <button class="carousel-btn next" aria-label="Siguiente">&#10095;</button>
         </div>
         <div class="carousel-dots"></div>
     </div>
-</section> <!---->
+</section>
 <main class="centrado">
     <article>
         <div class="juegos-wrapper">
@@ -297,6 +337,6 @@
 <script src="/javaScript/script.js"></script>
 <script src="/javaScript/scriptCarrito.js"></script>
 <script src="/javaScript/scriptModoOscuro.js"></script>
-<script src="/javaScript/scriptCarritoCarrusel.js"></script>
+<script src="/javaScript/scriptCarrusel.js"></script>
 </body>
 </html>
