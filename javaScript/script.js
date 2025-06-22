@@ -31,9 +31,9 @@ form.addEventListener('submit',(e)=>{
     //e.preventDefault()
     let errors = []
     if(firstname_input){
-        errors =getSignupFormErrors(firstname_input.value,email_input.value,password_input.value,repeat_password_input.value)
+        errors =getSignupFormErrors(firstname_input.value,email_input.value,password_input.value,repeat_password_input.value);
     }else {
-        errors =getLoginFormsErrors(email_input.value,password_input.value)
+        errors =getLoginFormsErrors(email_input.value,password_input.value);
     }
     if (errors.length > 0){
         e.preventDefault()
