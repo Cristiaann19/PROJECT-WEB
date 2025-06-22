@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Condensed+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -376,7 +377,7 @@ body.modo-oscuro {
 .product-title {
     font-size: 17px;
     font-weight: 500;
-    font-family: 'Bangers', cursive;
+    font-family: 'Montserrat', sans-serif;
     color: white;
     text-align: center;
     margin: 5px;
@@ -686,7 +687,7 @@ footer nav a:hover {
     }
     .product-title {
         font-size: 16px;
-        font-family: 'Bangers', cursive;
+        font-family: 'Montserrat', sans-serif;
         font-weight: 500;
         color: white;
         margin: 0 0 6px 0;
@@ -706,7 +707,7 @@ footer nav a:hover {
     .product-info {
         width: 95%;
         color: white;
-        font-family: 'Bangers', cursive;
+        font-family: 'Montserrat', sans-serif;
         font-size: 13px;
         text-align: justify;
         gap: 3px;
