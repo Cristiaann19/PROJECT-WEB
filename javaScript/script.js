@@ -18,45 +18,6 @@ window.addEventListener('resize', function() {
     }
 });
 
-// Selecciona imágenes dentro de todas las clases de juegos y el carrusel
-document.querySelectorAll(
-  '.juegoS .imagen-con-descripcion img, ' +
-  '.juegoA .imagen-con-descripcion img, ' +
-  '.juegoAvtr .imagen-con-descripcion img, ' +
-  '.juegoL .imagen-con-descripcion img, ' +
-  '.juegoD .imagen-con-descripcion img, ' +
-  '.container-carrusel .game img'
-).forEach((img) => {
-  img.style.cursor = 'pointer';
-  img.addEventListener('click', function() {
-    const title = img.alt || 'Juego';
-    const imageSrc = img.src;
-    // Si tiene descripción, úsala; si no, pon un texto por defecto
-    let description = '';
-    const descElem = img.parentElement.querySelector('.descripcion');
-    if (descElem) {
-      description = descElem.textContent;
-    } else {
-      description = 'No hay descripción disponible para este juego.';
-    }
-
-    document.getElementById('modal-title').textContent = title;
-    document.getElementById('modal-image').src = imageSrc;
-    document.getElementById('modal-description').textContent = description;
-
-    document.getElementById('modal').style.display = 'flex';
-  });
-});
-
-// Cierra el modal al hacer clic en la X
-document.querySelector('.close-btn').onclick = function() {
-  document.getElementById('modal').style.display = 'none';
-};
-
-// Cierra el modal al hacer clic fuera del contenido
-document.getElementById('modal').onclick = function(e) {
-  if (e.target === this) this.style.display = 'none';
-};
 
 //VERIFIACADOR DE CONTRASEÑAS
 const form = document.getElementById('form')
