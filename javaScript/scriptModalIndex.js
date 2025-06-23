@@ -6,6 +6,7 @@ document.querySelectorAll('.juegosAccion .imagen-con-descripcion img,' +
     '.juegosSupervivencia .imagen-con-descripcion img' ).forEach((img, idx) => {
     img.addEventListener('click', () => {
         document.querySelector('.products-preview').classList.add('active');
+        document.body.style.overflow = 'hidden';
         // Mostrar solo el modal correspondiente
         document.querySelectorAll('.products-preview .preview').forEach((preview, i) => {
             preview.style.display = (i === idx) ? 'block' : 'none';
@@ -17,6 +18,7 @@ document.querySelectorAll('.juegosAccion .imagen-con-descripcion img,' +
 document.querySelectorAll('.products-preview .fa-times').forEach(btn => {
     btn.addEventListener('click', () => {
         document.querySelector('.products-preview').classList.remove('active');
+        document.body.style.overflow = '';
     });
 });
 
@@ -24,5 +26,6 @@ document.querySelectorAll('.products-preview .fa-times').forEach(btn => {
 document.querySelector('.products-preview').addEventListener('click', function(e) {
     if (e.target === this) {
         this.classList.remove('active');
+        document.body.style.overflow = '';
     }
 });
