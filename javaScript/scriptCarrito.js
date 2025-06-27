@@ -192,3 +192,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     setInterval(moveCarousel, 2500);
 });
+
+document.querySelector('.yellow-btn').addEventListener('click', function () {
+    const cartItems = document.querySelector('.cart-items');
+    cartItems.innerHTML = '<h2>Mis compras <i class="fa-solid fa-cart-shopping"></i> :</h2><p></p>';
+
+    const summaryDetails = document.querySelector('.summary-details');
+    summaryDetails.innerHTML = '';
+
+    document.querySelector('.total-price').textContent = '0.00';
+
+    localStorage.setItem('carrito', JSON.stringify([]));
+
+    alert('¡Gracias por tu compra! Tu pedido ha sido procesado.');
+
+    mostrarCarrito();
+    calcularTotal();
+});
