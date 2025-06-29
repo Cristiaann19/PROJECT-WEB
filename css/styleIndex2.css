@@ -106,10 +106,6 @@ header {
     color: orangered;
 }
 
-.sidebar a.selected {
-    background-color: #EBF0FF;
-    color: #355CC0;
-}
 body.modo-oscuro .sidebar {
     background-color: #191919;
 }

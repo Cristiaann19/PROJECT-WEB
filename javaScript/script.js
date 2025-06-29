@@ -21,7 +21,10 @@ document.addEventListener('click', (e) => {
     }
 });
 
-//VERIFIACADOR DE CONTRASEÑAS
+
+
+
+//VERIFICADOR DE CONTRASEÑAS
 const form = document.getElementById('form')
 const firstname_input = document.getElementById('firstname-input')
 const email_input=document.getElementById('email-input')
