@@ -40,7 +40,6 @@ h2 {
 .encabezado-izquierda {
     display: flex;
     gap: 7%;
-    flex: 1;
 }
 .encabezado-izquierda .menu{
     color: white;
@@ -61,12 +60,10 @@ h2 {
     justify-items: center;
 }
 
-
 .encabezado-derecha {
     display: flex;
     align-items: center;
     gap: 20px;
-    flex: 1;
     justify-content: flex-end;
 }
 
@@ -97,6 +94,7 @@ h2 {
     background-color: white;
     display: none;
 }
+
 
 .sidebar a{
     color: black;
@@ -132,12 +130,11 @@ body.modo-oscuro .sidebar a:hover{
 @media screen and (max-width: 768px) {
     .encabezado-centro .img1 img{
         width: 12rem;
-        margin: 0px 10px;
     }
-    .izquierda .menu{
+    .encabezado-izquierda .menu{
         font-size: 1rem;
     }
-    .derecha a {
+    .encabezado-derecha a {
         font-size: 1rem;
     }
     .sidebar{
@@ -145,7 +142,19 @@ body.modo-oscuro .sidebar a:hover{
         width: 14rem;
     }
 }
+@media (max-width: 900px) {
+    
+    .encabezado-izquierda .img1 img {
+        display: block;
+        width: 13rem;
+        margin: 0px auto;
+    }
 
+    .encabezado-derecha {
+        flex: 0 0 auto;
+        gap: 10px;
+    }
+}
 /*BOTON OSCURO*/
 .boton-flotante {
     position: fixed;
@@ -172,26 +181,7 @@ body.modo-oscuro {
     color: white;
 }
 
-@media (max-width: 900px) {
-    .encabezado {
-        padding: 10px 15px;
-    }
 
-    .encabezado-izquierda .img1 img {
-        display: block;
-        width: 13rem;
-        margin: 0px auto;
-    }
-
-    .encabezado-centro {
-        display: none;
-    }
-
-    .encabezado-derecha {
-        flex: 0 0 auto;
-        gap: 10px;
-    }
-}
 /* MENSAJE DE CARRITO VACÍO */
 .empty-cart-message {
     width: 100%;
