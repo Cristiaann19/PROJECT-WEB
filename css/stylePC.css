@@ -1,14 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Condensed+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 /* RESET Y FUENTES */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Open Sans", sans-serif;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+}
+h1{
+    margin-top: 100px;
+    text-align: center;
+    font-family: "Press Start 2P", system-ui;
+    font-size: 2rem;
+    color: white;
 }
 h2 {
-    margin: 20px auto;
+    margin: 20px auto; 
     text-align: center;
     font-family: "Press Start 2P", system-ui;
     font-size: 20px;
@@ -24,90 +38,124 @@ h2 {
     position: relative;
 }
 
+
 .encabezado-izquierda {
     display: flex;
-    gap: 7%;
-    flex: 1;
+    align-items: center;
+    gap: 20px;
+    justify-content: flex-end;
+}
+.menu {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #fff;
 }
 
-.encabezado-izquierda .img1 img {
+.encabezado-centro .img1 img {
     width: 15rem;
     margin: 0px 10px;
 }
 
 .encabezado-centro {
-    justify-items: center;
-}
-
-.encabezado-centro .links {
-    flex-direction: row;
     display: flex;
+    align-items: center;
     justify-content: center;
-    text-align: center;
-    gap: 1rem;
-    color: white;
 }
 
-.encabezado-centro .links li {
-    list-style: none;
-}
-
-.encabezado-centro .links li a {
-    text-decoration: none;
-    padding: 8px 12px;
-    display: inline-block;
-    color: white;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    font-family: "Special Gothic Condensed One", sans-serif;
-    font-size: 1.1rem;
-}
-
-.encabezado-centro .links li a:hover {
-    background-color: orangered;
-    border-radius: 5px;
-}
 
 .encabezado-derecha {
     display: flex;
     align-items: center;
     gap: 20px;
-    flex: 1;
     justify-content: flex-end;
 }
 
 .encabezado-derecha a {
     color: white;
+    font-size: 18px;
 }
 
 .encabezado-derecha a:hover {
     color: orangered;
 }
 
-.menu-icon {
-    color: white;
-    cursor: pointer;
-}
-
-#toggle-menu {
+.sidebar{
+    margin-top: 77.5px;
+    width: 18.75rem;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 1.1rem 0;
+    border-right: 1px solid #444141;
+    overflow-y: auto;
+    background-color: white;
     display: none;
 }
 
-.div-android {
-    display: none;
-}
-
-.navegacion-android {
-    display: none;
-}
-
-li a {
+.sidebar a{
+    color: black;
     text-decoration: none;
-    padding: 8px 12px;
-    display: inline-block;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    gap: 1.3rem;
+    padding: 0.9rem 0.7rem;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: "Montserrat", system-ui;
+}
+.sidebar a:hover{
+    background-color: #F7F9FA;
+    color: orangered;
+}
+
+body.modo-oscuro .sidebar {
+    background-color: #191919;
+}
+
+body.modo-oscuro .sidebar a{
     color: white;
-    font-family: "Special Gothic Condensed One", sans-serif;
-    font-size: 1rem;
+}
+body.modo-oscuro .sidebar a:hover{
+    color: orangered;
+    background-color: #444141;
+}
+
+@media screen and (max-width: 768px) {
+    .encabezado-centro .img1 img{
+        width: 12rem;
+    }
+    .encabezado-izquierda .menu{
+        font-size: 1rem;
+    }
+    .encabezado-derecha a {
+        font-size: 1rem;
+    }
+    .sidebar{
+        margin-top: 66px;
+        width: 14rem;
+    }
+    h1{
+        margin-top: 60px ;
+        font-size: 20px;
+    }
+}
+@media (max-width: 900px) {
+    
+    .encabezado-izquierda .img1 img {
+        display: block;
+        width: 13rem;
+        margin: 0px auto;
+    }
+
+    .encabezado-derecha {
+        flex: 0 0 auto;
+        gap: 10px;
+    }
 }
 
 /*BOTON OSCURO*/
@@ -134,79 +182,6 @@ li a {
 body.modo-oscuro {
     background-color: #191919;
     color: white;
-}
-
-/* Ocultar el menú en escritorio */
-.dropdown_menu {
-    display: none;
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    width: 150px;
-    background: #333;
-    padding: 10px;
-    border-radius: 8px;
-    z-index: 999;
-}
-
-.dropdown_menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.dropdown_menu ul li {
-    margin: 10px 0;
-    text-align: center;
-}
-
-.dropdown_menu ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.dropdown_menu.open {
-    display: block;
-    height: 200px;
-}
-
-.toggle_btn {
-    cursor: pointer;
-    font-size: 1.5rem;
-    color: #fff;
-}
-
-.toggle_btn {
-    display: none;
-}
-
-/* Responsive: oculta nav grande y muestra hamburguesa */
-@media (max-width: 768px) {
-
-    .toggle_btn {
-        display: block;
-    }
-}
-
-@media (max-width: 900px) {
-    .encabezado {
-        padding: 10px 15px;
-    }
-
-    .encabezado-izquierda .img1 img {
-        display: block;
-        width: 13rem;
-        margin: 0px auto;
-    }
-
-    .encabezado-centro {
-        display: none;
-    }
-
-    .encabezado-derecha {
-        flex: 0 0 auto;
-        gap: 10px;
-    }
 }
 
 /*=======================*/

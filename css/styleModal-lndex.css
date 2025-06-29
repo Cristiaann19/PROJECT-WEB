@@ -13,7 +13,7 @@
     align-items: center;
     justify-content: center;
     background-color: rgba(20, 20, 20, 0.87);
-    z-index: 10000;
+    z-index: 9999;
 }
 .products-preview.active {
     display: flex;

@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
 
 <body>
@@ -20,47 +21,64 @@
         <div class="encabezado">
             <!--ZONA IZQUIERDA DEL HEADER-->
             <div class="encabezado-izquierda">
+                <div class="menu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+            <!--ZONA CENTRO DEL HEADER-->
+            <div class="encabezado-centro">
                 <a href="/index.html" class="img1">
                     <img src="/RECURSOS/logoPagina.png">
                 </a>
-            </div>
-
-            <!--ZONA CENTRO DEL HEADER-->
-            <div class="encabezado-centro">
-                <ul class="links">
-                    <li><a href="/html/JuegosPs5.html">PlayStation 5</a></li>
-                    <li><a href="/html/JuegosPs4.html">PlayStation 4</a></li>
-                    <li><a href="/html/JuegosPs3.html">PlayStation 3</a></li>
-                    <li><a href="/html/JuegosPC.html">PC</a></li>
-                </ul>
             </div>
             <!-- ZONA DERECHA DEL HEADER -->
             <div class="encabezado-derecha">
                 <a href="/html/Carrito.html" class="action_btn"><i class="fa-solid fa-cart-shopping"></i></a>
                 <a href="/html/Formulario.html" class="action_btn"><i class="fa-solid fa-user"></i></a>
-
-                <!-- Botón hamburguesa -->
-                <div class="toggle_btn">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-
-                <!-- Menú desplegable -->
-                <div class="dropdown_menu">
-                    <ul>
-                        <li><a href="/html/JuegosPs5.html">PlayStation 5</a></li>
-                        <li><a href="/html/JuegosPs4.html">PlayStation 4</a></li>
-                        <li><a href="/html/JuegosPs3.html">PlayStation 3</a></li>
-                        <li><a href="/html/JuegosPC.html">PC</a></li>
-                    </ul>
-                </div>
             </div>
         </div>
     </header>
+    <div class="sidebar" id="sidebar">
+        <nav>
+            <ul>
+                <li>
+                    <a href="/index.html">
+                        <ion-icon name="home"></ion-icon>
+                        <span>Inicio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/html/JuegosPs5.html">
+                        <ion-icon name="logo-game-controller-b"></ion-icon>
+                        <span>PS5</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/html/JuegosPs4.html">
+                        <ion-icon name="logo-game-controller-b"></ion-icon>
+                        <span>PS4</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/html/JuegosPs3.html">
+                        <ion-icon name="logo-game-controller-b"></ion-icon>
+                        <span>PS3</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/html/JuegosPC.html">
+                        <ion-icon name="desktop"></ion-icon>
+                        <span>PC</spanS>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 
     <!--CUERPO-->
     <section>
         <br>
-        <h2>¡Los olvidados de PS3!</h2>
+        <h1>¡Los olvidados de PS3!</h1>
         <div class="parent">
             <div><img src="https://i.pinimg.com/736x/fa/cc/3c/facc3cf687268665b265b14ab76e1f0f.jpg"
                     alt="Assaind Creed 3"></div>
