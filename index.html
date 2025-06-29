@@ -7,53 +7,98 @@
     <title>The QuackZone | Inicio</title>
     <link rel="stylesheet" href="/css/styleIndex2.css">
     <link rel="stylesheet" href="/css/styleModal.css">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/styleModal-lndex.css">
+    
 </head>
 
 <body>
     <div class="wrapper">
         <header>
-            <div class="encabezado">
-                <!--ZONA IZQUIERDA DEL HEADER-->
-                <div class="encabezado-izquierda">
-                    <a href="index.html" class="img1">
-                        <img src="/RECURSOS/logoPagina.png">
-                    </a>
-                </div>
-
-                <!--ZONA CENTRO DEL HEADER-->
-                <div class="encabezado-centro">
-                    <ul class="links">
-                        <li><a href="/html/JuegosPs5.html">PlayStation 5</a></li>
-                        <li><a href="/html/JuegosPs4.html">PlayStation 4</a></li>
-                        <li><a href="/html/JuegosPs3.html">PlayStation 3</a></li>
-                        <li><a href="/html/JuegosPC.html">PC</a></li>
-                    </ul>
-                </div>
-                <!-- ZONA DERECHA DEL HEADER -->
-                <div class="encabezado-derecha">
-                    <a href="html/Carrito.html" class="action_btn"><i class="fa-solid fa-cart-shopping"></i></a>
-                    <a href="/html/Formulario.html" class="action_btn"><i class="fa-solid fa-user"></i></a>
-
-                    <!-- Botón hamburguesa -->
-                    <div class="toggle_btn">
+            <div class="contenedor">
+                <div class="izquierda">
+                    <div class="menu">
                         <i class="fa-solid fa-bars"></i>
                     </div>
-
-                    <!-- Menú desplegable -->
-                    <div class="dropdown_menu">
-                        <ul>
-                            <li><a href="/html/JuegosPs5.html">PlayStation 5</a></li>
-                            <li><a href="/html/JuegosPs4.html">PlayStation 4</a></li>
-                            <li><a href="/html/JuegosPs3.html">PlayStation 3</a></li>
-                            <li><a href="/html/JuegosPC.html">PC</a></li>
-                        </ul>
+                </div>
+            
+                <div class="centro">
+                    <div class="logo">
+                        <a href="/index.html">
+                            <img src="RECURSOS/logoPagina.png" alt="Logo de The QuackZone">
+                        </a>
                     </div>
+                </div>
+            
+                <div class="derecha">
+                    <a href="/html/Carrito.html" class="action_btn"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="/html/Formulario.html" class="action_btn"><i class="fa-solid fa-user"></i></a>
                 </div>
             </div>
         </header>
+        <div class="sidebar" id="sidebar">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/html/JuegosPs5.html">
+                            <ion-icon name="logo-game-controller-b"></ion-icon>
+                            <span>PS5</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/html/JuegosPs4.html">
+                            <ion-icon name="logo-game-controller-b"></ion-icon>
+                            <span>PS4</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/html/JuegosPs3.html">
+                            <ion-icon name="logo-game-controller-b"></ion-icon>
+                            <span>PS3</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/html/JuegosPC.html">
+                            <i class="fa-solid fa-desktop"></i>
+                            <span>PC</spanS>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Accion">
+                            <ion-icon name="body"></ion-icon>
+                            <span>Accion</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Deportes">
+                            <ion-icon name="football"></ion-icon>
+                            <span>Deportes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Lucha">
+                            <i class="fa fa-hand-grab-o"></i>
+                            <span>Lucha</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Supervivencia">
+                            <ion-icon name="bonfire"></ion-icon>
+                            <span>Supervivencia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Aventura">
+                            <ion-icon name="compass"></ion-icon>
+                            <span>Aventura</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
         <main>
             <section id="home">
                 <br>

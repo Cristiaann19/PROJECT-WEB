@@ -4,14 +4,16 @@
 /* Modal general */
 .products-preview {
     position: fixed;
-    top: 0; left: 0;
+    top: 0; 
+    left: 0;
     width: 100vw;
     height: 100vh;
     background: rgba(0,0,0,0.7);
     display: none;
     align-items: center;
     justify-content: center;
-    z-index: 1000;
+    background-color: rgba(20, 20, 20, 0.87);
+    z-index: 10000;
 }
 .products-preview.active {
     display: flex;

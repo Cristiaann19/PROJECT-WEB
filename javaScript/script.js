@@ -1,23 +1,25 @@
-//Menu HAMBUERGUESA RESPONSIVE
-const toggleBtn = document.querySelector('.toggle_btn');
-const toggleBtnIcon = toggleBtn.querySelector('i');
-const dropDownMenu = document.querySelector('.dropdown_menu');
+const menuBtn = document.querySelector('.menu');
+const sidebar = document.getElementById('sidebar');
 
-toggleBtn.onclick = function () {
-    dropDownMenu.classList.toggle('open');
-    const isOpen = dropDownMenu.classList.contains('open');
-
-    toggleBtnIcon.classList = isOpen
-        ? 'fa-solid fa-xmark'
-        : 'fa-solid fa-bars';
-};
-window.addEventListener('resize', function() {
-    if (window.innerWidth > 768) {
-        dropDownMenu.classList.remove('open');
-        toggleBtnIcon.classList = 'fa-solid fa-bars';
+menuBtn.addEventListener('click', () => {
+    // Alterna la visibilidad del sidebar
+    if (sidebar.style.display === 'block') {
+        sidebar.style.display = 'none';
+    } else {
+        sidebar.style.display = 'block';
     }
 });
 
+// Opcional: cerrar el sidebar al hacer clic fuera de él
+document.addEventListener('click', (e) => {
+    if (
+        sidebar.style.display === 'block' &&
+        !sidebar.contains(e.target) &&
+        !menuBtn.contains(e.target)
+    ) {
+        sidebar.style.display = 'none';
+    }
+});
 
 //VERIFIACADOR DE CONTRASEÑAS
 const form = document.getElementById('form')
