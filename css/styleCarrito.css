@@ -247,6 +247,7 @@ main.main-container {
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
+    margin-top: 50px;
     gap: 100px;
     padding: 5px;
 }
