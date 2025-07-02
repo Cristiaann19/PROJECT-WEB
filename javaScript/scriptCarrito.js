@@ -107,7 +107,6 @@ function mostrarModalCarrito() {
     if (modal) {
         modal.classList.add('activo');
         document.body.style.overflow = 'hidden';
-
     }
 }
 
