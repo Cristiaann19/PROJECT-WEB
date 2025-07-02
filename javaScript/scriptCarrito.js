@@ -193,18 +193,24 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.querySelector('.yellow-btn').addEventListener('click', function () {
-    const cartItems = document.querySelector('.cart-items');
-    cartItems.innerHTML = '<h2>Mis compras <i class="fa-solid fa-cart-shopping"></i> :</h2><p></p>';
+    const confirmacion = confirm('¿Estás seguro de que deseas finalizar tu compra?');
 
-    const summaryDetails = document.querySelector('.summary-details');
-    summaryDetails.innerHTML = '';
+    if (confirmacion) {
+        const cartItems = document.querySelector('.cart-items');
+        cartItems.innerHTML = '<h2>Mis compras <i class="fa-solid fa-cart-shopping"></i> :</h2><p></p>';
 
-    document.querySelector('.total-price').textContent = '0.00';
+        const summaryDetails = document.querySelector('.summary-details');
+        summaryDetails.innerHTML = '';
 
-    localStorage.setItem('carrito', JSON.stringify([]));
+        document.querySelector('.total-price').textContent = '0.00';
 
-    alert('¡Gracias por tu compra! Tu pedido ha sido procesado.');
+        localStorage.setItem('carrito', JSON.stringify([]));
 
-    mostrarCarrito();
-    calcularTotal();
+        alert('¡Gracias por tu compra! Tu pedido ha sido procesado.');
+
+        mostrarCarrito();
+        calcularTotal();
+    } else {
+        alert('La compra no ha sido realizada.');
+    }
 });
