@@ -6,6 +6,10 @@
     padding: 0;
 }
 
+:root {
+    --acent-color: #ff4500;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -458,15 +462,15 @@ section {
     height: 8px;
     border-radius: 50%;
     background: transparent;
-    border: 2.5px solid var(--accent-color, #ff4500);
+    border: 2.5px solid var(--acent-color, #ff4500);
     cursor: pointer;
     transition: background 0.3s, transform 0.3s;
     display: inline-block;
 }
 
 .carousel-dot.active {
-    background: var(--accent-color, #ff4500);
-    border: 2px solid var(--accent-color, #ff4500);
+    background: var(--acent-color, #ff4500);
+    border: 2px solid var(--acent-color, #ff4500);
 }
 
 /*=======================*/
