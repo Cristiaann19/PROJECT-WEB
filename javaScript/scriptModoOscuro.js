@@ -21,7 +21,6 @@ document.getElementById("modo-oscuro-btn").addEventListener("click", function ()
     // Guardar el estado en localStorage
     localStorage.setItem("modoOscuro", modoOscuroActivo);
 
-    // Cambiar íconos
     const icono = this.querySelector("i");
     icono.classList.toggle("fa-moon");
     icono.classList.toggle("fa-sun");

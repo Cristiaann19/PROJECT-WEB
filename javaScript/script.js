@@ -1,27 +1,11 @@
-const menuBtn = document.querySelector('.menu');
+const menu = document.getElementById('menu');
 const sidebar = document.getElementById('sidebar');
 
-menuBtn.addEventListener('click', () => {
-    // Alterna la visibilidad del sidebar
-    if (sidebar.style.display === 'block') {
-        sidebar.style.display = 'none';
-    } else {
-        sidebar.style.display = 'block';
-    }
+
+menu.addEventListener('click',()=>{
+    sidebar.classList.toggle('menu-toggle')
+
 });
-
-// Opcional: cerrar el sidebar al hacer clic fuera de él
-document.addEventListener('click', (e) => {
-    if (
-        sidebar.style.display === 'block' &&
-        !sidebar.contains(e.target) &&
-        !menuBtn.contains(e.target)
-    ) {
-        sidebar.style.display = 'none';
-    }
-});
-
-
 
 
 //VERIFICADOR DE CONTRASEÑAS

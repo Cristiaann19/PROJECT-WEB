@@ -74,7 +74,7 @@ header {
 /*SIDEBAR*/
 .sidebar{
     margin-top: 77.5px;
-    width: 18.75rem;
+    width: 0rem;
     height: 100%;
     position: fixed;
     top: 0;
@@ -84,7 +84,10 @@ header {
     border-right: 1px solid #444141;
     overflow-y: auto;
     background-color: white;
-    display: none;
+    transition: width 0.5s ease;
+}
+.sidebar.menu-toggle{
+    width: 17rem;
 }
 
 .sidebar a{
@@ -130,7 +133,9 @@ body.modo-oscuro .sidebar a:hover{
         font-size: 1rem;
     }
     .sidebar{
-        margin-top: 66px;
+        margin-top: 66px; 
+    }
+    .sidebar.menu-toggle{ 
         width: 14rem;
     }
 }

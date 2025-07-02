@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat',sans-serif;
 }
 .wrapper {
     display: flex;
@@ -24,7 +25,7 @@ h1{
     text-align: center;
     font-family: "Press Start 2P", system-ui;
     font-size: 2rem;
-    color: white;
+    
 }
 h2 {
     margin: 20px auto; 
@@ -86,7 +87,7 @@ h2 {
 
 .sidebar{
     margin-top: 77.5px;
-    width: 18.75rem;
+    width: 0;
     height: 100%;
     position: fixed;
     top: 0;
@@ -96,7 +97,11 @@ h2 {
     border-right: 1px solid #444141;
     overflow-y: auto;
     background-color: white;
-    display: none;
+    transition: width 0.5s ease;
+}
+
+.sidebar.menu-toggle{
+    width: 17rem;
 }
 
 .sidebar a{
@@ -130,6 +135,7 @@ body.modo-oscuro .sidebar a:hover{
     background-color: #444141;
 }
 
+
 @media screen and (max-width: 768px) {
     .encabezado-centro .img1 img{
         width: 12rem;
@@ -142,11 +148,13 @@ body.modo-oscuro .sidebar a:hover{
     }
     .sidebar{
         margin-top: 66px;
-        width: 14rem;
     }
     h1{
         margin-top: 60px ;
         font-size: 20px;
+    }
+    .sidebar.menu-toggle{
+        width: 14rem;
     }
 }
 @media (max-width: 900px) {
@@ -161,6 +169,8 @@ body.modo-oscuro .sidebar a:hover{
         flex: 0 0 auto;
         gap: 10px;
     }
+
+
 }
 
 /*BOTON OSCURO*/
@@ -482,8 +492,8 @@ h4 {
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
-    height: 600px;
-    width: 1000px;
+    height: 39rem; /*36*/
+    width: 63rem; /*60*/
     margin-top: auto;
     display: flex;
 
@@ -676,7 +686,7 @@ footer nav a:hover {
 }
 
 /*RESPONSIVE*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
 
     .section1{
         display: none;
@@ -690,16 +700,15 @@ footer nav a:hover {
         height: auto;
         padding: 25px;
     }
-
-    .parent {
-        display: grid;
+    .contenedorCarrusel{
+        display: block;
     }
+    
     .derecha {
         width: 100%;
         justify-content: center;
         align-items: center;
     }
-
 
     img {
         width: 200px;
@@ -714,14 +723,18 @@ footer nav a:hover {
         font-size: 16px;
     }
 }
+
 @media screen and (max-width: 550px) {
     .logo img {
         width: 15rem;
         margin: 0px 30px;
-
     }
-    .contenedorCarrusel {
+    
+    .contenedorCarrusel{
         display: none;
+    }
+    .parent{
+        display: grid;
     }
     .nav {
         opacity: 0;
@@ -738,5 +751,5 @@ footer nav a:hover {
         padding: 2rem;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
     }
-
 }
+
