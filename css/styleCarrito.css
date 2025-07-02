@@ -12,13 +12,21 @@
     margin: 0;
     padding: 0;
 }
+
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 2000;
+    transition: transform 0.3s ease-in-out, visibility 0s 0.3s;
 }
+
+header.hidden {
+    transform: translateY(-100%);
+    visibility: hidden;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
