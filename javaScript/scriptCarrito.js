@@ -107,6 +107,7 @@ function mostrarModalCarrito() {
     if (modal) {
         modal.classList.add('activo');
         document.body.style.overflow = 'hidden';
+
     }
 }
 
@@ -193,24 +194,18 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.querySelector('.yellow-btn').addEventListener('click', function () {
-    const confirmacion = confirm('¿Estás seguro de que deseas finalizar tu compra?');
+    const cartItems = document.querySelector('.cart-items');
+    cartItems.innerHTML = '<h2>Mis compras <i class="fa-solid fa-cart-shopping"></i> :</h2><p></p>';
 
-    if (confirmacion) {
-        const cartItems = document.querySelector('.cart-items');
-        cartItems.innerHTML = '<h2>Mis compras <i class="fa-solid fa-cart-shopping"></i> :</h2><p></p>';
+    const summaryDetails = document.querySelector('.summary-details');
+    summaryDetails.innerHTML = '';
 
-        const summaryDetails = document.querySelector('.summary-details');
-        summaryDetails.innerHTML = '';
+    document.querySelector('.total-price').textContent = '0.00';
 
-        document.querySelector('.total-price').textContent = '0.00';
+    localStorage.setItem('carrito', JSON.stringify([]));
 
-        localStorage.setItem('carrito', JSON.stringify([]));
+    alert('¡Gracias por tu compra! Tu pedido ha sido procesado.');
 
-        alert('¡Gracias por tu compra! Tu pedido ha sido procesado.');
-
-        mostrarCarrito();
-        calcularTotal();
-    } else {
-        alert('La compra no ha sido realizada.');
-    }
+    mostrarCarrito();
+    calcularTotal();
 });
