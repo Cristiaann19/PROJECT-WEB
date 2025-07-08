@@ -10,18 +10,32 @@ sign_in_btn.addEventListener('click', () => {
     container.classList.remove('sign-up-mode');
 })
 
-//VALIDACIÓN DE INICIO DE SESIÓN
+
+const usuariosValidos = [
+    { usuario: "Criss", contraseña: "123456" },
+    { usuario: "jufer_07", contraseña: "bia1102" },
+    { usuario: "Admin", contraseña: "admin09" }
+];
+
+// Validación de inicio de sesión
 document.querySelector('.sign-in-form').addEventListener('submit', function(e) {
     e.preventDefault();
 
     const usuario = this.querySelector('input[type="text"]').value.trim();
     const contraseña = this.querySelector('input[type="password"]').value.trim();
 
+    // Verificación de que las credenciales sean correctas
     if (!usuario || !contraseña) {
         alert('Por favor, completa todos los campos para iniciar sesión.');
     } else {
-        alert(`¡Bienvenido! Inicio sesión exitoso`);
-        window.location.href = "/index.html";
+        const usuarioValido = usuariosValidos.find(u => u.usuario === usuario && u.contraseña === contraseña);
+
+        if (usuarioValido) {
+            alert(`¡Bienvenido, ${usuario}! Inicio sesión exitoso`);
+            window.location.href = "/index.html";
+        } else {
+            alert('Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.');
+        }
     }
 });
 
