@@ -62,8 +62,8 @@ h2 {
     right: 11px;
     background-color: #ff6300;
     color: #000000;
-    width: 16px;
-    height: 16px;
+    width: 17px;
+    height: 17px;
     padding-right: 0;
     border-radius: 50%;
     text-align: center;
@@ -73,6 +73,7 @@ h2 {
     font-family: 'Orbitron', 'Montserrat', Arial, sans-serif;
     transition: transform 0.2s, background 0.2s;
 }
+
 
 #contador-carrito {
     transition: transform 0.2s, background-color 0.2s;
