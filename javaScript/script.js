@@ -21,9 +21,9 @@ window.onscroll = function() {
     var sidebar = document.querySelector('.sidebar');
     if (window.scrollY > 100) {
         header.style.display = 'none';
-        sidebar.style.display = 'none'; // Hace desaparecer el sidebar
+        sidebar.style.display = 'none';
     } else {
         header.style.display = 'block';
-        sidebar.style.display = 'block'; // Vuelve a mostrar el sidebar
+        sidebar.style.display = 'block';
     }
 };
