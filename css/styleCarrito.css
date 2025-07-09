@@ -199,7 +199,6 @@ body.modo-oscuro {
     color: white;
 }
 
-
 /* MENSAJE DE CARRITO VACÍO */
 .empty-cart-message {
     width: 100%;
@@ -259,7 +258,7 @@ main.main-container {
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    margin-top: 50px;
+    margin-top: 100px;
     gap: 100px;
     padding: 5px;
 }
