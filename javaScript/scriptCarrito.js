@@ -82,7 +82,6 @@ function mostrarCarrito() {
         `;
         itemsContenedor.appendChild(item);
     });
-
     calcularTotal();
     actualizarContadorCarrito();
 }
@@ -151,10 +150,12 @@ function cerrarModalCarrito() {
     }
 }
 
-// Asigna el evento a los dos botones después de que el DOM cargue
+// ==================== FUNCIONES DE LOS BOTONES DEL MODAL DE CARRITO ========================
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('btn-continuar').addEventListener('click', cerrarModalCarrito);
-    document.getElementById('btn-ver-carrito').addEventListener('click', cerrarModalCarrito);
+    document.getElementById('btn-ver-carrito').addEventListener('click', function() {
+        window.location.href="/html/Carrito.html";
+    });
 });
 
 // ==================== INICIALIZAR AL CARGAR ====================
