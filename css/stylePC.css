@@ -37,17 +37,18 @@ header.hidden {
 /*Para el contador del carrito*/
 #contador-carrito {
     position: absolute;
-    top: 9px;
-    right: 11px;
+    top: 8px;
+    right: 12px;
     background-color: #ff6300;
     color: #000000;
-    width: 17px;
-    height: 17px;
+    width: 19px;
+    height: 19px;
+    border: 2px solid #000000;
     padding-right: 0;
     border-radius: 50%;
     text-align: center;
     font-size: 12px;
-    line-height: 17px;
+    line-height: 15.5px;
     font-weight: bold;
     font-family: 'Orbitron', 'Montserrat', Arial, sans-serif;
     transition: transform 0.2s, background 0.2s;
@@ -728,6 +729,13 @@ footer nav a:hover {
     height: auto;
 }
 
+.payment-logos ul,
+.payment-logos li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 /*RESPONSIVE*/
 @media screen and (max-width: 768px) {
 
@@ -796,3 +804,13 @@ footer nav a:hover {
     }
 }
 
+@media screen and (max-width: 600px) {
+    #contador-carrito {
+        width: 15px;
+        height: 15px;
+        font-size: 10px;
+        line-height: 12px;
+        top: 6px;
+        right: 15px;
+    }
+}
