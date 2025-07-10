@@ -6,11 +6,13 @@ function renderStars(rating) {
     let html = "";
     for (let i = 1; i <= maxStars; i++) {
         html += `<span 
-            style="color:${i <= rating ? 'gold' : 'gray'}; font-size:22px; cursor:pointer;" 
+            style="color:${i <= rating ? 'gold' : 'gray'}; font-size:28px; cursor:pointer;" 
             onclick="setRating(${i})">&#9733;</span>`;
     }
     const starElem = document.getElementById("star-rating");
-    if (starElem) starElem.innerHTML = html;
+    if (starElem) {
+        starElem.innerHTML = html;
+    }
 }
 
 function setRating(valor) {
@@ -155,7 +157,31 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('btn-continuar').addEventListener('click', cerrarModalCarrito);
     document.getElementById('btn-ver-carrito').addEventListener('click', function() {
         window.location.href="/html/Carrito.html";
+        cerrarModalCarrito();
     });
+});
+
+// ==================== FUNCIONES DE FINALIZAR COMPRA ====================
+document.querySelector('.yellow-btn').addEventListener('click', function () {
+    console.log('El botón "Finalizar compra" ha sido clickeado'); // Verifica si el evento está siendo activado
+
+    const confirmacion = confirm('¿Estás seguro de que deseas finalizar tu compra?');
+
+    if (confirmacion) {
+        console.log('Compra confirmada');
+        const cartItems = document.querySelector('.cart-items');
+        cartItems.innerHTML = '<h2>Mis compras <i class="fa-solid fa-cart-shopping"></i> :</h2><p></p>';
+        const summaryDetails = document.querySelector('.summary-details');
+        summaryDetails.innerHTML = '';
+        document.querySelector('.total-price').textContent = '0.00';
+        localStorage.setItem('carrito', JSON.stringify([]));
+        alert('¡Gracias por tu compra! Tu pedido ha sido procesado.');
+        mostrarCarrito();
+        calcularTotal();
+    } else {
+        console.log('La compra no fue realizada');
+        alert('La compra no ha sido realizada.');
+    }
 });
 
 // ==================== INICIALIZAR AL CARGAR ====================
@@ -164,4 +190,5 @@ document.addEventListener("DOMContentLoaded", () => {
         mostrarCarrito();
     }
     actualizarContadorCarrito();
+    renderStars(calificacion);
 });
