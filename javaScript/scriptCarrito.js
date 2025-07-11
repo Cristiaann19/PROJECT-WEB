@@ -172,7 +172,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // ==================== FUNCIONES DE FINALIZAR COMPRA ====================
 document.querySelector('.yellow-btn').addEventListener('click', function () {
-    console.log('El botón "Finalizar compra" ha sido clickeado'); // Verifica si el evento está siendo activado
+    const usuario = localStorage.getItem('usuarioLogueado');
+    if (!usuario) {
+        alert('Debes iniciar sesión para finalizar la compra.');
+        window.location.href = "/html/Formulario.html";
+        return;
+    }
+    // Verifica si el evento está siendo activado
 
     const confirmacion = confirm('¿Estás seguro de que deseas finalizar tu compra?');
 

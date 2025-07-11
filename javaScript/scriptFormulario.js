@@ -1,6 +1,8 @@
 const sign_in_btn = document.querySelector("#sign-in-btn");
 const sign_up_btn = document.querySelector("#sign-up-btn");
 const container = document.querySelector(".container");
+const cont = document.getElementById('toast'); //PARA LA CREACIÓN DE TOASTS
+
 
 sign_up_btn.addEventListener('click', () => {
     container.classList.add('sign-up-mode');
@@ -10,11 +12,29 @@ sign_in_btn.addEventListener('click', () => {
     container.classList.remove('sign-up-mode');
 })
 
+//CREACIÓN DE TOASTS
+/*document.getElementById('nuevo').addEventListener('click', () => {
+    crearToast('Inicio de Sesion Exitoso');
+});*/
+
+function crearToast(msg) {
+    const t = document.createElement('div');
+    t.className = 'toast';
+    t.innerHTML = `<span>${msg}</span>  <button type = "button">x</button>`;
+    cont.appendChild(t);
+    t.querySelector('button').onclick = () => cerrar(t);
+    setTimeout(() => cerrar(t), 4000);
+}
+function cerrar(el) {
+    el.classList.add('hide');
+    el.addEventListener('animationend', () => el.remove());
+}
+
 
 const usuariosValidos = [
     { usuario: "Criss", contraseña: "123456" },
     { usuario: "jufer_07", contraseña: "bia1102" },
-    { usuario: "Admin", contraseña: "admin09" }
+    { usuario: "admin", contraseña: "admin" }
 ];
 
 // Validación de inicio de sesión
@@ -31,8 +51,12 @@ document.querySelector('.sign-in-form').addEventListener('submit', function(e) {
         const usuarioValido = usuariosValidos.find(u => u.usuario === usuario && u.contraseña === contraseña);
 
         if (usuarioValido) {
-            alert(`¡Bienvenido, ${usuario}! Inicio sesión exitoso`);
-            window.location.href = "/index.html";
+            crearToast(`¡Bienvenido, ${usuario}!`);
+            localStorage.setItem('usuarioLogueado', usuario); // Guarda el usuario logueado
+            setTimeout(() => {  
+                window.location.href = "/index.html";
+            },1000); 
+            
         } else {
             alert('Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.');
         }
