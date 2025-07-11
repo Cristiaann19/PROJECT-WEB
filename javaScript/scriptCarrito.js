@@ -37,11 +37,9 @@ function mostrarMensajeCarritoVacio(carrito) {
 
 // ==================== ACTUALIZAR CONTADOR CARRITO ====================
 function actualizarContadorCarrito() {
-    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-    const contador = document.getElementById('contador-carrito');
-    if (contador) {
-        contador.textContent = carrito.reduce((total, juego) => total + juego.cantidad, 0);
-    }
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    const contador = document.getElementById("contador-carrito");
+    if (contador) contador.textContent = carrito.length;
 }
 
 // ==================== MOSTRAR PRODUCTOS DEL CARRITO ====================
@@ -207,3 +205,27 @@ btns.forEach((b,i)=> b.addEventListener('click',()=>{
         ind.style.left = (i * 100/btns.length) + '%';
     })
 );
+
+// ==================== FUNCION PARA EL CARRUSEL DEL CARRITO ====================
+document.addEventListener("DOMContentLoaded", () => {
+    const track = document.querySelector(".carousel-track");
+    const items = document.querySelectorAll(".carousel-item");
+
+    if (!track || items.length === 0) return;
+
+    let currentIndex = 0;
+    const itemWidth = items[0].offsetWidth + 20;
+    const totalItems = items.length;
+
+    function moveCarousel() {
+        if (currentIndex >= totalItems - 8) {
+            currentIndex = 0;
+        } else {
+            currentIndex++;
+        }
+
+        const translateX = -currentIndex * itemWidth;
+        track.style.transform = `translateX(${translateX}px)`;
+    }
+    setInterval(moveCarousel, 2500);
+});
