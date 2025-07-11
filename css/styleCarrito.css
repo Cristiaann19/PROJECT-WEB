@@ -509,7 +509,20 @@ main.main-container {
     align-self: flex-start;
     margin-bottom: 100px;
 }
-
+@media (max-width: 600px) {
+  .info-section {
+    width: 95%;
+    max-width: 340px;
+    margin: 16px auto !important;
+    padding: 10px 8px;
+    border-radius: 12px;
+    box-sizing: border-box;
+  }
+  .info-box{
+    width: 97%;
+  }
+  
+}
 .info-details div {
     display: flex;
     justify-content: space-between;
@@ -559,7 +572,7 @@ main.main-container {
 }
 
 .infoTabs {
-    font-size: 16px;
+    font-size: 14px;
     font-family: 'Montserrat', sans-serif;
     color: black;
     text-align: justify;
@@ -568,7 +581,7 @@ main.main-container {
 }
 
 .correo, .numero {
-    font-size: 16px;
+    font-size: 14px;
     font-family: 'Montserrat', sans-serif;
     color: orangered;
     text-align: justify;
