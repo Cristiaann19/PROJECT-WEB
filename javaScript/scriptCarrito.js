@@ -1,3 +1,14 @@
+// ==================== INICIALIZAR AL CARGAR ====================
+document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+        actualizarContadorCarrito();
+        if (document.querySelector(".cart-box")) {
+            mostrarCarrito();
+        }
+        renderStars(calificacion);
+    }, 50);
+});
+
 // ==================== CALIFICACIÓN DE ESTRELLAS ====================
 let calificacion = 0;
 
@@ -180,15 +191,6 @@ document.querySelector('.yellow-btn').addEventListener('click', function () {
         console.log('La compra no fue realizada');
         alert('La compra no ha sido realizada.');
     }
-});
-
-// ==================== INICIALIZAR AL CARGAR ====================
-document.addEventListener("DOMContentLoaded", () => {
-    actualizarContadorCarrito();
-    if (document.querySelector(".cart-box")) {
-        mostrarCarrito();
-    }
-    renderStars(calificacion);
 });
 
 // ==================== FUNCIONES DE LOS TABS DE INFO ====================
