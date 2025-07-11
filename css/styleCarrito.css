@@ -509,6 +509,7 @@ main.main-container {
     align-self: flex-start;
     margin-bottom: 100px;
 }
+
 @media (max-width: 600px) {
   .info-section {
     width: 95%;
