@@ -184,10 +184,10 @@ document.querySelector('.yellow-btn').addEventListener('click', function () {
 
 // ==================== INICIALIZAR AL CARGAR ====================
 document.addEventListener("DOMContentLoaded", () => {
+    actualizarContadorCarrito();
     if (document.querySelector(".cart-box")) {
         mostrarCarrito();
     }
-    actualizarContadorCarrito();
     renderStars(calificacion);
 });
 
