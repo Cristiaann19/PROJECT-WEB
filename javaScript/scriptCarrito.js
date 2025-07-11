@@ -192,3 +192,18 @@ document.addEventListener("DOMContentLoaded", () => {
     actualizarContadorCarrito();
     renderStars(calificacion);
 });
+
+// ==================== FUNCIONES DE LOS TABS DE INFO ====================
+const tabs = document.getElementById('tabs');
+const btns = [...tabs.querySelectorAll('button')];
+const panes = [...tabs.querySelectorAll('.contenido > div')];
+const ind = tabs.querySelector('.indicador');
+
+btns.forEach((b,i)=> b.addEventListener('click',()=>{
+        btns.forEach(x=>x.classList.remove('activo'));
+        panes.forEach(x=>x.classList.remove('activo'));
+        b.classList.add('activo');
+        panes[i].classList.add('activo');
+        ind.style.left = (i * 100/btns.length) + '%';
+    })
+);

@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-
 <body>
   <header>
     <div class="encabezado">
@@ -189,20 +188,54 @@
           </div>
         </div>
       </section>
-      <aside class="summary-section">
-        <div class="summary-box">
-          <h2>Resumen de su compra</h2>
-          <button class="yellow-btn">Finalizar compra</button>
-          <div class="summary-details"></div>
-          <div class="summary-total">
-            <span>Total S/. </span>
-            <span class="total-price"></span>
+
+      <div class="sumary-info-wrapper">
+
+        <aside class="summary-section">
+          <div class="summary-box">
+            <h2>Resumen de su compra</h2>
+            <button class="yellow-btn">Finalizar compra</button>
+            <div class="summary-details"></div>
+            <div class="summary-total">
+              <span>Total S/. </span>
+              <span class="total-price"></span>
+            </div>
+            <div class="trustpilot">
+              <div id="star-rating"></div>
+            </div>
           </div>
-          <div class="trustpilot">
-            <div id="star-rating"></div>
+        </aside>
+        <aside class="info-section">
+          <div>
+            <div id="letraInfo">
+              <i class="fa-solid fa-circle-info"></i>
+              Sobre Nosotros</div>
+            <div class="tabs" id="tabs">
+              <div class="tab-encabezados">
+                <button class="activo">Acerca de la Página Web</button>
+                <button>Políticas de Envío y Devoluciones</button>
+                <button>Atención al Cliente</button>
+                <span class="indicador"></span>
+              </div>
+              <div class="contenido">
+                <div class="activo">
+                  <p class="infoTabs">The QuackZone 🦆, el mejor sitio web para comprar videojuegos, rápido y seguro para todos los gamers.</p>
+                </div>
+                <div>
+                  <p class="infoTabs">El envío puede demorar entre 4 a 5 días. Puedes devolver productos dentro de los 30 días.</p>
+                </div>
+                <div>
+                  <div>
+                    <p class="infoTabs">
+                      Contáctanos al correo electrónico<span class="correo">soporte@thequackzone.com</span> o llama al número<span class="numero">912345678</span> para más información o dudas.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </aside>
+        </aside>
+      </div>
     </main>
   </section>
   <footer>
