@@ -32,7 +32,7 @@ function cerrar(el) {
 
 
 const usuariosValidos = [
-    { usuario: "Criss", contraseña: "123456" },
+    { usuario: "criss", contraseña: "123456" },
     { usuario: "jufer_07", contraseña: "bia1102" },
     { usuario: "admin", contraseña: "admin" }
 ];

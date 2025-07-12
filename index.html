@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/styleModal-lndex.css">
-    
+
 </head>
 
 <body>
@@ -24,7 +24,7 @@
                         <i class="fa-solid fa-bars"></i>
                     </div>
                 </div>
-            
+
                 <div class="centro">
                     <div class="logo">
                         <a href="/index.html">
@@ -32,9 +32,11 @@
                         </a>
                     </div>
                 </div>
-            
+
                 <div class="derecha">
-                    <a href="/html/Formulario.html" class="action_btn"><i class="fa-solid fa-user"></i></a>
+                    <a href="/html/Formulario.html" class="action_btn" id="user-btn">
+                        <span id="user-icon"><i class="fa-solid fa-user"></i></span>
+                    </a> 
                     <a href="/html/Carrito.html" class="action_btn" onclick="actualizarContadorCarrito()">
                         <i class="fa-solid fa-cart-shopping"></i>
                         <span id="contador-carrito">0</span>
@@ -301,7 +303,7 @@
                         <div class="imagen-con-descripcion">
                             <img src="https://i.pinimg.com/736x/b7/b4/cf/b7b4cf8c56224c828b12d7e8ff7594f7.jpg"
                                 alt="Mortal Kombat 11">
-                        </div>        
+                        </div>
                     </div>
                 </div>
             </section>
@@ -359,7 +361,8 @@
                 acompaña a Ellie en su lucha por sobrevivir y encontrar justicia.</p>
             <div class="price">S/. 159.50</div>
             <div class="buttons">
-                <button class="buy-btn" onclick="addToCart('The Last of Us Parte II', 'The Last of Us Parte II es una obra maestra narrativa que combina emoción, tensión, a través de Ellie, vivirás una travesía cruda y poderosa en un mundo devastado por la pérdida y la venganza.', '159.50', '/RECURSOS/Part_II_Remastered_cover_art.webp', 'PS5', 'Accion y Aventura')">
+                <button class="buy-btn"
+                    onclick="addToCart('The Last of Us Parte II', 'The Last of Us Parte II es una obra maestra narrativa que combina emoción, tensión, a través de Ellie, vivirás una travesía cruda y poderosa en un mundo devastado por la pérdida y la venganza.', '159.50', '/RECURSOS/Part_II_Remastered_cover_art.webp', 'PS5', 'Accion y Aventura')">
                     <i class="fas fa-shopping-cart"></i> Comprar
                 </button>
             </div>
@@ -383,7 +386,8 @@
                 moderna con gráficos realistas y mecánicas de juego mejoradas.</p>
             <div class="price">S/. 165.50</div>
             <div class="buttons">
-                <button class="buy-btn" onclick="addToCart('Call of Duty: Modern Warfare II', 'Call of Duty: Modern Warfare 2, te sumerge en combates tácticos intensos con gráficos de última generación y una campaña cinematográfica.', '165.50', 'https://i.3djuegos.com/juegos/18491/call_of_duty_modern_warfare_2/fotos/ficha/call_of_duty_modern_warfare_2-5754880.webp', 'PS5', 'Shooter y Accion')">
+                <button class="buy-btn"
+                    onclick="addToCart('Call of Duty: Modern Warfare II', 'Call of Duty: Modern Warfare 2, te sumerge en combates tácticos intensos con gráficos de última generación y una campaña cinematográfica.', '165.50', 'https://i.3djuegos.com/juegos/18491/call_of_duty_modern_warfare_2/fotos/ficha/call_of_duty_modern_warfare_2-5754880.webp', 'PS5', 'Shooter y Accion')">
                     <i class="fas fa-shopping-cart"></i> Comprar
                 </button>
             </div>
@@ -436,7 +440,8 @@
                 reinos y luchan contra dioses y criaturas mitológicas.</p>
             <div class="price">S/. 199.00</div>
             <div class="buttons">
-                <button class="buy-btn" onclick="addToCart('God of War Ragnarök', 'God of War: Ragnarök eleva la saga a nuevas alturas con combates épicos, paisajes nórdicos impresionantes y una narrativa profundamente emotiva. Acompaña a Kratos y Atreus en su lucha contra el destino mientras el fin de los dioses se aproxima.', '182.20', 'https://image.api.playstation.com/vulcan/ap/rnd/202207/1117/CyWGhpXfSmIcuecOFXG841JE.png', 'PS5', 'Accion y Aventura')">
+                <button class="buy-btn"
+                    onclick="addToCart('God of War Ragnarök', 'God of War: Ragnarök eleva la saga a nuevas alturas con combates épicos, paisajes nórdicos impresionantes y una narrativa profundamente emotiva. Acompaña a Kratos y Atreus en su lucha contra el destino mientras el fin de los dioses se aproxima.', '182.20', 'https://image.api.playstation.com/vulcan/ap/rnd/202207/1117/CyWGhpXfSmIcuecOFXG841JE.png', 'PS5', 'Accion y Aventura')">
                     <i class="fas fa-shopping-cart"></i> Comprar
                 </button>
             </div>
@@ -460,7 +465,8 @@
                 de libertad total y acción sin fin.</p>
             <div class="price">S/. 110.90</div>
             <div class="buttons">
-                <button class="buy-btn" onclick="addToCart('Grand Theft Auto V', 'Grand Theft Auto V te sumerge en el caótico y vibrante mundo de Los Santos con gráficos mejorados y una jugabilidad fluida. Vive una historia criminal épica a través de tres personajes únicos en un mundo abierto lleno de acción y libertad.', '124.40', 'https://thegamekeys.in/wp-content/uploads/2023/08/71uizbdZ5dL.jpg', 'PS5', 'Accion')">
+                <button class="buy-btn"
+                    onclick="addToCart('Grand Theft Auto V', 'Grand Theft Auto V te sumerge en el caótico y vibrante mundo de Los Santos con gráficos mejorados y una jugabilidad fluida. Vive una historia criminal épica a través de tres personajes únicos en un mundo abierto lleno de acción y libertad.', '124.40', 'https://thegamekeys.in/wp-content/uploads/2023/08/71uizbdZ5dL.jpg', 'PS5', 'Accion')">
                     <i class="fas fa-shopping-cart"></i> Comprar
                 </button>
             </div>
@@ -512,7 +518,8 @@
                 romper sus tradiciones para proteger su tierra con honor y sigilo.</p>
             <div class="price">S/. 199.00</div>
             <div class="buttons">
-                <button class="buy-btn" onclick="addToCart('Ghost of Tsushima', 'Ghost of Tsushima es una épica aventura de mundo abierto ambientada en el Japón del siglo XIII durante la invasión mongola. Asumes el rol de Jin Sakai, un honorable samurái que debe adoptar tácticas furtivas y poco convencionales para proteger a su pueblo y recuperar su hogar.', '199.90', 'https://i.pinimg.com/736x/aa/65/be/aa65be39f98195b92ee2239b97c9866e.jpg', 'PS4', 'Acción y Aventura')">
+                <button class="buy-btn"
+                    onclick="addToCart('Ghost of Tsushima', 'Ghost of Tsushima es una épica aventura de mundo abierto ambientada en el Japón del siglo XIII durante la invasión mongola. Asumes el rol de Jin Sakai, un honorable samurái que debe adoptar tácticas furtivas y poco convencionales para proteger a su pueblo y recuperar su hogar.', '199.90', 'https://i.pinimg.com/736x/aa/65/be/aa65be39f98195b92ee2239b97c9866e.jpg', 'PS4', 'Acción y Aventura')">
                     <i class="fas fa-shopping-cart"></i> Comprar
                 </button>
             </div>
@@ -778,7 +785,8 @@
                 enfoque en la personalización de los luchadores y el modo multijugador.</p>
             <div class="price">S/. 155.80</div>
             <div class="buttons">
-                <button class="buy-btn" onclick="addToCart('Mortal Kombat 11', 'Mortal Kombat 11 ofrece combates intensos con gráficos impresionantes, movimientos finales brutales y una narrativa cinematográfica envolvente. Personaliza luchadores, domina combos y enfréntate en épicas batallas tanto offline como en línea.', '155.80', 'https://i.pinimg.com/736x/1b/a3/ea/1ba3ea6ff3f49c631268573d56d6adae.jpg', 'PS4', 'Accion y Peleas')">
+                <button class="buy-btn"
+                    onclick="addToCart('Mortal Kombat 11', 'Mortal Kombat 11 ofrece combates intensos con gráficos impresionantes, movimientos finales brutales y una narrativa cinematográfica envolvente. Personaliza luchadores, domina combos y enfréntate en épicas batallas tanto offline como en línea.', '155.80', 'https://i.pinimg.com/736x/1b/a3/ea/1ba3ea6ff3f49c631268573d56d6adae.jpg', 'PS4', 'Accion y Peleas')">
                     <i class="fas fa-shopping-cart"></i> Comprar
                 </button>
             </div>
@@ -806,7 +814,8 @@
                 desafíos como criaturas hostiles y cambios en el entorno.</p>
             <div class="price">S/. 125.00</div>
             <div class="buttons">
-                <button class="buy-btn" onclick="addToCart('Minecraft', 'Minecraft es un juego de construcción y aventura en mundo abierto donde puedes explorar, minar, crear y sobrevivir en mundos infinitos. Con gráficos pixelados y libertad total, fomenta la creatividad tanto en solitario como en modo multijugador.', '123.30', 'https://i.pinimg.com/474x/d2/45/9d/d2459de3246eb8a7d3504903d200f26c.jpg', 'PC', 'Aventura')">
+                <button class="buy-btn"
+                    onclick="addToCart('Minecraft', 'Minecraft es un juego de construcción y aventura en mundo abierto donde puedes explorar, minar, crear y sobrevivir en mundos infinitos. Con gráficos pixelados y libertad total, fomenta la creatividad tanto en solitario como en modo multijugador.', '123.30', 'https://i.pinimg.com/474x/d2/45/9d/d2459de3246eb8a7d3504903d200f26c.jpg', 'PC', 'Aventura')">
                     <i class="fas fa-shopping-cart"></i> Comprar
                 </button>
             </div>
@@ -892,7 +901,8 @@
                 implacables de enemigos.</p>
             <div class="price">S/. 79.00</div>
             <div class="buttons">
-                <button class="buy-btn" onclick="addToCart('World War Z: Aftermath', 'World War Z es un juego cooperativo de disparos en tercera persona donde los jugadores enfrentan hordas masivas de zombis en distintas partes del mundo.', '79.50', 'https://i.pinimg.com/736x/02/58/e7/0258e72b1eb0c41033ec469481b49912.jpg', 'PC', 'Terror y Acción')">
+                <button class="buy-btn"
+                    onclick="addToCart('World War Z: Aftermath', 'World War Z es un juego cooperativo de disparos en tercera persona donde los jugadores enfrentan hordas masivas de zombis en distintas partes del mundo.', '79.50', 'https://i.pinimg.com/736x/02/58/e7/0258e72b1eb0c41033ec469481b49912.jpg', 'PC', 'Terror y Acción')">
                     <i class="fas fa-shopping-cart"></i> Comprar
                 </button>
             </div>
@@ -954,4 +964,5 @@
     <script src="/javaScript/scriptModoOscuro.js"></script>
     <script src="/javaScript/scriptModalIndex.js"></script>
 </body>
+
 </html>
