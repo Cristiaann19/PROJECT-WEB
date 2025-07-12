@@ -31,9 +31,10 @@ function cerrar(el) {
 }
 
 
+
 const usuariosValidos = [
-    { usuario: "criss", contraseña: "123456" },
-    { usuario: "jufer_07", contraseña: "bia1102" },
+    { usuario: "criss", contraseña: "1234" },
+    { usuario: "jufer_07", contraseña: "jufer07" },
     { usuario: "admin", contraseña: "admin" }
 ];
 
@@ -53,9 +54,15 @@ document.querySelector('.sign-in-form').addEventListener('submit', function(e) {
         if (usuarioValido) {
             crearToast(`¡Bienvenido, ${usuario}!`);
             localStorage.setItem('usuarioLogueado', usuario); // Guarda el usuario logueado
-            setTimeout(() => {  
-                window.location.href = "/index.html";
-            },1000); 
+            setTimeout(() => {
+                const destino = localStorage.getItem('urlDestino');
+                if (destino) {
+                    window.location.href = destino;
+                    localStorage.removeItem('urlDestino');
+                } else {
+                    window.location.href = "/index.html";
+                }
+            }, 1000);
             
         } else {
             alert('Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.');

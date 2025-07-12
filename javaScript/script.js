@@ -52,4 +52,14 @@ window.addEventListener('DOMContentLoaded', function() {
         userBtn.onclick = null;
     }
 });
-
+// ==================== GUARDADO DE PAGINA ====================
+document.addEventListener('DOMContentLoaded', function() {
+    const userBtn = document.getElementById('user-btn');
+    if (userBtn) {
+        userBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            localStorage.setItem('urlDestino', window.location.pathname);
+            window.location.href = "/html/Formulario.html";
+        });
+    }
+});
