@@ -62,8 +62,7 @@ document.querySelector('.sign-in-form').addEventListener('submit', function(e) {
                 } else {
                     window.location.href = "/index.html";
                 }
-            }, 1000);
-            
+            }, 1000);        
         } else {
             alert('Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.');
         }
@@ -78,12 +77,24 @@ document.querySelector('.sign-up-form').addEventListener('submit', function(e) {
     const email = this.querySelector('input[placeholder="Correo electrónico"]').value.trim();
     const password = this.querySelector('input[placeholder="Contraseña"]').value.trim();
 
-    if (!username || !email || !password) {
+    const usuarioValido = usuariosValidos.find(u => u.usuario === username );
+    if (usuarioValido) {
+        alert('El nombre de usuario no se encuentra disponible. Escoja otro.');
+    }else if (!username || !email || !password) {
         alert('Por favor, completa todos los campos para registrarte.');
     } else if (!email.includes('@')) {
         alert('El correo electrónico ingresado no es válido. Debe contener "@"');
     } else {
-        alert(`¡Gracias por registrarte, ${username}!`);
-        window.location.href = "/index.html";
+        crearToast(`¡Registro exitoso! Bienvenido, ${username}!`);
+        localStorage.setItem('usuarioLogueado', username); // Guarda el usuario logueado
+        setTimeout(() => {
+            const destino = localStorage.getItem('urlDestino');
+            if (destino) {
+                window.location.href = destino;
+                localStorage.removeItem('urlDestino');
+            } else {
+                window.location.href = "/index.html";
+            }
+        }, 1000);
     }
 });

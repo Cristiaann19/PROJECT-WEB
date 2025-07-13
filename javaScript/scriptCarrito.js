@@ -175,7 +175,7 @@ document.querySelector('.yellow-btn').addEventListener('click', function () {
     const usuario = localStorage.getItem('usuarioLogueado');
     if (!usuario) {
         alert('Debes iniciar sesión para finalizar tu compra.');
-        window.location.href = '/html/Formulario.html';
+        //window.location.href = '/html/Formulario.html';
         return;
     }
     // Verifica si el evento está siendo activado
