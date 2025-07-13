@@ -24,8 +24,8 @@ body, input{
     position: absolute;
     width: 2000px;
     height: 2000px;
-    border-radius: 50%;
     background: linear-gradient(-45deg, #da592b, #da592b);
+    border-radius: 50%;
     top: -10%;
     right: 48%;
     transform: translateY(-50%);
@@ -41,7 +41,7 @@ body, input{
     width: 50%;
     display: grid;
     grid-template-columns: 1fr;
-    z-index: 5;
+    z-index: 7;
     transition: 1s .7s ease-in-out;
 }
 
@@ -294,12 +294,11 @@ button {
   cursor: pointer;
   margin-left: 10px;
 }
-.btn_volver a{
+.btn_volver {
     background-color: #f9642e;
     color: #000000;
     padding: 12px 30px;
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 14px;
     border: none;
     border-radius: 30px;
     cursor: pointer;
@@ -310,7 +309,8 @@ button {
     align-content: left;
     text-decoration: none;
     margin-top: 20px;
-    
+    justify-content: center;
+    align-items: center;
 }
 
 .volver-container {
@@ -450,8 +450,10 @@ button {
     }
 }
 
+
+
 @media (max-width: 570px){
-    form{
+    form {
         padding: 0 1.5rem;
     }
 
@@ -471,4 +473,17 @@ button {
         bottom: 28%;
         left: 50%
     }
+}
+@media (max-width: 870px) {
+  .container::before {
+    z-index: 1 !important;
+  }
+  .panels-container {
+    z-index: 2 !important;
+  }
+  .signin-signup {
+    z-index: 10 !important;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
