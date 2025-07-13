@@ -82,9 +82,11 @@ document.querySelector('.sign-up-form').addEventListener('submit', function(e) {
         alert('El nombre de usuario no se encuentra disponible. Escoja otro.');
     }else if (!username || !email || !password) {
         alert('Por favor, completa todos los campos para registrarte.');
-    } else if (!email.includes('@')) {
-        alert('El correo electrónico ingresado no es válido. Debe contener "@"');
-    } else {
+    } else if (!email.includes('@') || (!email.includes('.'))){
+        alert('El correo electrónico debe contener "@" y ".".');
+    } else if (password.length < 6) {
+        alert('La contraseña debe tener al menos 6 caracteres.');
+    }else {
         crearToast(`¡Registro exitoso! Bienvenido, ${username}!`);
         localStorage.setItem('usuarioLogueado', username); // Guarda el usuario logueado
         setTimeout(() => {

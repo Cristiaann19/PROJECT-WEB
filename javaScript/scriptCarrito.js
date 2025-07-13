@@ -99,6 +99,22 @@ function mostrarCarrito() {
 
 // ==================== AGREGAR AL CARRITO ====================
 function addToCart(nombre, descripcion, precio, imagen, plataforma, categoria) {
+    const cont = document.getElementById('toast'); //PARA LA CREACIÓN DE TOASTS
+    
+    function crearToast(msg) {
+        const t = document.createElement('div');
+        t.className = 'toast';
+        t.innerHTML = `<span>${msg}</span>  <button type = "button">x</button>`;
+        cont.appendChild(t);
+        t.querySelector('button').onclick = () => cerrar(t);
+        setTimeout(() => cerrar(t), 4000);
+    }
+    function cerrar(el) {
+        el.classList.add('hide');
+        el.addEventListener('animationend', () => el.remove());
+    }
+
+
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     const index = carrito.findIndex(j => j.nombre === nombre);
     if (index !== -1) {
@@ -115,9 +131,11 @@ function addToCart(nombre, descripcion, precio, imagen, plataforma, categoria) {
         };
         carrito.push(nuevoJuego);
     }
+    
     localStorage.setItem('carrito', JSON.stringify(carrito));
     mostrarModalCarrito();
     actualizarContadorCarrito();
+    crearToast(`¡Juego agregado al carrito!`);
     mostrarCarrito();
 }
 
@@ -173,6 +191,21 @@ document.addEventListener('DOMContentLoaded', function() {
 // ==================== FUNCIONES DE FINALIZAR COMPRA ====================
 document.querySelector('.yellow-btn').addEventListener('click', function () {
     const usuario = localStorage.getItem('usuarioLogueado');
+    const cont = document.getElementById('toast'); //PARA LA CREACIÓN DE TOASTS
+    
+    function crearToast(msg) {
+        const t = document.createElement('div');
+        t.className = 'toast';
+        t.innerHTML = `<span>${msg}</span>  <button type = "button">x</button>`;
+        cont.appendChild(t);
+        t.querySelector('button').onclick = () => cerrar(t);
+        setTimeout(() => cerrar(t), 4000);
+    }
+    function cerrar(el) {
+        el.classList.add('hide');
+        el.addEventListener('animationend', () => el.remove());
+    }
+
     if (!usuario) {
         alert('Debes iniciar sesión para finalizar tu compra.');
         //window.location.href = '/html/Formulario.html';
@@ -190,7 +223,7 @@ document.querySelector('.yellow-btn').addEventListener('click', function () {
         summaryDetails.innerHTML = '';
         document.querySelector('.total-price').textContent = '0.00';
         localStorage.setItem('carrito', JSON.stringify([]));
-        alert('¡Gracias por tu compra! Tu pedido ha sido procesado.');
+        crearToast(`¡Operacion Exitosa! Gracias por su compra.`);
         mostrarCarrito();
         calcularTotal();
     } else {

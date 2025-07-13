@@ -29,3 +29,4 @@ document.querySelector('.products-preview').addEventListener('click', function(e
         document.body.style.overflow = '';
     }
 });
+
