@@ -30,7 +30,6 @@ const usuariosValidos = [
 ];
 
 // Validación de inicio de sesión
-// ...existing code...
 document.addEventListener('DOMContentLoaded', function() {
     // Validación de inicio de sesión
     const signInForm = document.querySelector('.sign-in-form');
@@ -96,4 +95,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-// ...existing code...
+
