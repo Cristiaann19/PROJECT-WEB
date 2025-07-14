@@ -107,7 +107,7 @@ function addToCart(nombre, descripcion, precio, imagen, plataforma, categoria) {
         t.innerHTML = `<span>${msg}</span>  <button type = "button">x</button>`;
         cont.appendChild(t);
         t.querySelector('button').onclick = () => cerrar(t);
-        setTimeout(() => cerrar(t), 4000);
+        setTimeout(() => cerrar(t), 2000);
     }
     function cerrar(el) {
         el.classList.add('hide');
