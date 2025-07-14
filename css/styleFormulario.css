@@ -304,7 +304,7 @@ button {
     margin-right: auto;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
-    align-content: left;
+    align-content: center;
     text-decoration: none;
     margin-top: 20px;
     justify-content: center;
