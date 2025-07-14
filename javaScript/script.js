@@ -1,7 +1,8 @@
 const menuBtn = document.getElementById('menu');
 const sidebar = document.getElementById('sidebar');
 const toggleBtnIcon = menuBtn.querySelector('i');
-
+const userlist = document.getElementById('user-menu');
+const btncerrar = document.getElementById('btn-cerrar');
 
 menuBtn.addEventListener('click',()=>{
     sidebar.classList.toggle('menu-toggle');
@@ -10,12 +11,19 @@ menuBtn.addEventListener('click',()=>{
 window.onscroll = function() {
     var header = document.querySelector('header');
     var sidebar = document.querySelector('.sidebar');
+    var uselist = document.querySelector('.user-menu');
     if (window.scrollY > 100) {
         header.style.display = 'none';
         sidebar.style.display = 'none';
+        uselist.style.display = 'none';
+        /**/
+        sidebar.classList.remove('menu-toggle');
+        sidebar.classList.remove('open');
+        toggleBtnIcon.classList = 'fa-solid fa-bars';
     } else {
         header.style.display = 'block';
         sidebar.style.display = 'block';
+        
     }
 };
 
@@ -34,16 +42,28 @@ window.addEventListener('DOMContentLoaded', function() {
     const userIcon = document.getElementById('user-icon');
     const usuarioLogueado = localStorage.getItem('usuarioLogueado');
 
+
     if (usuarioLogueado) {
         // Si está logueado, muestra el icono de salir y permite cerrar sesión
         userIcon.innerHTML = '<i class="fa-solid fa-arrow-right-from-bracket"></i>';
-        userBtn.href = "#";
-        userBtn.title = "Cerrar sesión";
-        userBtn.onclick = function(e) {
+        
+        userBtn.addEventListener('click', () => {
+            // Alterna la visibilidad del menú de usuario
+            if (userlist.style.display === 'block') {
+                userlist.style.display = 'none';
+            } else {
+                userlist.style.display = 'block';
+            }
+        });
+
+        btncerrar.href = "#";
+        btncerrar.title = "Cerrar sesión";
+        btncerrar.onclick = function(e) {
             e.preventDefault();
             localStorage.removeItem('usuarioLogueado');
             location.reload();
         }
+
     } else {
         // Si no está logueado, muestra el icono de usuario y va al login
         userIcon.innerHTML = '<i class="fa-solid fa-user"></i>';
@@ -59,7 +79,10 @@ document.addEventListener('DOMContentLoaded', function() {
         userBtn.addEventListener('click', function(e) {
             e.preventDefault();
             localStorage.setItem('urlDestino', window.location.pathname);
-            window.location.href = "/html/Formulario.html";
+            window.location.href = userBtn.href;
         });
     }
 });
+
+
+

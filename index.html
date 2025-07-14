@@ -34,7 +34,7 @@
                 </div>
 
                 <div class="derecha">
-                    <a href="/html/Formulario.html" class="action_btn" id="user-btn">
+                    <a href="#" class="action_btn" id="user-btn">
                         <span id="user-icon"><i class="fa-solid fa-user"></i></span>
                     </a> 
                     <a href="/html/Carrito.html" class="action_btn" onclick="actualizarContadorCarrito()">
@@ -42,8 +42,16 @@
                         <span id="contador-carrito">0</span>
                     </a>
                 </div>
+                
             </div>
         </header>
+        <div class="user-menu" id="user-menu">
+            <ul class="menu-list">
+                <li><a href="#" class="menu-MM"><i class="fa-solid fa-user"></i>Mi cuenta</a></li>
+                <li><a href="#" class="menu-MM"><i class="fa-solid fa-cart-shopping"></i>Mis compras</a></li>
+                <li><a href="#" class="menu-MM" id="btn-cerrar"><i class="fa-solid fa-arrow-right-from-bracket"></i>Cerrar Sesion</a></li>
+            </ul>
+        </div>
         <div class="sidebar" id="sidebar">
             <nav>
                 <ul>
@@ -105,6 +113,7 @@
                 </ul>
             </nav>
         </div>
+        
         <main>
             <div class="toast-container" id="toast"></div>
             <section id="home">

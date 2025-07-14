@@ -147,8 +147,8 @@ h2 {
     padding: 1.1rem 0;
     border-right: 1px solid #444141;
     overflow-y: auto;
-    background-color: white;
     transition: width 0.5s ease;
+    background-color: rgb(52, 52, 52);
 }
 
 .sidebar.menu-toggle{
@@ -156,7 +156,7 @@ h2 {
 }
 
 .sidebar a{
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -170,7 +170,7 @@ h2 {
     font-family: "Montserrat", system-ui;
 }
 .sidebar a:hover{
-    background-color: #F7F9FA;
+    background-color: #555; 
     color: orangered;
 }
 
@@ -870,4 +870,56 @@ button {
 }
 @keyframes fadeout {
   to { opacity: 0; transform: translateY(-20px); }
+}
+/*CSS DEL MENU DE CUANDO HAY CUENTA LOGEADA*/
+.user-menu {
+    margin-top: 77.5px;
+    width: 200px;
+    height: auto;
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    z-index: 100;
+    padding: 1.1rem 1rem;
+    border-right: 1px solid #444141;
+    overflow-y: auto;
+    background-color: rgb(52, 52, 52);
+    display: none;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-list li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.1s;
+    display: flex;
+    align-items: center; 
+    border-bottom: 1px solid #555;
+}
+
+/* Para q no haya línea divisoria en el último ítem */
+.menu-list li:last-child {
+    border-bottom: none;
+}
+
+.menu-MM {
+    text-decoration: none;
+    color: white;
+    display: flex;  
+    align-items: center;  
+    padding: 10px 0;  
+}
+
+/* Separar el ícono del texto */
+.menu-MM i {
+    margin-right: 10px; 
+}
+
+.menu-list li:hover {
+    background-color: #555; 
 }
