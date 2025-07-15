@@ -24,9 +24,9 @@ function cerrar(el) {
 
 
 const usuariosValidos = [
-    { usuario: "criss", contraseña: "1234" },
-    { usuario: "jufer_07", contraseña: "jufer07" },
-    { usuario: "admin", contraseña: "admin" }
+    { usuario: "criss", contraseña: "1234" ,correo:"crisss@gmail.com",telefono:"123456789", nombres:"Cristian", apellidos:"Huaman"},
+    { usuario: "jufer_07", contraseña: "jufer07", correo:"jufer@gmail.com", telefono:"987654321", nombres:"Jufer", apellidos:"Castañeda"},
+    { usuario: "admin", contraseña: "admin", correo:"admin1@gmail.com", telefono:"987452521", nombres:"Administrador", apellidos:"unknow" },
 ];
 
 // Validación de inicio de sesión
@@ -94,5 +94,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+    
 });
 

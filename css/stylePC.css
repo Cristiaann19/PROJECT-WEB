@@ -828,14 +828,40 @@ footer nav a:hover {
     width: 200px;
     height: auto;
     position: fixed;
-    top: 15px;
+    top: -5px;
     right: 20px;
-    z-index: 100;
+    z-index: 2001;
     padding: 1.1rem 1rem;
     border-right: 1px solid #444141;
     overflow-y: auto;
     background-color: rgb(52, 52, 52);
     display: none;
+    border: none;
+    overflow: visible; 
+}
+
+.user-menu::before {
+    content: "";
+    position: absolute;
+    top: -16px;
+    right: 43px;
+    border-width: 0 16px 16px 16px;
+    border-style: solid;
+    border-color: transparent transparent rgb(52, 52, 52) transparent;
+    width: 0;
+    height: 0;
+    z-index: 2001;
+}
+
+@media (max-width: 600px) {
+
+    .user-menu{
+        width: 190px;
+    }
+
+    .user-menu::before {
+        right: 30px;
+    }
 }
 
 .menu-list {
@@ -845,7 +871,7 @@ footer nav a:hover {
 }
 
 .menu-list li {
-    padding: 10px;
+    padding: 5px;
     cursor: pointer;
     transition: background 0.1s;
     display: flex;

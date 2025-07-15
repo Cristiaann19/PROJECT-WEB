@@ -216,7 +216,7 @@ document.querySelector('.yellow-btn').addEventListener('click', function () {
     const confirmacion = confirm('¿Estás seguro de que deseas finalizar tu compra?');
 
     if (confirmacion) {
-        console.log('Compra confirmada');
+        
         const cartItems = document.querySelector('.cart-items');
         cartItems.innerHTML = '<h2>Mis compras <i class="fa-solid fa-cart-shopping"></i> :</h2><p></p>';
         const summaryDetails = document.querySelector('.summary-details');

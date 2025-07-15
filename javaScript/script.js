@@ -45,7 +45,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
     if (usuarioLogueado) {
         // Si está logueado, muestra el icono de salir y permite cerrar sesión
-        userIcon.innerHTML = '<i class="fa-solid fa-arrow-right-from-bracket"></i>';
+        userIcon.innerHTML = '<i class="far fa-user-circle"></i>';
         
         userBtn.addEventListener('click', () => {
             // Alterna la visibilidad del menú de usuario

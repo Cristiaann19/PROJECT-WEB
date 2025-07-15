@@ -131,7 +131,8 @@ form.sign-up-form{
 }
 
 .btn:hover{
-    background-color: orangered;
+    background-color: rgb(52, 52, 52);
+    color: #ffffff;
 }
 
 .social-text{
